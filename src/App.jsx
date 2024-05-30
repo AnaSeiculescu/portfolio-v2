@@ -1,7 +1,12 @@
 import "./App.css";
+import { PresentationCard } from "./components/PresentationCard";
 
 function App() {
-    return <>Ana Seiculescu Portfolio</>;
+    return (
+        <>
+            <PresentationCard></PresentationCard>
+        </>
+    );
 }
 
 export default App;
