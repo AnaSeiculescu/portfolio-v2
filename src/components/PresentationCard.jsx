@@ -25,9 +25,10 @@ export function PresentationCard() {
         boxShadow: 5,
         borderRadius: "0",
         width: "25%",
-        height: "110%",
+        height: "100%",
         color: "white",
         textAlign: "center",
+        paddingTop: "50px",
     };
 
     const logoStyle = {
@@ -54,7 +55,7 @@ export function PresentationCard() {
             // console.log("scrollDemoRef.current: ", scrollDemoRef);
             setScrollPosition({ scrollTop });
         }
-        if (scrollPosition.scrollTop >= "800") {
+        if (scrollPosition.scrollTop >= "750") {
             console.log("scrollPosition: ", scrollPosition);
             setScrollPosition(scrollPosition.scrollTop);
             setMenuPosition("sticky");
@@ -62,7 +63,7 @@ export function PresentationCard() {
         }
 
         const prevScroll = findThePrevScroll(e);
-        if (scrollPosition.scrollTop < "700" && prevScroll >= "800") {
+        if (scrollPosition.scrollTop < "700" && prevScroll >= "750") {
             console.log("VREAU ceva aici");
         }
     };
@@ -91,7 +92,7 @@ export function PresentationCard() {
                 onScroll={handleScroll}
             >
                 <img src={logo1} alt="logo" style={logoStyle} />
-                <Box className="stickyMenu" ref={scrollDemoRef} style={menuStyle} onScroll={handleScroll}>
+                <Box className="stickyMenu" ref={scrollDemoRef} style={menuStyle}>
                     Ana Seiculescu Portfolio <br /> scrollTop: {scrollPosition.scrollTop}
                 </Box>
                 <ResponsiveMasonry
@@ -99,7 +100,7 @@ export function PresentationCard() {
                     style={{ margin: "25px 25px 25px 40%" }}
                 >
                     <Masonry gutter="15px">
-                        {new Array(23).fill(null).map(() => (
+                        {new Array(23).fill(null).map((elem, index) => (
                             <Card
                                 key={Math.random()}
                                 sx={{
@@ -109,7 +110,7 @@ export function PresentationCard() {
                                     height: "250px",
                                 }}
                             >
-                                <CardContent>My first Project</CardContent>
+                                <CardContent>Project no. {index + 1}</CardContent>
                             </Card>
                         ))}
                     </Masonry>
