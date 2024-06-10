@@ -4,6 +4,7 @@ import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 import logo1 from "../../images/logo1.png";
+import portfolioImage from "../../images/portfolio-image.jpg";
 // import { useEffect } from "react";
 // import MagicScroll from "magic-scroll";
 import { useState, useRef } from "react";
@@ -80,7 +81,6 @@ export function PresentationCard() {
                     padding: "0 auto",
                     alignContent: "center",
                     textAlign: "center",
-                    // fontSize: "40px",
                 }}
             >
                 <Typography
@@ -115,7 +115,16 @@ export function PresentationCard() {
                 >
                     <img src={logo1} alt="logo" style={logoStyle} />
                     <Box className="stickyMenu" ref={scrollDemoRef} style={menuStyle}>
-                        Ana Seiculescu Portfolio <br /> scrollTop: {scrollPosition.scrollTop}
+                        scrollTop: {scrollPosition.scrollTop} <br />
+                        <img
+                            src={portfolioImage}
+                            alt="portfolio-image"
+                            style={{
+                                width: "150px",
+                                height: "150px",
+                                border: "10px solid #2c303a",
+                            }}
+                        />
                     </Box>
                     <ResponsiveMasonry
                         columnsCountBreakPoints={{ 400: 1, 850: 2, 1250: 3 }}
