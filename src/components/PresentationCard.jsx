@@ -3,82 +3,66 @@ import CardContent from "@mui/material/CardContent";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
-import logo1 from "../../images/logo1.png";
-import portfolioImage from "../../images/portfolio-image.jpg";
-// import { useEffect } from "react";
-// import MagicScroll from "magic-scroll";
-import { useState, useRef } from "react";
+import portfolioImage from "../../images/portfolio-image3.jpeg";
 import { Typography } from "@mui/material";
-// import zIndex from "@mui/material/styles/zIndex";
+import VerticalTabsPanel from "./VerticalTabsPanel";
 
 export function PresentationCard() {
-    const [scrollPosition, setScrollPosition] = useState({ scrollTop: 0 });
-    const scrollDemoRef = useRef(null);
-
-    // const prevScrollTopRef = useRef(0);
-
-    const [menuPosition, setMenuPosition] = useState("absolute");
-    const [menuTop, setMenuTop] = useState("-40vh");
-
     const menuStyle = {
-        position: menuPosition,
-        top: menuTop,
+        position: "absolute",
+        top: "0",
         left: "13%",
-        backgroundColor: "#000000",
+
+        display: "flex",
+        flexDirection: "column",
+        gap: "40px",
+        // alignItems: "center",
+
+        // backgroundColor: "#000000",
+        // background:
+        //     "linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(12,22,22,1) 19%, rgba(13,23,23,1) 44%, rgba(144,254,255,1) 100%)",
+        // background:
+        //     "linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(12,22,22,1) 19%, rgba(13,23,23,1) 44%, rgba(254,254,254,1) 100%)",
+        background:
+            "linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(12,22,22,1) 19%, rgba(13,23,23,1) 44%, rgba(140,225,255,1) 100%)",
+        color: "white",
         boxShadow: 5,
         borderRadius: "0",
-        width: "25%",
-        height: "150%",
-        color: "white",
+
+        width: "15%",
+        height: "200vh",
+
         textAlign: "center",
-        paddingTop: "50px",
         zIndex: "5",
     };
 
-    const logoStyle = {
-        position: "absolute",
-        top: "0",
-        left: "30px",
-        width: "110px",
-        height: "110px",
-    };
-
-    // const findThePrevScroll = (e) => {
-    //     // console.log("eventul este: ", e);
-    //     const currentScrollTop = e.target.scrollTop;
-    //     // const prevScrollTop = prevScrollTopRef.current;
-
-    //     prevScrollTopRef.current = currentScrollTop;
-
-    //     return prevScrollTopRef.current;
-    // };
-
-    const handleScroll = () => {
-        if (scrollDemoRef.current) {
-            const { scrollTop } = scrollDemoRef.current;
-            // console.log("scrollDemoRef.current: ", scrollDemoRef);
-            setScrollPosition({ scrollTop });
-        }
-        if (scrollPosition.scrollTop >= "750") {
-            console.log("scrollPosition: ", scrollPosition);
-            setScrollPosition(scrollPosition.scrollTop);
-            setMenuPosition("sticky");
-            setMenuTop("0");
-        }
-
-        // const prevScroll = findThePrevScroll(e);
-        // if (scrollPosition.scrollTop < "700" && prevScroll >= "750") {
-        //     console.log("VREAU ceva aici");
-        // }
-    };
-
     return (
-        <Container maxWidth="false" sx={{ display: "flex", width: "100%", flexDirection: "column" }}>
+        <>
+            <Box className="stickyMenu" style={menuStyle}>
+                <img
+                    src={portfolioImage}
+                    alt="portfolio-image"
+                    style={{
+                        position: "sticky",
+                        top: "60px",
+                        width: "300px",
+                        border: "8px solid #2c303a",
+                        // border: "8px solid transparent",
+                        // border: "8px solid #FFFFFF",
+                        borderRadius: "3px",
+                        alignSelf: "end",
+                        marginRight: "30px",
+                    }}
+                />
+                <VerticalTabsPanel />
+            </Box>
             <Box
+                className="firstPage"
                 sx={{
                     backgroundColor: "white",
-                    height: "130vh",
+                    height: "100vh",
                     padding: "0 auto",
+                    marginLeft: "28%",
                     alignContent: "center",
                     textAlign: "center",
                 }}
@@ -91,63 +75,41 @@ export function PresentationCard() {
                     Welcome!
                 </Typography>
             </Box>
+
             <Container
                 maxWidth="false"
+                className="scrollingArea"
                 sx={{
-                    width: "100%",
+                    width: "100vw",
                     height: "100vh",
-                    display: "flex",
-                    backgroundColor: "#000000",
+                    position: "relative",
+                    backgroundColor: "#2c303a",
+                    color: "white",
+                    overflow: "auto",
+                    flexGrow: 1,
                 }}
             >
-                <Box
-                    className="scrollingArea"
-                    ref={scrollDemoRef}
-                    sx={{
-                        position: "relative",
-                        backgroundColor: "#2c303a",
-                        color: "white",
-                        margin: "30px 6px",
-                        overflow: "auto",
-                        flexGrow: 1,
-                    }}
-                    onScroll={handleScroll}
+                <ResponsiveMasonry
+                    columnsCountBreakPoints={{ 400: 1, 850: 2, 1250: 3 }}
+                    style={{ margin: "25px 5% 25px 32%" }}
                 >
-                    <img src={logo1} alt="logo" style={logoStyle} />
-                    <Box className="stickyMenu" ref={scrollDemoRef} style={menuStyle}>
-                        scrollTop: {scrollPosition.scrollTop} <br />
-                        <img
-                            src={portfolioImage}
-                            alt="portfolio-image"
-                            style={{
-                                width: "150px",
-                                height: "150px",
-                                border: "10px solid #2c303a",
-                            }}
-                        />
-                    </Box>
-                    <ResponsiveMasonry
-                        columnsCountBreakPoints={{ 400: 1, 850: 2, 1250: 3 }}
-                        style={{ margin: "25px 25px 25px 40%" }}
-                    >
-                        <Masonry gutter="15px">
-                            {new Array(23).fill(null).map((elem, index) => (
-                                <Card
-                                    key={Math.random()}
-                                    sx={{
-                                        backgroundColor: "#1E1F22",
-                                        color: "white",
-                                        width: "100%",
-                                        height: "250px",
-                                    }}
-                                >
-                                    <CardContent>Project no. {index + 1}</CardContent>
-                                </Card>
-                            ))}
-                        </Masonry>
-                    </ResponsiveMasonry>
-                </Box>
+                    <Masonry gutter="25px">
+                        {new Array(23).fill(null).map((elem, index) => (
+                            <Card
+                                key={Math.random()}
+                                sx={{
+                                    backgroundColor: "#1E1F22",
+                                    color: "white",
+                                    width: "100%",
+                                    height: "300px",
+                                }}
+                            >
+                                <CardContent>Project no. {index + 1}</CardContent>
+                            </Card>
+                        ))}
+                    </Masonry>
+                </ResponsiveMasonry>
             </Container>
-        </Container>
+        </>
     );
 }
