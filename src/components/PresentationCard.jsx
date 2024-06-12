@@ -9,22 +9,21 @@ import VerticalTabsPanel from "./VerticalTabsPanel";
 import { useEffect, useState, useRef } from "react";
 
 export function PresentationCard() {
-    const [contentHeight, setContentHeight] = useState(0);
-
+    const contentRef = useRef(null);
+    const [contentHeight, setContentHeight] = useState("100vh");
     const [tabValue, setTabValue] = useState(0);
 
-    const contentRef = useRef(null);
+    const updateHeight = () => {
+        if (contentRef.current) {
+            setContentHeight(contentRef.current.clientHeight);
+            // contactRef.current.scrollHeight = contentRef.current.clientHeight;
+        }
+    };
 
     useEffect(() => {
-        const updateHeight = () => {
-            if (contentRef.current) {
-                console.log("contentRef: ", contentRef);
-                setContentHeight(contentRef.current.clientHeight);
-                // contactRef.current.scrollHeight = contentRef.current.clientHeight;
-            }
-        };
-        // console.log("contentHeight: ", contentHeight);
-        updateHeight();
+        // we use a timeout because we need to wait for the masonry layout to finnish arranging elements
+        setTimeout(updateHeight);
+        // updateHeight();
         window.addEventListener("resize", updateHeight);
         return () => {
             window.removeEventListener("resize", updateHeight);
@@ -95,7 +94,8 @@ export function PresentationCard() {
         borderRadius: "0",
 
         width: "18%",
-        height: `${contentHeight}px`,
+        height: contentHeight,
+        transition: "height 3.7s",
 
         textAlign: "center",
         zIndex: "5",
@@ -162,7 +162,7 @@ export function PresentationCard() {
                     ref={aboutRef}
                     className="about"
                     sx={{
-                        marginTop: "40px",
+                        paddingTop: "100px",
                         marginLeft: "35%",
                         height: "100vh",
                         display: "flex",
@@ -187,10 +187,10 @@ export function PresentationCard() {
                     <Card
                         sx={{
                             position: "absolute",
-                            top: "100px",
+                            top: "200px",
                             left: "10%",
                             width: "60%",
-                            height: "300px",
+                            height: "380px",
                             boxShadow: "4",
                         }}
                     >
@@ -225,7 +225,7 @@ export function PresentationCard() {
                     className="contact"
                     ref={contactRef}
                     sx={{
-                        marginTop: "100px",
+                        paddingTop: "100px",
                         marginLeft: "35%",
                         height: "100vh",
                         display: "flex",
@@ -233,6 +233,18 @@ export function PresentationCard() {
                         position: "relative",
                     }}
                 >
+                    <Card
+                        sx={{
+                            position: "absolute",
+                            top: "200px",
+                            left: "10%",
+                            width: "60%",
+                            height: "300px",
+                            boxShadow: "4",
+                        }}
+                    >
+                        <CardContent></CardContent>
+                    </Card>
                     <Card
                         sx={{
                             boxShadow: "5",
@@ -246,18 +258,6 @@ export function PresentationCard() {
                         }}
                     >
                         <CardContent>Contact me</CardContent>
-                    </Card>
-                    <Card
-                        sx={{
-                            position: "absolute",
-                            top: "100px",
-                            left: "10%",
-                            width: "60%",
-                            height: "300px",
-                            boxShadow: "4",
-                        }}
-                    >
-                        <CardContent></CardContent>
                     </Card>
                 </Box>
             </Container>
