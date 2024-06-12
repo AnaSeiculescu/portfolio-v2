@@ -6,8 +6,26 @@ import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 import portfolioImage from "../../images/portfolio-image3.jpeg";
 import { Typography } from "@mui/material";
 import VerticalTabsPanel from "./VerticalTabsPanel";
+import { useEffect, useState, useRef } from "react";
 
 export function PresentationCard() {
+    const [contentHeight, setContentHeight] = useState(0);
+
+    const contentRef = useRef(null);
+
+    useEffect(() => {
+        const updateHeight = () => {
+            if (contentRef.current) {
+                setContentHeight(contentRef.current.scrollHeight);
+            }
+        };
+        updateHeight();
+        window.addEventListener("resize", updateHeight);
+        return () => {
+            window.removeEventListener("resize", updateHeight);
+        };
+    }, []);
+
     const menuStyle = {
         position: "absolute",
         top: "0",
@@ -29,69 +47,102 @@ export function PresentationCard() {
         boxShadow: 5,
         borderRadius: "0",
 
-        width: "15%",
-        height: "200vh",
+        width: "20%",
+        height: `${contentHeight}px`,
 
         textAlign: "center",
         zIndex: "5",
     };
 
     return (
-        <>
-            <Box className="stickyMenu" style={menuStyle}>
-                <img
-                    src={portfolioImage}
-                    alt="portfolio-image"
-                    style={{
-                        position: "sticky",
-                        top: "60px",
-                        width: "300px",
-                        border: "8px solid #2c303a",
-                        // border: "8px solid transparent",
-                        // border: "8px solid #FFFFFF",
-                        borderRadius: "3px",
-                        alignSelf: "end",
-                        marginRight: "30px",
-                    }}
-                />
-                <VerticalTabsPanel />
-            </Box>
-            <Box
-                className="firstPage"
-                sx={{
-                    backgroundColor: "white",
-                    height: "100vh",
-                    padding: "0 auto",
-                    marginLeft: "28%",
-                    alignContent: "center",
-                    textAlign: "center",
-                }}
-            >
-                <Typography
-                    sx={{
-                        fontSize: "40px",
-                    }}
-                >
-                    Welcome!
-                </Typography>
+        <Container maxWidth="false" className="content" ref={contentRef} sx={{ position: "relative" }}>
+            <Box sx={{ position: "relative", display: "flex", flexGrow: "1", justifyContent: "center" }}>
+                <Box className="stickyMenu" style={menuStyle}>
+                    <img
+                        src={portfolioImage}
+                        alt="portfolio-image"
+                        style={{
+                            position: "absolute",
+                            top: "60px",
+                            width: "300px",
+                            border: "8px solid #FFF",
+                            borderRadius: "3px",
+                            alignSelf: "end",
+                            marginRight: "30px",
+                        }}
+                    />
+                    <VerticalTabsPanel />
+                </Box>
             </Box>
 
             <Container
                 maxWidth="false"
                 className="scrollingArea"
-                sx={{
-                    width: "100vw",
-                    height: "100vh",
-                    position: "relative",
-                    backgroundColor: "#2c303a",
-                    color: "white",
-                    overflow: "auto",
-                    flexGrow: 1,
-                }}
+                sx={
+                    {
+                        // overflow: "auto",
+                    }
+                }
             >
+                <Box
+                    className="firstPage"
+                    sx={{
+                        color: "black",
+                        height: "100vh",
+                        marginLeft: "28%",
+                        alignContent: "center",
+                        textAlign: "center",
+                        zIndex: "2",
+                    }}
+                >
+                    <Typography
+                        sx={{
+                            fontSize: "40px",
+                        }}
+                    >
+                        Welcome!
+                    </Typography>
+                </Box>
+                <Box
+                    sx={{
+                        marginTop: "40px",
+                        marginLeft: "35%",
+                        height: "100vh",
+                        display: "flex",
+                        flexDirection: "column",
+                        position: "relative",
+                    }}
+                >
+                    <Card
+                        sx={{
+                            boxShadow: "5",
+                            width: "30%",
+                            height: "150px",
+                            marginLeft: "50%",
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "center",
+                            zIndex: "2",
+                        }}
+                    >
+                        <CardContent>Some about me</CardContent>
+                    </Card>
+                    <Card
+                        sx={{
+                            position: "absolute",
+                            top: "100px",
+                            left: "10%",
+                            width: "60%",
+                            height: "300px",
+                            boxShadow: "4",
+                        }}
+                    >
+                        <CardContent></CardContent>
+                    </Card>
+                </Box>
                 <ResponsiveMasonry
                     columnsCountBreakPoints={{ 400: 1, 850: 2, 1250: 3 }}
-                    style={{ margin: "25px 5% 25px 32%" }}
+                    style={{ padding: "2% 2% 2% 35%", backgroundColor: "#2c303a", borderRadius: "10px" }}
                 >
                     <Masonry gutter="25px">
                         {new Array(23).fill(null).map((elem, index) => (
@@ -110,6 +161,6 @@ export function PresentationCard() {
                     </Masonry>
                 </ResponsiveMasonry>
             </Container>
-        </>
+        </Container>
     );
 }
