@@ -32,7 +32,7 @@ export function PresentationCard() {
 
     const homeRef = useRef(null);
     const aboutRef = useRef(null);
-    const projectsRef = useRef(null);
+    const workRef = useRef(null);
     const contactRef = useRef(null);
 
     const scrollToRef = (ref) => {
@@ -42,32 +42,13 @@ export function PresentationCard() {
         }
     };
 
-    const handleChange = (event, newValue) => {
-        switch (newValue) {
-            case 0:
-                scrollToRef(homeRef);
-                break;
-            case 1:
-                scrollToRef(aboutRef);
-                break;
-            case 2:
-                scrollToRef(projectsRef);
-                break;
-            case 3:
-                scrollToRef(contactRef);
-                break;
-            default:
-                break;
-        }
-    };
-
     useEffect(() => {
         if (tabValue === 0) {
             scrollToRef(homeRef);
         } else if (tabValue === 1) {
             scrollToRef(aboutRef);
         } else if (tabValue === 2) {
-            scrollToRef(projectsRef);
+            scrollToRef(workRef);
         } else if (tabValue === 3) {
             scrollToRef(contactRef);
         }
@@ -82,12 +63,7 @@ export function PresentationCard() {
             sx={{ position: "relative" }}
         >
             <Box sx={{ position: "relative", display: "flex", flexGrow: "1", justifyContent: "center" }}>
-                <StickyMenu
-                    contentHeight={contentHeight}
-                    tabValue={tabValue}
-                    setTabValue={setTabValue}
-                    onChange={handleChange}
-                />
+                <StickyMenu contentHeight={contentHeight} tabValue={tabValue} setTabValue={setTabValue} />
             </Box>
 
             <Container
@@ -133,9 +109,9 @@ export function PresentationCard() {
                 >
                     <AboutCards />
                 </Box>
-                <Box ref={projectsRef}>
+                <Box ref={workRef}>
                     <ResponsiveMasonry
-                        className="projects"
+                        className="work"
                         columnsCountBreakPoints={{ 400: 1, 850: 2, 1250: 3 }}
                         style={{ padding: "2% 2% 2% 35%", backgroundColor: "#2c303a" }}
                     >

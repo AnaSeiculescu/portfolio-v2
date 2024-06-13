@@ -2,8 +2,11 @@ import Box from "@mui/material/Box";
 import portfolioImage from "../../images/portfolio-image3.jpeg";
 import VerticalTabsPanel from "./VerticalTabsPanel";
 import PropTypes from "prop-types";
+import DownloadCV from "./DownloadCV";
+import GroupContactButtons from "./GroupContactButtons";
+import MadeWithLove from "./MadeWithLove";
 
-export default function StickyMenu({ contentHeight, tabValue, setTabValue, onChange }) {
+export default function StickyMenu({ contentHeight, tabValue, setTabValue }) {
     const menuStyle = {
         position: "absolute",
         top: "0",
@@ -41,7 +44,7 @@ export default function StickyMenu({ contentHeight, tabValue, setTabValue, onCha
                 alt="portfolio-image"
                 style={{
                     position: "absolute",
-                    top: "60px",
+                    top: "50vh",
                     left: "-23%",
                     // right: '20%',
                     width: "300px",
@@ -51,14 +54,17 @@ export default function StickyMenu({ contentHeight, tabValue, setTabValue, onCha
                     marginRight: "30px",
                 }}
             />
-            <VerticalTabsPanel onTabChange={onChange} tabValue={tabValue} setTabValue={setTabValue} />
+
+            <VerticalTabsPanel tabValue={tabValue} setTabValue={setTabValue} />
+            <GroupContactButtons />
+            <DownloadCV />
+            <MadeWithLove />
         </Box>
     );
 }
 
 StickyMenu.propTypes = {
-    onChange: PropTypes.func,
     setTabValue: PropTypes.func,
     tabValue: PropTypes.number,
-    contentHeight: PropTypes.number,
+    contentHeight: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };

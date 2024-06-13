@@ -24,7 +24,7 @@ export default function AboutCards() {
                     top: "200px",
                     left: "10%",
                     width: "60%",
-                    height: "450px",
+                    height: "60%",
                     boxShadow: "4",
                 }}
             >
