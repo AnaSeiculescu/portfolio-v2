@@ -3,10 +3,11 @@ import CardContent from "@mui/material/CardContent";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
-import portfolioImage from "../../images/portfolio-image3.jpeg";
 import { Typography } from "@mui/material";
-import VerticalTabsPanel from "./VerticalTabsPanel";
 import { useEffect, useState, useRef } from "react";
+import StickyMenu from "./StickyMenu";
+import AboutCards from "./AboutCards";
+import ContactCards from "./ContactCards";
 
 export function PresentationCard() {
     const contentRef = useRef(null);
@@ -16,7 +17,6 @@ export function PresentationCard() {
     const updateHeight = () => {
         if (contentRef.current) {
             setContentHeight(contentRef.current.clientHeight);
-            // contactRef.current.scrollHeight = contentRef.current.clientHeight;
         }
     };
 
@@ -73,34 +73,6 @@ export function PresentationCard() {
         }
     }, [tabValue]);
 
-    const menuStyle = {
-        position: "absolute",
-        top: "0",
-        left: "13%",
-
-        display: "flex",
-        flexDirection: "column",
-        gap: "40px",
-
-        // backgroundColor: "#000000",
-        // background:
-        //     "linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(12,22,22,1) 19%, rgba(13,23,23,1) 44%, rgba(144,254,255,1) 100%)",
-        // background:
-        //     "linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(12,22,22,1) 19%, rgba(13,23,23,1) 44%, rgba(254,254,254,1) 100%)",
-        background:
-            "linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(12,22,22,1) 19%, rgba(13,23,23,1) 44%, rgba(140,225,255,1) 100%)",
-        color: "white",
-        boxShadow: 5,
-        borderRadius: "0",
-
-        width: "18%",
-        height: contentHeight,
-        transition: "height 3.7s",
-
-        textAlign: "center",
-        zIndex: "5",
-    };
-
     return (
         <Container
             maxWidth="false"
@@ -110,24 +82,12 @@ export function PresentationCard() {
             sx={{ position: "relative" }}
         >
             <Box sx={{ position: "relative", display: "flex", flexGrow: "1", justifyContent: "center" }}>
-                <Box className="stickyMenu" style={menuStyle}>
-                    <img
-                        src={portfolioImage}
-                        alt="portfolio-image"
-                        style={{
-                            position: "absolute",
-                            top: "60px",
-                            left: "-23%",
-                            // right: '20%',
-                            width: "300px",
-                            border: "8px solid #FFF",
-                            borderRadius: "3px",
-                            alignSelf: "end",
-                            marginRight: "30px",
-                        }}
-                    />
-                    <VerticalTabsPanel onTabChange={handleChange} tabValue={tabValue} setTabValue={setTabValue} />
-                </Box>
+                <StickyMenu
+                    contentHeight={contentHeight}
+                    tabValue={tabValue}
+                    setTabValue={setTabValue}
+                    onChange={handleChange}
+                />
             </Box>
 
             <Container
@@ -155,7 +115,8 @@ export function PresentationCard() {
                             fontSize: "40px",
                         }}
                     >
-                        Welcome!
+                        Welcome! <br />
+                        I&apos;m Ana
                     </Typography>
                 </Box>
                 <Box
@@ -170,32 +131,7 @@ export function PresentationCard() {
                         position: "relative",
                     }}
                 >
-                    <Card
-                        sx={{
-                            boxShadow: "5",
-                            width: "30%",
-                            height: "150px",
-                            marginLeft: "50%",
-                            display: "flex",
-                            alignItems: "center",
-                            justifyContent: "center",
-                            zIndex: "2",
-                        }}
-                    >
-                        <CardContent>Some about me</CardContent>
-                    </Card>
-                    <Card
-                        sx={{
-                            position: "absolute",
-                            top: "200px",
-                            left: "10%",
-                            width: "60%",
-                            height: "380px",
-                            boxShadow: "4",
-                        }}
-                    >
-                        <CardContent></CardContent>
-                    </Card>
+                    <AboutCards />
                 </Box>
                 <Box ref={projectsRef}>
                     <ResponsiveMasonry
@@ -233,32 +169,7 @@ export function PresentationCard() {
                         position: "relative",
                     }}
                 >
-                    <Card
-                        sx={{
-                            position: "absolute",
-                            top: "200px",
-                            left: "10%",
-                            width: "60%",
-                            height: "300px",
-                            boxShadow: "4",
-                        }}
-                    >
-                        <CardContent></CardContent>
-                    </Card>
-                    <Card
-                        sx={{
-                            boxShadow: "5",
-                            width: "30%",
-                            height: "150px",
-                            marginLeft: "50%",
-                            display: "flex",
-                            alignItems: "center",
-                            justifyContent: "center",
-                            zIndex: "2",
-                        }}
-                    >
-                        <CardContent>Contact me</CardContent>
-                    </Card>
+                    <ContactCards />
                 </Box>
             </Container>
         </Container>
