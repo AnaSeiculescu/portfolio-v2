@@ -3,7 +3,7 @@ import portfolioImage from "../../images/portfolio-image3.jpeg";
 import VerticalTabsPanel from "./VerticalTabsPanel";
 import PropTypes from "prop-types";
 
-export default function StickyMenu({ contentHeight, tabValue, setTabValue, handleChange }) {
+export default function StickyMenu({ contentHeight, tabValue, setTabValue, onChange }) {
     const menuStyle = {
         position: "absolute",
         top: "0",
@@ -51,13 +51,13 @@ export default function StickyMenu({ contentHeight, tabValue, setTabValue, handl
                     marginRight: "30px",
                 }}
             />
-            <VerticalTabsPanel onTabChange={handleChange} tabValue={tabValue} setTabValue={setTabValue} />
+            <VerticalTabsPanel onTabChange={onChange} tabValue={tabValue} setTabValue={setTabValue} />
         </Box>
     );
 }
 
 StickyMenu.propTypes = {
-    handleChange: PropTypes.func,
+    onChange: PropTypes.func,
     setTabValue: PropTypes.func,
     tabValue: PropTypes.number,
     contentHeight: PropTypes.number,

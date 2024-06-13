@@ -9,8 +9,8 @@ export default function ContactCards() {
                     position: "absolute",
                     top: "200px",
                     left: "10%",
-                    width: "60%",
-                    height: "300px",
+                    width: "40%",
+                    height: "500px",
                     boxShadow: "4",
                 }}
             >
@@ -19,9 +19,9 @@ export default function ContactCards() {
             <Card
                 sx={{
                     boxShadow: "5",
-                    width: "30%",
-                    height: "150px",
-                    marginLeft: "50%",
+                    width: "25%",
+                    height: "100px",
+                    marginLeft: "45%",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
