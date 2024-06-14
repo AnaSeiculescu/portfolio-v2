@@ -6,7 +6,8 @@
 
 .work-container {
     display: flex;
-    height: 45vh;
+    flex-direction: column;
+    height: 100vh;
     width: 100%;
     position: relative;
     margin: 5%;
@@ -14,26 +15,26 @@
 
 .first-scroll-container,
 .second-scroll-container {
-    height: 43vh;
+    height: 23vh;
 }
 
 .first-carousell-primary,
 .first-crousell-secondary {
     position: absolute;
-    top: 2%;
-    left: 100%;
+    top: 30%;
+    /* left: 100%; */
     width: 100%;
-    overflow: hidden;
+    /* overflow: hidden; */
     /* white-space: nowrap; */
 }
 
 .second-carousell-primary,
 .second-carousell-secondary {
     position: absolute;
-    top: 80%;
+    top: 70%;
     left: 100%;
     width: 100%;
-    overflow: hidden;
+    /* overflow: hidden; */
     /* white-space: nowrap; */
 }
 
@@ -41,14 +42,12 @@
     width: 100%;
     margin-left: 20px;
     border-radius: 10px;
-    box-shadow: 6px 6px 2px black;
 }
 
 .second-carousell-primary Card {
     width: 100%;
     margin-left: 20px;
     border-radius: 10px;
-    box-shadow: 6px 6px 2px black;
 }
 
 .first-carousell-primary,
@@ -58,7 +57,11 @@
     animation: scroll-horizontal 20s linear infinite;
 }
 
-.first-crousell-secondary,
+.first-crousell-secondary {
+    animation: scroll-horizontal 20s linear infinite;
+    animation-delay: 10s;
+}
+
 .second-carousell-secondary {
     animation: scroll-horizontal 20s linear infinite;
     animation-delay: 10s;
@@ -72,4 +75,30 @@
     100% {
         left: -100%;
     }
+}
+
+.first-carousell-primary:hover,
+.first-carousell-primary:hover ~ .first-carousell-secondary {
+    animation-play-state: paused;
+}
+
+.first-carousell-secondary:hover {
+    animation-play-state: paused;
+}
+
+.first-scroll-container:hover > .first-carousell-primary:not(:hover) {
+    animation-play-state: paused;
+}
+
+.second-carousell-primary:hover,
+.second-carousell-primary:hover ~ .second-carousell-secondary {
+    animation-play-state: paused;
+}
+
+.second-carousell-secondary:hover {
+    animation-play-state: paused;
+}
+
+.second-scroll-container:hover > .second-carousell-primary:not(:hover) {
+    animation-play-state: paused;
 }
