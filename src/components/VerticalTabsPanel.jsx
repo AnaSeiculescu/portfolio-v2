@@ -3,9 +3,9 @@ import Tab from "@mui/material/Tab";
 import Box from "@mui/material/Box";
 import PropTypes from "prop-types";
 
-const VerticalTabs = ({ setTabValue, tabValue }) => {
+const VerticalTabs = ({ tabValue, onTabChange }) => {
     const handleTabChange = (event, newValue) => {
-        setTabValue(newValue);
+        onTabChange(newValue);
         console.log("newValue2: ", newValue);
     };
 
@@ -32,6 +32,7 @@ const VerticalTabs = ({ setTabValue, tabValue }) => {
 VerticalTabs.propTypes = {
     setTabValue: PropTypes.func,
     tabValue: PropTypes.number,
+    onTabChange: PropTypes.func,
 };
 
 export default VerticalTabs;

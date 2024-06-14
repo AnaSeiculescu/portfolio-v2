@@ -8,11 +8,57 @@ import { useEffect, useState, useRef } from "react";
 import StickyMenu from "./StickyMenu";
 import AboutCards from "./AboutCards";
 import ContactCards from "./ContactCards";
+import { useInView } from "react-intersection-observer";
+import { usePrevious } from "@uidotdev/usehooks";
 
 export function PresentationCard() {
     const contentRef = useRef(null);
     const [contentHeight, setContentHeight] = useState("100vh");
     const [tabValue, setTabValue] = useState(0);
+
+    const [homeRef, inViewOfHome, homeEntry] = useInView({ threshold: 0.5 });
+    const [aboutRef, inViewOfAbout, aboutEntry] = useInView({ threshold: 0.5 });
+    const [workRef, inViewOfWork, workEntry] = useInView({ threshold: 0.2 });
+    const [contactRef, inViewOfContact, contactEntry] = useInView({ threshold: 0.5 });
+
+    const previouslyInViewOfHome = usePrevious(inViewOfHome);
+    const previouslyInViewOfAbout = usePrevious(inViewOfAbout);
+    const previouslyInViewOfWork = usePrevious(inViewOfWork);
+    const previouslyInViewOfContact = usePrevious(inViewOfContact);
+
+    console.log("homeRef.current", homeRef.current);
+
+    useEffect(() => {
+        if (!previouslyInViewOfHome && inViewOfHome) {
+            console.log("setting to 0");
+            setTabValue(0);
+            return;
+        }
+        if (!previouslyInViewOfAbout && inViewOfAbout) {
+            console.log("setting to 1");
+            setTabValue(1);
+            return;
+        }
+        if (!previouslyInViewOfWork && inViewOfWork) {
+            console.log("setting to 2");
+            setTabValue(2);
+            return;
+        }
+        if (!previouslyInViewOfContact && inViewOfContact) {
+            console.log("setting to 3");
+            setTabValue(3);
+            return;
+        }
+    }, [
+        inViewOfHome,
+        inViewOfAbout,
+        inViewOfWork,
+        inViewOfContact,
+        previouslyInViewOfHome,
+        previouslyInViewOfAbout,
+        previouslyInViewOfWork,
+        previouslyInViewOfContact,
+    ]);
 
     const updateHeight = () => {
         if (contentRef.current) {
@@ -30,29 +76,60 @@ export function PresentationCard() {
         };
     }, []);
 
-    const homeRef = useRef(null);
-    const aboutRef = useRef(null);
-    const workRef = useRef(null);
-    const contactRef = useRef(null);
+    // const homeRef = useRef(null);
+    // const aboutRef = useRef(null);
+    // const workRef = useRef(null);
+    // const contactRef = useRef(null);
 
-    const scrollToRef = (ref) => {
-        if (ref && ref.current) {
-            window.scrollTo({ top: ref.current.offsetTop, behavior: "smooth" });
-            console.log("ref.current: ", ref.current);
+    // console.log("window.scroll: ", window.scroll());
+    const scrollToEntry = (entry) => {
+        console.log("entry: ", entry);
+        // if (ref && ref.current) {
+        //     window.scrollTo({ top: ref.current.offsetTop, behavior: "smooth" });
+        //     console.log("ref.current: ", ref.current);
+        // }
+        console.log("entry.target.clientTop", entry.target.clientTop);
+        console.log("entry.target.scrollTop", entry.target.scrollTop);
+        console.log("entry.target.getBoundingClientRect()", entry.target.getBoundingClientRect());
+
+        window.scrollBy({ top: entry.target.getBoundingClientRect().top, behavior: "smooth" });
+        // window.scroll({
+        //     top: entry.boundingClientRect.top,
+        //     behavior: "smooth",
+        // });
+    };
+
+    const handleTabChange = (newTab) => {
+        console.log("new tab: ", newTab);
+        switch (newTab) {
+            case 0:
+                scrollToEntry(homeEntry);
+                break;
+            case 1:
+                scrollToEntry(aboutEntry);
+                break;
+            case 2:
+                scrollToEntry(workEntry);
+                break;
+            case 3:
+                scrollToEntry(contactEntry);
+                break;
+            default:
+                break;
         }
     };
 
-    useEffect(() => {
-        if (tabValue === 0) {
-            scrollToRef(homeRef);
-        } else if (tabValue === 1) {
-            scrollToRef(aboutRef);
-        } else if (tabValue === 2) {
-            scrollToRef(workRef);
-        } else if (tabValue === 3) {
-            scrollToRef(contactRef);
-        }
-    }, [tabValue]);
+    // useEffect(() => {
+    //     if (tabValue === 0) {
+    //         scrollToEntry(homeEntry);
+    //     } else if (tabValue === 1) {
+    //         scrollToEntry(aboutEntry);
+    //     } else if (tabValue === 2) {
+    //         scrollToEntry(workEntry);
+    //     } else if (tabValue === 3) {
+    //         scrollToEntry(contactEntry);
+    //     }
+    // }, [tabValue]);
 
     return (
         <Container
@@ -63,7 +140,12 @@ export function PresentationCard() {
             sx={{ position: "relative" }}
         >
             <Box sx={{ position: "relative", display: "flex", flexGrow: "1", justifyContent: "center" }}>
-                <StickyMenu contentHeight={contentHeight} tabValue={tabValue} setTabValue={setTabValue} />
+                <StickyMenu
+                    onTabChange={handleTabChange}
+                    contentHeight={contentHeight}
+                    tabValue={tabValue}
+                    // setTabValue={setTabValue}
+                />
             </Box>
 
             <Container
@@ -113,10 +195,13 @@ export function PresentationCard() {
                     <ResponsiveMasonry
                         className="work"
                         columnsCountBreakPoints={{ 400: 1, 850: 2, 1250: 3 }}
-                        style={{ padding: "2% 2% 2% 35%", backgroundColor: "#2c303a" }}
+                        style={{
+                            padding: "2% 2% 2% 35%",
+                            // backgroundColor: "#2c303a",
+                        }}
                     >
                         <Masonry gutter="25px">
-                            {new Array(23).fill(null).map((elem, index) => (
+                            {new Array(17).fill(null).map((elem, index) => (
                                 <Card
                                     key={Math.random()}
                                     sx={{
@@ -124,6 +209,7 @@ export function PresentationCard() {
                                         color: "white",
                                         width: "100%",
                                         height: "300px",
+                                        boxShadow: "4",
                                     }}
                                 >
                                     <CardContent>Project no. {index + 1}</CardContent>

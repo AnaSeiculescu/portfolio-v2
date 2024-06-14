@@ -6,7 +6,7 @@ import DownloadCV from "./DownloadCV";
 import GroupContactButtons from "./GroupContactButtons";
 import MadeWithLove from "./MadeWithLove";
 
-export default function StickyMenu({ contentHeight, tabValue, setTabValue }) {
+export default function StickyMenu({ onTabChange, contentHeight, tabValue, setTabValue }) {
     const menuStyle = {
         position: "absolute",
         top: "0",
@@ -39,23 +39,25 @@ export default function StickyMenu({ contentHeight, tabValue, setTabValue }) {
 
     return (
         <Box className="stickyMenu" style={menuStyle}>
-            <img
-                src={portfolioImage}
-                alt="portfolio-image"
-                style={{
-                    position: "absolute",
-                    top: "50vh",
-                    left: "-23%",
-                    // right: '20%',
-                    width: "300px",
-                    border: "8px solid #FFF",
-                    borderRadius: "3px",
-                    alignSelf: "end",
-                    marginRight: "30px",
-                }}
-            />
+            <Box>
+                <img
+                    src={portfolioImage}
+                    alt="portfolio-image"
+                    style={{
+                        position: "absolute",
+                        top: "50vh",
+                        left: "-23%",
+                        // right: '20%',
+                        width: "300px",
+                        border: "8px solid #FFF",
+                        borderRadius: "3px",
+                        alignSelf: "end",
+                        marginRight: "30px",
+                    }}
+                />
+            </Box>
 
-            <VerticalTabsPanel tabValue={tabValue} setTabValue={setTabValue} />
+            <VerticalTabsPanel onTabChange={onTabChange} tabValue={tabValue} setTabValue={setTabValue} />
             <GroupContactButtons />
             <DownloadCV />
             <MadeWithLove />
@@ -66,5 +68,6 @@ export default function StickyMenu({ contentHeight, tabValue, setTabValue }) {
 StickyMenu.propTypes = {
     setTabValue: PropTypes.func,
     tabValue: PropTypes.number,
+    onTabChange: PropTypes.func,
     contentHeight: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
