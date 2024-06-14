@@ -1,8 +1,8 @@
-import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
+// import Card from "@mui/material/Card";
+// import CardContent from "@mui/material/CardContent";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
-import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
+// import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 import { Typography } from "@mui/material";
 import { useEffect, useState, useRef } from "react";
 import StickyMenu from "./StickyMenu";
@@ -10,6 +10,7 @@ import AboutCards from "./AboutCards";
 import ContactCards from "./ContactCards";
 import { useInView } from "react-intersection-observer";
 import { usePrevious } from "@uidotdev/usehooks";
+import Work from "./Work";
 
 export function PresentationCard() {
     const contentRef = useRef(null);
@@ -69,7 +70,7 @@ export function PresentationCard() {
     useEffect(() => {
         // we use a timeout because we need to wait for the masonry layout to finnish arranging elements
         setTimeout(updateHeight);
-        // updateHeight();
+        updateHeight();
         window.addEventListener("resize", updateHeight);
         return () => {
             window.removeEventListener("resize", updateHeight);
@@ -192,7 +193,8 @@ export function PresentationCard() {
                     <AboutCards />
                 </Box>
                 <Box ref={workRef}>
-                    <ResponsiveMasonry
+                    <Work />
+                    {/* <ResponsiveMasonry
                         className="work"
                         columnsCountBreakPoints={{ 400: 1, 850: 2, 1250: 3 }}
                         style={{
@@ -216,7 +218,7 @@ export function PresentationCard() {
                                 </Card>
                             ))}
                         </Masonry>
-                    </ResponsiveMasonry>
+                    </ResponsiveMasonry> */}
                 </Box>
 
                 <Box

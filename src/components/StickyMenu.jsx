@@ -45,10 +45,10 @@ export default function StickyMenu({ onTabChange, contentHeight, tabValue, setTa
                     alt="portfolio-image"
                     style={{
                         position: "absolute",
-                        top: "50vh",
+                        top: "48vh",
                         left: "-23%",
                         // right: '20%',
-                        width: "300px",
+                        width: "260px",
                         border: "8px solid #FFF",
                         borderRadius: "3px",
                         alignSelf: "end",

@@ -10,7 +10,7 @@ const VerticalTabs = ({ tabValue, onTabChange }) => {
     };
 
     return (
-        <Box sx={{ display: "flex", position: "sticky", top: "23vh", alignSelf: "center" }}>
+        <Box sx={{ display: "flex", position: "sticky", top: "20vh", alignSelf: "center", zIndex: "10" }}>
             <Tabs
                 orientation="vertical"
                 variant="scrollable"

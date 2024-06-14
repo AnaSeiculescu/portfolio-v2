@@ -1,0 +1,75 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.work-container {
+    display: flex;
+    height: 45vh;
+    width: 100%;
+    position: relative;
+    margin: 5%;
+}
+
+.first-scroll-container,
+.second-scroll-container {
+    height: 43vh;
+}
+
+.first-carousell-primary,
+.first-crousell-secondary {
+    position: absolute;
+    top: 2%;
+    left: 100%;
+    width: 100%;
+    overflow: hidden;
+    /* white-space: nowrap; */
+}
+
+.second-carousell-primary,
+.second-carousell-secondary {
+    position: absolute;
+    top: 80%;
+    left: 100%;
+    width: 100%;
+    overflow: hidden;
+    /* white-space: nowrap; */
+}
+
+.first-carousell-primary Card {
+    width: 100%;
+    margin-left: 20px;
+    border-radius: 10px;
+    box-shadow: 6px 6px 2px black;
+}
+
+.second-carousell-primary Card {
+    width: 100%;
+    margin-left: 20px;
+    border-radius: 10px;
+    box-shadow: 6px 6px 2px black;
+}
+
+.first-carousell-primary,
+.second-carousell-primary {
+    display: flex;
+    justify-content: space-around;
+    animation: scroll-horizontal 20s linear infinite;
+}
+
+.first-crousell-secondary,
+.second-carousell-secondary {
+    animation: scroll-horizontal 20s linear infinite;
+    animation-delay: 10s;
+}
+
+@keyframes scroll-horizontal {
+    0% {
+        left: 100%;
+    }
+
+    100% {
+        left: -100%;
+    }
+}
