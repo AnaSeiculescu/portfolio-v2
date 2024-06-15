@@ -7,62 +7,83 @@
 .work-container {
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    height: 130vh;
     width: 100%;
     position: relative;
-    margin: 5%;
+    /* margin: 5%; */
 }
 
-.first-scroll-container,
-.second-scroll-container {
-    height: 23vh;
-}
-
-.first-carousell-primary,
-.first-crousell-secondary {
+.first-scroll-container {
     position: absolute;
-    top: 30%;
-    /* left: 100%; */
+    top: 18%;
+    height: 45vh;
+    width: 100vw;
+}
+
+.second-scroll-container {
+    position: absolute;
+    top: 60%;
+    height: 45vh;
+    width: 100vw;
+}
+
+.first-carousel-primary,
+.first-carousel-secondary {
+    position: absolute;
+    top: 25%;
+    /* top: 0; */
+    left: 100%;
     width: 100%;
+    height: 25vh;
     /* overflow: hidden; */
     /* white-space: nowrap; */
 }
 
-.second-carousell-primary,
-.second-carousell-secondary {
+.second-carousel-primary,
+.second-carousel-secondary {
     position: absolute;
-    top: 70%;
+    top: 25%;
     left: 100%;
     width: 100%;
     /* overflow: hidden; */
     /* white-space: nowrap; */
 }
 
-.first-carousell-primary Card {
+.first-carousel-primary Card {
     width: 100%;
     margin-left: 20px;
-    border-radius: 10px;
+    /* border-radius: 10px; */
 }
 
-.second-carousell-primary Card {
+.first-carousel-primary > .project {
+    transition: transform 0.3s ease-in-out;
+}
+
+.first-carousel-primary > .project:hover {
+    transform: scale(1.1);
+
+    transition-delay: 50ms;
+}
+
+.second-carousel-primary Card {
     width: 100%;
     margin-left: 20px;
-    border-radius: 10px;
+    /* border-radius: 10px; */
 }
 
-.first-carousell-primary,
-.second-carousell-primary {
+.first-carousel-primary,
+.second-carousel-primary {
     display: flex;
     justify-content: space-around;
     animation: scroll-horizontal 20s linear infinite;
 }
 
-.first-crousell-secondary {
+.first-carousel-secondary {
     animation: scroll-horizontal 20s linear infinite;
     animation-delay: 10s;
 }
 
-.second-carousell-secondary {
+.second-carousel-secondary {
     animation: scroll-horizontal 20s linear infinite;
     animation-delay: 10s;
 }
@@ -77,28 +98,28 @@
     }
 }
 
-.first-carousell-primary:hover,
-.first-carousell-primary:hover ~ .first-carousell-secondary {
+.first-carousel-primary:hover,
+.first-carousel-primary:hover ~ .first-carousel-secondary {
     animation-play-state: paused;
 }
 
-.first-carousell-secondary:hover {
+.first-carousel-secondary:hover {
     animation-play-state: paused;
 }
 
-.first-scroll-container:hover > .first-carousell-primary:not(:hover) {
+.first-scroll-container:hover > .first-carousel-primary:not(:hover) {
     animation-play-state: paused;
 }
 
-.second-carousell-primary:hover,
-.second-carousell-primary:hover ~ .second-carousell-secondary {
+.second-carousel-primary:hover,
+.second-carousel-primary:hover ~ .second-carousel-secondary {
     animation-play-state: paused;
 }
 
-.second-carousell-secondary:hover {
+.second-carousel-secondary:hover {
     animation-play-state: paused;
 }
 
-.second-scroll-container:hover > .second-carousell-primary:not(:hover) {
+.second-scroll-container:hover > .second-carousel-primary:not(:hover) {
     animation-play-state: paused;
 }
