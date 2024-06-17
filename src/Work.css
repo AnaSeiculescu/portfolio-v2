@@ -16,7 +16,7 @@
 .first-scroll-container {
     position: absolute;
     top: 5%;
-    height: 45vh;
+    height: 35vh;
     width: 100vw;
     z-index: 2;
 }
@@ -24,7 +24,7 @@
 .second-scroll-container {
     position: absolute;
     top: 55%;
-    height: 45vh;
+    height: 35vh;
     width: 100vw;
 }
 
@@ -57,17 +57,17 @@
 .second-carousel-primary {
     display: flex;
     justify-content: space-around;
-    animation: scroll-horizontal 20s linear infinite;
+    animation: scroll-horizontal 30s linear infinite;
 }
 
 .first-carousel-secondary {
-    animation: scroll-horizontal 20s linear infinite;
-    animation-delay: 10s;
+    animation: scroll-horizontal 30s linear infinite;
+    animation-delay: 15s;
 }
 
 .second-carousel-secondary {
-    animation: scroll-horizontal 20s linear infinite;
-    animation-delay: 10s;
+    animation: scroll-horizontal 30s linear infinite;
+    animation-delay: 15s;
 }
 
 @keyframes scroll-horizontal {
@@ -93,6 +93,11 @@
     animation-play-state: paused;
 }
 
+/* .first-carousel-secondary:hover,
+.first-carousel-primary {
+    animation-play-state: paused;
+} */
+
 .second-carousel-primary:hover,
 .second-carousel-primary:hover ~ .second-carousel-secondary {
     animation-play-state: paused;
@@ -105,3 +110,11 @@
 .second-scroll-container:hover > .second-carousel-primary:not(:hover) {
     animation-play-state: paused;
 }
+
+/* .first-scroll-container > *:hover {
+    animation-play-state: paused;
+} */
+
+/* .first-scroll-container:has(.project:hover) {
+    animation-play-state: paused;
+} */

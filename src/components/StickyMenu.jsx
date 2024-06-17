@@ -10,7 +10,7 @@ export default function StickyMenu({ onTabChange, contentHeight, tabValue, setTa
     const menuStyle = {
         position: "absolute",
         top: "0",
-        left: "13%",
+        left: "12%",
 
         display: "flex",
         flexDirection: "column",
@@ -26,7 +26,7 @@ export default function StickyMenu({ onTabChange, contentHeight, tabValue, setTa
         background:
             "linear-gradient(0deg, rgba(172,55,255,1) 0%, rgba(14,6,37,1) 45%, rgba(71,96,217,1) 72%, rgba(34,193,195,1) 100%)",
         color: "white",
-        boxShadow: 5,
+        boxShadow: 8,
         borderRadius: "0",
 
         width: "18%",
@@ -38,7 +38,7 @@ export default function StickyMenu({ onTabChange, contentHeight, tabValue, setTa
     };
 
     return (
-        <Box className="stickyMenu" style={menuStyle}>
+        <Box className="stickyMenu" sx={menuStyle}>
             <Box>
                 <img
                     src={portfolioImage}
@@ -51,8 +51,9 @@ export default function StickyMenu({ onTabChange, contentHeight, tabValue, setTa
                         width: "260px",
                         border: "8px solid #FFF",
                         borderRadius: "3px",
-                        alignSelf: "end",
+                        // alignSelf: "end",
                         marginRight: "30px",
+                        boxShadow: "1px 1px 5px rgb(117, 116, 116)",
                     }}
                 />
             </Box>

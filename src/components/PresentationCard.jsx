@@ -225,7 +225,7 @@ export function PresentationCard() {
                     className="contact"
                     ref={contactRef}
                     sx={{
-                        paddingTop: "850px",
+                        paddingTop: "650px",
                         marginLeft: "35%",
                         height: "130vh",
                         display: "flex",

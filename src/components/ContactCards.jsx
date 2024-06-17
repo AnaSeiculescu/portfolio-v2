@@ -7,7 +7,7 @@ export default function ContactCards() {
             <Card
                 sx={{
                     position: "absolute",
-                    top: "450px",
+                    top: "250px",
                     left: "10%",
                     width: "40%",
                     height: "50%",
