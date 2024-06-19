@@ -135,7 +135,8 @@ export default function Work() {
                 sx={{
                     boxShadow: "4",
                     width: "100%",
-                    backgroundColor: "#f0f1f0",
+                    // backgroundColor: "#f0f1f0",
+                    backgroundColor: "rgb(93, 75, 100)",
                 }}
             >
                 <Typography variant="h5" sx={{ paddingLeft: "55%" }}>

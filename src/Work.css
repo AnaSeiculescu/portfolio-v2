@@ -57,17 +57,17 @@
 .second-carousel-primary {
     display: flex;
     justify-content: space-around;
-    animation: scroll-horizontal 30s linear infinite;
+    animation: scroll-horizontal 35s linear infinite;
 }
 
 .first-carousel-secondary {
-    animation: scroll-horizontal 30s linear infinite;
-    animation-delay: 15s;
+    animation: scroll-horizontal 35s linear infinite;
+    animation-delay: 17.5s;
 }
 
 .second-carousel-secondary {
-    animation: scroll-horizontal 30s linear infinite;
-    animation-delay: 15s;
+    animation: scroll-horizontal 35s linear infinite;
+    animation-delay: 17.5s;
 }
 
 @keyframes scroll-horizontal {
