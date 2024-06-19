@@ -138,7 +138,7 @@ export function PresentationCard() {
             className="content"
             disableGutters={true}
             ref={contentRef}
-            sx={{ position: "relative" }}
+            // sx={{ position: "relative" }}
         >
             <Box sx={{ position: "relative", display: "flex", flexGrow: "1", justifyContent: "center" }}>
                 <StickyMenu
@@ -161,9 +161,10 @@ export function PresentationCard() {
                     ref={homeRef}
                     className="home"
                     sx={{
+                        backgroundColor: "#f0f1f0",
                         color: "black",
-                        height: "100vh",
-                        marginLeft: "28%",
+                        minHeight: "100vh",
+                        paddingLeft: "28%",
                         alignContent: "center",
                         textAlign: "center",
                         zIndex: "2",
@@ -184,7 +185,7 @@ export function PresentationCard() {
                     sx={{
                         paddingTop: "100px",
                         marginLeft: "35%",
-                        height: "100vh",
+                        minHeight: "100vh",
                         display: "flex",
                         flexDirection: "column",
                         position: "relative",
@@ -192,7 +193,7 @@ export function PresentationCard() {
                 >
                     <AboutCards />
                 </Box>
-                <Box ref={workRef}>
+                <Box ref={workRef} sx={{ backgroundColor: "#f0f1f0" }}>
                     <Work />
                     {/* <ResponsiveMasonry
                         className="work"
@@ -227,7 +228,7 @@ export function PresentationCard() {
                     sx={{
                         paddingTop: "650px",
                         marginLeft: "35%",
-                        height: "130vh",
+                        minHeight: "130vh",
                         display: "flex",
                         // flexDirection: "column",
                         position: "relative",

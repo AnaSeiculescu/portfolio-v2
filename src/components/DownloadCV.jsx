@@ -1,6 +1,7 @@
 import axios from "axios";
 import fileDownload from "js-file-download";
 import Button from "@mui/material/Button";
+import "../GroupContactButtons.css";
 
 export default function DownloadCV() {
     const myCvURL = "../../resources/AnaSeiculescu-Resume-CV.pdf";
@@ -26,6 +27,7 @@ export default function DownloadCV() {
 
     return (
         <Button
+            className="download-cv"
             sx={downloadBtnStyle}
             variant="text"
             color="warning"
