@@ -10,7 +10,7 @@ export default function StickyMenu({ onTabChange, contentHeight, tabValue, setTa
     const menuStyle = {
         position: "absolute",
         top: "0",
-        left: "12%",
+        left: "10%",
 
         display: "flex",
         flexDirection: "column",
@@ -48,7 +48,7 @@ export default function StickyMenu({ onTabChange, contentHeight, tabValue, setTa
                         top: "48vh",
                         left: "-23%",
                         // right: '20%',
-                        width: "260px",
+                        width: "250px",
                         border: "8px solid #FFF",
                         borderRadius: "3px",
                         // alignSelf: "end",

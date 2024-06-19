@@ -13,13 +13,37 @@ export default function GroupContactButtons() {
     return (
         <Box sx={groupBtnsStyle}>
             <Link href="" underline="none" target="blank">
-                <i className="fa-solid fa-envelope fa-xl" style={{ color: "#F9CF00" }}></i>
+                <i
+                    className="fa-solid fa-envelope fa-xl"
+                    style={{
+                        color: "#F9CF00",
+                        transition: "transform 0.3s ease-in-out",
+                        transform: "scale(1.1)",
+                        transitionDelay: "50ms",
+                    }}
+                ></i>
             </Link>
             <Link href="https://github.com/AnaSeiculescu" underline="none" target="blank">
-                <i className="fa-brands fa-github fa-xl" style={{ color: "#F9CF00" }}></i>
+                <i
+                    className="fa-brands fa-github fa-xl"
+                    style={{
+                        color: "#F9CF00",
+                        transition: "transform 0.3s ease-in-out",
+                        transform: "scale(1.1)",
+                        transitionDelay: "50ms",
+                    }}
+                ></i>
             </Link>
             <Link href="https://www.linkedin.com/in/ana-seiculescu/" underline="none" target="blank">
-                <i className="fa-brands fa-linkedin fa-xl" style={{ color: "#F9CF00" }}></i>
+                <i
+                    className="fa-brands fa-linkedin fa-xl"
+                    style={{
+                        color: "#F9CF00",
+                        transition: "transform 0.3s ease-in-out",
+                        transform: "scale(1.1)",
+                        transitionDelay: "50ms",
+                    }}
+                ></i>
             </Link>
         </Box>
     );

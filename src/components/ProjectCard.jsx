@@ -11,7 +11,7 @@ export function ProjectCard({ title, alt, imgSrc, linkHref }) {
             className="project"
             sx={{
                 width: 300,
-                height: 400,
+                height: 300,
                 marginRight: "15px",
                 backgroundColor: "lightgrey",
                 color: "white",
@@ -22,7 +22,7 @@ export function ProjectCard({ title, alt, imgSrc, linkHref }) {
             <Link href={linkHref} underline="none" target="blank">
                 <CardMedia
                     component="img"
-                    height="280"
+                    height="200"
                     image={imgSrc}
                     alt={alt}
                     sx={{ marginBottom: "15px", boxShadow: "3" }}
