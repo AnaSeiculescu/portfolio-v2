@@ -35,9 +35,9 @@ export function ProjectCard({ title, technologies, alt, imgSrc, linkHref }) {
                         {title}
                         {/* <br /> */}
                     </Typography>
-                    <Stack direction="row" spacing={1}>
+                    <Stack direction="row" spacing={0.5}>
                         {technologies.map((tech, index) => (
-                            <Chip key={index} label={tech} variant="outlined" />
+                            <Chip key={index} label={tech} variant="outlined" size="small" />
                         ))}
                     </Stack>
                 </CardContent>
