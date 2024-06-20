@@ -4,13 +4,13 @@ import Box from "@mui/material/Box";
 
 export default function ContactCards() {
     return (
-        <Box sx={{ width: "65%" }}>
+        <Box sx={{ width: "85%" }}>
             <Card
                 sx={{
                     // position: "absolute",
                     marginTop: "130px",
-                    marginLeft: "10%",
-                    width: "350px",
+                    marginLeft: "20%",
+                    width: "400px",
                     height: "450px",
                     boxShadow: "4",
                 }}

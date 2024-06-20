@@ -11,6 +11,7 @@
     /* transform: scale(1.2); */
     color: #b89e20;
     transition-delay: 50ms;
+    cursor: pointer;
 }
 
 .download-cv:hover {

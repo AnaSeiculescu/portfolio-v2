@@ -16,15 +16,17 @@
 .first-scroll-container {
     position: absolute;
     top: 5%;
-    height: 35vh;
+    /* height: 35vh; */
+    height: 400px;
     width: 100vw;
     z-index: 2;
 }
 
 .second-scroll-container {
     position: absolute;
-    top: 45%;
-    height: 35vh;
+    top: 50%;
+    /* height: 35vh; */
+    height: 400px;
     width: 100vw;
 }
 

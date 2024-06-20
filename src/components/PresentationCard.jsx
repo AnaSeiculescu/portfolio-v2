@@ -121,17 +121,9 @@ export function PresentationCard() {
         }
     };
 
-    // useEffect(() => {
-    //     if (tabValue === 0) {
-    //         scrollToEntry(homeEntry);
-    //     } else if (tabValue === 1) {
-    //         scrollToEntry(aboutEntry);
-    //     } else if (tabValue === 2) {
-    //         scrollToEntry(workEntry);
-    //     } else if (tabValue === 3) {
-    //         scrollToEntry(contactEntry);
-    //     }
-    // }, [tabValue]);
+    const handleClickEmail = () => {
+        scrollToEntry(contactEntry);
+    };
 
     return (
         <Container
@@ -151,6 +143,7 @@ export function PresentationCard() {
                     onTabChange={handleTabChange}
                     contentHeight={contentHeight}
                     tabValue={tabValue}
+                    onClickEmail={handleClickEmail}
                     // setTabValue={setTabValue}
                 />
             </Box>
@@ -161,6 +154,8 @@ export function PresentationCard() {
                 className="scrollingArea"
                 sx={{
                     overflow: "auto",
+                    // marginBottom: "25px",
+                    // boxShadow: 5,
                 }}
             >
                 <Box
@@ -211,33 +206,7 @@ export function PresentationCard() {
                     }}
                 >
                     <Work />
-                    {/* <ResponsiveMasonry
-                        className="work"
-                        columnsCountBreakPoints={{ 400: 1, 850: 2, 1250: 3 }}
-                        style={{
-                            padding: "2% 2% 2% 35%",
-                            // backgroundColor: "#2c303a",
-                        }}
-                    >
-                        <Masonry gutter="25px">
-                            {new Array(17).fill(null).map((elem, index) => (
-                                <Card
-                                    key={Math.random()}
-                                    sx={{
-                                        backgroundColor: "#1E1F22",
-                                        color: "white",
-                                        width: "100%",
-                                        height: "300px",
-                                        boxShadow: "4",
-                                    }}
-                                >
-                                    <CardContent>Project no. {index + 1}</CardContent>
-                                </Card>
-                            ))}
-                        </Masonry>
-                    </ResponsiveMasonry> */}
                 </Box>
-
                 <Box
                     className="contact"
                     ref={contactRef}
@@ -253,8 +222,11 @@ export function PresentationCard() {
                     <Divider textAlign="right">get in touch</Divider>
                     <ContactCards />
                 </Box>
-                <Box sx={{ backgroundColor: "#f0f1f0", width: "100%", height: "20vh" }}></Box>
             </Container>
+
+            <Box sx={{ backgroundColor: "#f0f1f0", width: "100%", height: "15vh", overflow: "hidden" }}>
+                <Box sx={{ width: "100%", height: "10px", boxShadow: 5, position: "relative", top: "-10px" }}></Box>
+            </Box>
         </Container>
     );
 }

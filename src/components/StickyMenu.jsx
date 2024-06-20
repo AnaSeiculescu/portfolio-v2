@@ -6,7 +6,7 @@ import DownloadCV from "./DownloadCV";
 import GroupContactButtons from "./GroupContactButtons";
 import MadeWithLove from "./MadeWithLove";
 
-export default function StickyMenu({ onTabChange, contentHeight, tabValue, setTabValue }) {
+export default function StickyMenu({ onTabChange, contentHeight, tabValue, setTabValue, onClickEmail }) {
     const menuStyle = {
         position: "absolute",
         top: "0",
@@ -35,7 +35,7 @@ export default function StickyMenu({ onTabChange, contentHeight, tabValue, setTa
 
         textAlign: "center",
         zIndex: "5",
-        opacity: "0.93",
+        opacity: "0.95",
     };
 
     return (
@@ -60,7 +60,7 @@ export default function StickyMenu({ onTabChange, contentHeight, tabValue, setTa
             </Box>
 
             <VerticalTabsPanel onTabChange={onTabChange} tabValue={tabValue} setTabValue={setTabValue} />
-            <GroupContactButtons />
+            <GroupContactButtons onClickEmail={onClickEmail} />
             <DownloadCV />
             <MadeWithLove />
         </Box>
@@ -71,5 +71,6 @@ StickyMenu.propTypes = {
     setTabValue: PropTypes.func,
     tabValue: PropTypes.number,
     onTabChange: PropTypes.func,
+    onClickEmail: PropTypes.func,
     contentHeight: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };

@@ -5,7 +5,7 @@ export const latestProjectsPropsPrimary = [
         alt: "power-organizer",
         imgSrc: "../../images/power-organizer.jpg",
         linkHref: "",
-        technologies: ["React.js", "Material UI"],
+        technologies: ["React.js", "JavaScript", "Material UI"],
     },
     {
         id: 1.2,
@@ -40,7 +40,7 @@ export const latestProjectsPropsSecondary = [
         alt: "power-organizer",
         imgSrc: "../../images/power-organizer.jpg",
         linkHref: "",
-        technologies: ["React.js", "Material UI"],
+        technologies: ["React.js", "JavaScript", "Material UI"],
     },
     {
         id: 1.6,

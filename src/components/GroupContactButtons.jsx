@@ -1,8 +1,9 @@
 import Box from "@mui/material/Box";
 import Link from "@mui/material/Link";
 import "../GroupContactButtons.css";
+import PropTypes from "prop-types";
 
-export default function GroupContactButtons() {
+export default function GroupContactButtons({ onClickEmail }) {
     const groupBtnsStyle = {
         position: "sticky",
         top: "83.5vh",
@@ -13,7 +14,7 @@ export default function GroupContactButtons() {
     };
     return (
         <Box sx={groupBtnsStyle}>
-            <Link href="" underline="none" target="blank">
+            <Link onClick={onClickEmail} underline="none" target="blank">
                 <i className="fa-solid fa-envelope fa-xl"></i>
             </Link>
             <Link href="https://github.com/AnaSeiculescu" underline="none" target="blank">
@@ -25,3 +26,7 @@ export default function GroupContactButtons() {
         </Box>
     );
 }
+
+GroupContactButtons.propTypes = {
+    onClickEmail: PropTypes.func,
+};
