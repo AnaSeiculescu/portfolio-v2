@@ -10,6 +10,7 @@ export default function AboutCards() {
                     width: "30%",
                     height: "150px",
                     marginLeft: "50%",
+                    marginTop: "50px",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
@@ -21,7 +22,7 @@ export default function AboutCards() {
             <Card
                 sx={{
                     position: "absolute",
-                    top: "200px",
+                    top: "250px",
                     left: "10%",
                     width: "60%",
                     height: "60%",

@@ -11,6 +11,7 @@ import ContactCards from "./ContactCards";
 import { useInView } from "react-intersection-observer";
 import { usePrevious } from "@uidotdev/usehooks";
 import Work from "./Work";
+import Divider from "@mui/material/Divider";
 
 export function PresentationCard() {
     const contentRef = useRef(null);
@@ -138,7 +139,12 @@ export function PresentationCard() {
             className="content"
             disableGutters={true}
             ref={contentRef}
-            // sx={{ position: "relative" }}
+            sx={
+                {
+                    // position: "relative",
+                    // border: "20px solid white",
+                }
+            }
         >
             <Box sx={{ position: "relative", display: "flex", flexGrow: "1", justifyContent: "center" }}>
                 <StickyMenu
@@ -161,7 +167,7 @@ export function PresentationCard() {
                     ref={homeRef}
                     className="home"
                     sx={{
-                        backgroundColor: "#f0f1f0",
+                        // backgroundColor: "#f0f1f0",
                         color: "black",
                         minHeight: "100vh",
                         paddingLeft: "28%",
@@ -179,11 +185,12 @@ export function PresentationCard() {
                         I&apos;m Ana
                     </Typography>
                 </Box>
+
                 <Box
                     ref={aboutRef}
                     className="about"
                     sx={{
-                        paddingTop: "100px",
+                        paddingTop: "80px",
                         marginLeft: "35%",
                         minHeight: "100vh",
                         display: "flex",
@@ -191,9 +198,18 @@ export function PresentationCard() {
                         position: "relative",
                     }}
                 >
+                    <Divider textAlign="right">some about me</Divider>
                     <AboutCards />
                 </Box>
-                <Box ref={workRef} sx={{ backgroundColor: "#f0f1f0" }}>
+
+                <Box
+                    ref={workRef}
+                    sx={{
+                        // backgroundColor: "#f0f1f0",
+                        paddingTop: "80px",
+                        // paddingLeft: "35%",
+                    }}
+                >
                     <Work />
                     {/* <ResponsiveMasonry
                         className="work"
@@ -226,14 +242,15 @@ export function PresentationCard() {
                     className="contact"
                     ref={contactRef}
                     sx={{
-                        paddingTop: "650px",
+                        // paddingTop: "650px",
                         marginLeft: "35%",
                         minHeight: "130vh",
-                        display: "flex",
+                        // display: "flex",
                         // flexDirection: "column",
                         position: "relative",
                     }}
                 >
+                    <Divider textAlign="right">get in touch</Divider>
                     <ContactCards />
                 </Box>
             </Container>

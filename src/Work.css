@@ -7,7 +7,7 @@
 .work-container {
     display: flex;
     flex-direction: column;
-    height: 140vh;
+    min-height: 150vh;
     width: 100%;
     position: relative;
     /* margin: 5%; */
@@ -23,7 +23,7 @@
 
 .second-scroll-container {
     position: absolute;
-    top: 55%;
+    top: 45%;
     height: 35vh;
     width: 100vw;
 }
