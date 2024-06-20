@@ -1,8 +1,6 @@
-// import Card from "@mui/material/Card";
-// import CardContent from "@mui/material/CardContent";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
-// import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
+
 import { Typography } from "@mui/material";
 import { useEffect, useState, useRef } from "react";
 import StickyMenu from "./StickyMenu";
@@ -77,28 +75,13 @@ export function PresentationCard() {
             window.removeEventListener("resize", updateHeight);
         };
     }, []);
-
-    // const homeRef = useRef(null);
-    // const aboutRef = useRef(null);
-    // const workRef = useRef(null);
-    // const contactRef = useRef(null);
-
-    // console.log("window.scroll: ", window.scroll());
     const scrollToEntry = (entry) => {
         console.log("entry: ", entry);
-        // if (ref && ref.current) {
-        //     window.scrollTo({ top: ref.current.offsetTop, behavior: "smooth" });
-        //     console.log("ref.current: ", ref.current);
-        // }
         console.log("entry.target.clientTop", entry.target.clientTop);
         console.log("entry.target.scrollTop", entry.target.scrollTop);
         console.log("entry.target.getBoundingClientRect()", entry.target.getBoundingClientRect());
 
         window.scrollBy({ top: entry.target.getBoundingClientRect().top, behavior: "smooth" });
-        // window.scroll({
-        //     top: entry.boundingClientRect.top,
-        //     behavior: "smooth",
-        // });
     };
 
     const handleTabChange = (newTab) => {
@@ -138,13 +121,12 @@ export function PresentationCard() {
                 }
             }
         >
-            <Box sx={{ position: "relative", display: "flex", flexGrow: "1", justifyContent: "center" }}>
+            <Box sx={{ display: "flex", flexGrow: "1", justifyContent: "center" }}>
                 <StickyMenu
                     onTabChange={handleTabChange}
                     contentHeight={contentHeight}
                     tabValue={tabValue}
                     onClickEmail={handleClickEmail}
-                    // setTabValue={setTabValue}
                 />
             </Box>
 
@@ -154,6 +136,9 @@ export function PresentationCard() {
                 className="scrollingArea"
                 sx={{
                     overflow: "auto",
+                    // position: "relative",
+                    // clipPath: "circle(40%)",
+                    // backgroundColor: "#f0f1f0",
                     // marginBottom: "25px",
                     // boxShadow: 5,
                 }}
@@ -211,21 +196,41 @@ export function PresentationCard() {
                     className="contact"
                     ref={contactRef}
                     sx={{
-                        // paddingTop: "650px",
-                        marginLeft: "35%",
+                        paddingTop: "70px",
+                        paddingLeft: "35%",
                         minHeight: "110vh",
                         // display: "flex",
                         // flexDirection: "column",
                         position: "relative",
+                        backgroundColor: "#fafafa",
                     }}
                 >
-                    <Divider textAlign="right">get in touch</Divider>
+                    {/* <Divider textAlign="right">get in touch</Divider> */}
                     <ContactCards />
                 </Box>
+                {/* <Box
+                    sx={{
+                        backgroundColor: "#d096e7",
+                        width: "80px",
+                        height: "80px",
+                        position: "relative",
+                        bottom: "-40px",
+                        left: "60%",
+                        borderRadius: "50%",
+                    }}
+                ></Box> */}
             </Container>
 
-            <Box sx={{ backgroundColor: "#f0f1f0", width: "100%", height: "15vh", overflow: "hidden" }}>
-                <Box sx={{ width: "100%", height: "10px", boxShadow: 5, position: "relative", top: "-10px" }}></Box>
+            <Box sx={{ backgroundColor: "#f0f1f0", width: "100%", height: "6vh", overflow: "hidden" }}>
+                <Box
+                    sx={{
+                        width: "100%",
+                        height: "10px",
+                        boxShadow: 4,
+                        position: "relative",
+                        top: "-10px",
+                    }}
+                ></Box>
             </Box>
         </Container>
     );
