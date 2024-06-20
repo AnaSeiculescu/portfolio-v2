@@ -35,6 +35,7 @@ export default function StickyMenu({ onTabChange, contentHeight, tabValue, setTa
 
         textAlign: "center",
         zIndex: "5",
+        opacity: "0.93",
     };
 
     return (

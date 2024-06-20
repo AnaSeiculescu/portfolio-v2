@@ -1,16 +1,17 @@
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
+import Box from "@mui/material/Box";
 
 export default function ContactCards() {
     return (
-        <>
+        <Box sx={{ width: "65%" }}>
             <Card
                 sx={{
-                    position: "absolute",
-                    top: "250px",
-                    left: "10%",
-                    width: "40%",
-                    height: "50%",
+                    // position: "absolute",
+                    marginTop: "130px",
+                    marginLeft: "10%",
+                    width: "350px",
+                    height: "450px",
                     boxShadow: "4",
                 }}
             >
@@ -19,17 +20,18 @@ export default function ContactCards() {
             <Card
                 sx={{
                     boxShadow: "5",
-                    width: "25%",
-                    height: "100px",
-                    marginLeft: "45%",
+                    width: "200px",
+                    height: "70px",
+                    marginLeft: "80%",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
                     zIndex: "2",
+                    transform: "translateY(-150%) translateX(-70%)",
                 }}
             >
                 <CardContent>Contact me</CardContent>
             </Card>
-        </>
+        </Box>
     );
 }

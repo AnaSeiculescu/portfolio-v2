@@ -244,7 +244,7 @@ export function PresentationCard() {
                     sx={{
                         // paddingTop: "650px",
                         marginLeft: "35%",
-                        minHeight: "130vh",
+                        minHeight: "110vh",
                         // display: "flex",
                         // flexDirection: "column",
                         position: "relative",
@@ -253,6 +253,7 @@ export function PresentationCard() {
                     <Divider textAlign="right">get in touch</Divider>
                     <ContactCards />
                 </Box>
+                <Box sx={{ backgroundColor: "#f0f1f0", width: "100%", height: "20vh" }}></Box>
             </Container>
         </Container>
     );
