@@ -27,7 +27,9 @@ export default function ContactCards() {
                     marginRight: "-5px",
                     // width: "800px",
                     // height: "400px",
-                    boxShadow: "4",
+                    boxShadow: "5",
+                    // background:
+                    //     "linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(192,76,241,1) 11%, rgba(255,255,255,1) 100%)",
                     // backgroundColor: "#e5edbc",
                     // opacity: "7",
                 }}
@@ -156,12 +158,17 @@ export default function ContactCards() {
                     // backgroundColor: "#25dbc4",
                     backgroundColor: "#f7d31e",
                     // backgroundColor: "#c7e72e",
-                    opacity: "0.90",
+                    opacity: "0.85",
                     // transform: "translateY(-580%) translateX(-70%)",
                 }}
             >
-                <CardContent>Send me an email</CardContent>
+                <CardContent sx={{ fontSize: "20px", textAlign: "center" }}>Send me an email</CardContent>
             </Card>
+
+            <Typography variant="subtitle1" align="center" sx={{ padding: "5% 5% 5% 35%", color: "grey" }}>
+                I welcome all feedback—whether you found delight, distaste, excitement, or boredom here. Your thoughts
+                are invaluable to me. <br /> Thank you!
+            </Typography>
         </Box>
     );
 }

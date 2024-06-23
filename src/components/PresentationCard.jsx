@@ -171,7 +171,7 @@ export function PresentationCard() {
                     className="about"
                     sx={{
                         paddingTop: "80px",
-                        marginLeft: "35%",
+                        // marginLeft: "35%",
                         // height: "100vh",
                         // display: "flex",
                         // flexDirection: "column",
