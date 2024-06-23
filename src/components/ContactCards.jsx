@@ -28,7 +28,8 @@ export default function ContactCards() {
                     // width: "800px",
                     // height: "400px",
                     boxShadow: "4",
-                    // backgroundColor: "#2d2936",
+                    // backgroundColor: "#e5edbc",
+                    // opacity: "7",
                 }}
             >
                 <CardContent>
@@ -40,7 +41,7 @@ export default function ContactCards() {
                         // flexWrap="wrap"
                     > */}
                     <Stack
-                        sx={{ justifyContent: "center", flexGrow: "1", margin: "30px 0", padding: "0 8% 0 2%" }}
+                        sx={{ justifyContent: "center", flexGrow: "1", margin: "30px 0", padding: "0 8% 0 32%" }}
                         spacing={{ xs: 5, sm: 3 }}
                         direction="row"
                         useFlexGap
@@ -138,16 +139,24 @@ export default function ContactCards() {
             <Card
                 sx={{
                     position: "absolute",
-                    top: "-50px",
+                    // top: "-50px",
+                    top: "-150px",
                     right: "8%",
                     boxShadow: "5",
-                    width: "200px",
-                    height: "70px",
+                    // width: "200px",
+                    // height: "70px",
+                    width: "180px",
+                    height: "180px",
+                    borderRadius: "50%",
                     marginLeft: "80%",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
                     zIndex: "2",
+                    // backgroundColor: "#25dbc4",
+                    backgroundColor: "#f7d31e",
+                    // backgroundColor: "#c7e72e",
+                    opacity: "0.90",
                     // transform: "translateY(-580%) translateX(-70%)",
                 }}
             >

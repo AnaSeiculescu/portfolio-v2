@@ -9,7 +9,7 @@ import ContactCards from "./ContactCards";
 import { useInView } from "react-intersection-observer";
 import { usePrevious } from "@uidotdev/usehooks";
 import Work from "./Work";
-import Divider from "@mui/material/Divider";
+// import Divider from "@mui/material/Divider";
 
 export function PresentationCard() {
     const contentRef = useRef(null);
@@ -172,13 +172,13 @@ export function PresentationCard() {
                     sx={{
                         paddingTop: "80px",
                         marginLeft: "35%",
-                        minHeight: "100vh",
-                        display: "flex",
-                        flexDirection: "column",
+                        // height: "100vh",
+                        // display: "flex",
+                        // flexDirection: "column",
                         position: "relative",
                     }}
                 >
-                    <Divider textAlign="right">some about me</Divider>
+                    {/* <Divider textAlign="right">some about me</Divider> */}
                     <AboutCards />
                 </Box>
 
@@ -197,12 +197,12 @@ export function PresentationCard() {
                     ref={contactRef}
                     sx={{
                         paddingTop: "70px",
-                        paddingLeft: "35%",
+                        // paddingLeft: "35%",
                         minHeight: "110vh",
                         // display: "flex",
                         // flexDirection: "column",
                         position: "relative",
-                        backgroundColor: "#fafafa",
+                        // backgroundColor: "#fafafa",
                     }}
                 >
                     {/* <Divider textAlign="right">get in touch</Divider> */}
