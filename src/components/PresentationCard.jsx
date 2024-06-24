@@ -184,11 +184,13 @@ export function PresentationCard() {
 
                 <Box
                     ref={workRef}
-                    sx={{
-                        // backgroundColor: "#f0f1f0",
-                        paddingTop: "80px",
-                        // paddingLeft: "35%",
-                    }}
+                    sx={
+                        {
+                            // backgroundColor: "#f0f1f0",
+                            // paddingTop: "40px",
+                            // paddingLeft: "35%",
+                        }
+                    }
                 >
                     <Work />
                 </Box>

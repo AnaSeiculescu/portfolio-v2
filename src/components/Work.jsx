@@ -94,7 +94,7 @@ export default function Work() {
             </Box>
 
             <Box className="my-inspiration" sx={{ paddingLeft: "55%", width: "100%", height: "300px" }}>
-                <Typography variant="h5">where did I get my inspiration</Typography>
+                <Typography variant="h5">where did I get my inspiration from</Typography>
             </Box>
             {/* <Box className='my-learning'>
     <Typography variant="h5" sx={{ paddingLeft: "55%" }}>

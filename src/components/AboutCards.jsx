@@ -36,6 +36,7 @@ export default function AboutCards() {
             <Card
                 sx={{
                     marginTop: "150px",
+                    marginBottom: "80px",
                     padding: "0 5% 0 37%",
                     boxShadow: "5",
                     // background:
@@ -63,29 +64,26 @@ export default function AboutCards() {
                             itself.&quot;
                             <br /> — Adam Elenbaas
                         </span>
-                        <Divider sx={{ marginTop: "30px" }}></Divider>
+                        <Divider sx={{ marginTop: "50px", marginBottom: "50px" }}></Divider>
                         <Typography className="about-me" align="left">
                             <br />
-                            <br />
+
                             <p>
-                                <Typography sx={{ textAlign: "center" }}>
+                                <Typography sx={{}}>
                                     I am a junior web developer, curious and open-minded, eager to learn 🦋 and embrace
                                     new challenges.
                                 </Typography>
-                                <Divider sx={{ marginTop: "30px" }}></Divider>
-                                <br />
+                                {/* <Divider sx={{ marginTop: "30px" }}></Divider> */}
                                 <br />I have honed skills in managing small projects, maintaining client communications,
                                 and being both independent and proactive through my experience as a construction
                                 architect. Larger projects have taught me the value of teamwork.🐜
                             </p>
-                            <Divider sx={{ marginTop: "30px" }}></Divider>
-                            <br />
 
-                            <Typography sx={{ textAlign: "center" }}>
+                            <Typography sx={{}}>
                                 I have learned that trust and communication within a team 🌤️ can transform work into a
                                 joyful and successful endeavor; without these, work becomes a less inspiring place. ⛈️
                             </Typography>
-                            <Divider sx={{ marginTop: "30px" }}></Divider>
+                            {/* <Divider sx={{ marginTop: "30px" }}></Divider> */}
                             <br />
 
                             <br />
@@ -101,7 +99,7 @@ export default function AboutCards() {
                                 walks, reading, and listening to music.
                             </p>
                             <br />
-                            <Divider sx={{ marginTop: "30px" }}></Divider>
+                            <Divider sx={{ marginTop: "10px" }}></Divider>
                             <br />
                             <p>
                                 🦋 I eagerly await the opportunity to join a dynamic work environment where I can

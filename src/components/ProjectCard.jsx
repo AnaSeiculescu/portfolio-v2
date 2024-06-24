@@ -24,7 +24,7 @@ export function ProjectCard({ title, technologies, alt, imgSrc, linkHref }) {
             <Link href={linkHref} underline="none" target="blank">
                 <CardMedia
                     component="img"
-                    height="200"
+                    height="180"
                     // width="285"
                     image={imgSrc}
                     alt={alt}
