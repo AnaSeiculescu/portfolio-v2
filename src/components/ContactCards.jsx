@@ -165,7 +165,7 @@ export default function ContactCards() {
                 <CardContent sx={{ fontSize: "20px", textAlign: "center" }}>Send me an email</CardContent>
             </Card>
 
-            <Typography variant="subtitle1" align="center" sx={{ padding: "5% 5% 5% 35%", color: "grey" }}>
+            <Typography variant="subtitle1" align="center" sx={{ padding: "5% 5% 5% 30%", color: "grey" }}>
                 I welcome all feedback—whether you found delight, distaste, excitement, or boredom here. Your thoughts
                 are invaluable to me. <br /> Thank you!
             </Typography>

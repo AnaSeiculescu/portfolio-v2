@@ -1,6 +1,8 @@
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
+import "../AboutCards.css";
+import Divider from "@mui/material/Divider";
 
 export default function AboutCards() {
     return (
@@ -46,7 +48,7 @@ export default function AboutCards() {
                         align="center"
                         sx={{
                             marginTop: "13%",
-                            marginBottom: "5%",
+                            marginBottom: "8%",
                             color: "grey",
                             maxWidth: "80ch",
                         }}
@@ -61,26 +63,50 @@ export default function AboutCards() {
                             itself.&quot;
                             <br /> — Adam Elenbaas
                         </span>
-                        <Typography align="left" sx={{ textIndent: "25px" }}>
-                            <br />
-                            <br />I am a junior web developer, curious and open-minded, eager to learn and embrace new
-                            challenges. I have honed skills in managing small projects, maintaining client
-                            communications, and being both independent and proactive through my experience as a
-                            construction architect. Larger projects have taught me the value of teamwork.
-                            <br />
-                            I have learned that trust and communication within a team can transform work into a joyful
-                            and successful endeavor; without these, work becomes a less inspiring place.
+                        <Divider sx={{ marginTop: "30px" }}></Divider>
+                        <Typography className="about-me" align="left">
                             <br />
                             <br />
-                            For some time now, I have been studying frontend development through online platforms and
-                            teaching courses. I am also part of the WebDev Remote Learning Program at Nagarro company.
+                            <p>
+                                <Typography sx={{ textAlign: "center" }}>
+                                    I am a junior web developer, curious and open-minded, eager to learn 🦋 and embrace
+                                    new challenges.
+                                </Typography>
+                                <Divider sx={{ marginTop: "30px" }}></Divider>
+                                <br />
+                                <br />I have honed skills in managing small projects, maintaining client communications,
+                                and being both independent and proactive through my experience as a construction
+                                architect. Larger projects have taught me the value of teamwork.🐜
+                            </p>
+                            <Divider sx={{ marginTop: "30px" }}></Divider>
                             <br />
+
+                            <Typography sx={{ textAlign: "center" }}>
+                                I have learned that trust and communication within a team 🌤️ can transform work into a
+                                joyful and successful endeavor; without these, work becomes a less inspiring place. ⛈️
+                            </Typography>
+                            <Divider sx={{ marginTop: "30px" }}></Divider>
                             <br />
-                            When I&apos;m not at my computer, I enjoy meeting friends, engaging in sports, going for
-                            walks, reading, and listening to music.
+
                             <br />
-                            <br />I eagerly await the opportunity to join a dynamic work environment where I can
-                            continue to learn and contribute.
+                            <p>
+                                🐾 For some time now, I have been studying frontend development through online platforms
+                                and teaching courses. I am also part of the WebDev Remote Learning Program at Nagarro
+                                company.
+                            </p>
+                            <br />
+                            {/* <br /> */}
+                            <p>
+                                When I&apos;m not at my computer, I enjoy meeting friends, engaging in sports, going for
+                                walks, reading, and listening to music.
+                            </p>
+                            <br />
+                            <Divider sx={{ marginTop: "30px" }}></Divider>
+                            <br />
+                            <p>
+                                🦋 I eagerly await the opportunity to join a dynamic work environment where I can
+                                continue to learn and contribute.
+                            </p>
                         </Typography>
                     </Typography>
                 </CardContent>

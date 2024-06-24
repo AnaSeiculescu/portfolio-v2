@@ -1,0 +1,6 @@
+.about-me > p::first-letter {
+    /* padding-left: 35px; */
+    /* font-size: 1.4rem;
+    font-weight: 400;
+    color: black; */
+}
