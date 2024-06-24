@@ -6,7 +6,7 @@ export const latestProjectsPropsPrimary = [
         imgSrc: "../../images/power-organizer.jpg",
         linkHref: "",
         technologies: ["React.js", "JavaScript", "Material UI"],
-        description: "An app that helps you keep track of your todos",
+        description: "helps you keep track of your todos depending on the calendar",
     },
     {
         id: 1.2,
@@ -14,8 +14,8 @@ export const latestProjectsPropsPrimary = [
         alt: "dizzy-notes",
         imgSrc: "../../images/dizzy-notes.jpg",
         linkHref: "https://anaseiculescu.github.io/keep-notes/",
-        technologies: ["JavaScript", "Masonry", "CSS", "HTML"],
-        description: "",
+        technologies: ["JavaScript", "Masonry", "CSS", "LocalStorage/node-storage"],
+        description: "your can add and delete coloured notes, storaged locally / with node-storage api",
     },
     {
         id: 1.3,
@@ -23,8 +23,8 @@ export const latestProjectsPropsPrimary = [
         alt: "call-a-cat",
         imgSrc: "../../images/catAPI.jpg",
         linkHref: "https://cat-caller.netlify.app/#",
-        technologies: ["React.js", "Bootstrap", "Netlify"],
-        description: "",
+        technologies: ["React.js", "The Cat API", "Bootstrap", "Netlify"],
+        description: "call how many cat you want to colect, from The Cat API",
     },
     {
         id: 1.4,
@@ -33,7 +33,7 @@ export const latestProjectsPropsPrimary = [
         imgSrc: '"../../images/collection-map.jpg',
         linkHref: "https://anaseiculescu.github.io/collection-map/",
         technologies: ["JavaScript", "jQuery", "GoogleMapsAPI", "CSS"],
-        description: "",
+        description: "search for locations and you can collect them on your map and in your list",
     },
 ];
 
@@ -45,7 +45,7 @@ export const latestProjectsPropsSecondary = [
         imgSrc: "../../images/power-organizer.jpg",
         linkHref: "",
         technologies: ["React.js", "JavaScript", "Material UI"],
-        description: "",
+        description: "helps you keep track of your todos depending on the calendar",
     },
     {
         id: 1.6,
@@ -53,8 +53,8 @@ export const latestProjectsPropsSecondary = [
         alt: "dizzy-notes",
         imgSrc: "../../images/dizzy-notes.jpg",
         linkHref: "https://anaseiculescu.github.io/keep-notes/",
-        technologies: ["JavaScript", "Masonry", "CSS", "HTML"],
-        description: "",
+        technologies: ["JavaScript", "Masonry", "CSS", "LocalStorage/node-storage"],
+        description: "your can add and delete coloured notes, storaged locally / with node-storage api",
     },
     {
         id: 1.7,
@@ -62,8 +62,8 @@ export const latestProjectsPropsSecondary = [
         alt: "call-a-cat",
         imgSrc: "../../images/catAPI.jpg",
         linkHref: "https://cat-caller.netlify.app/#",
-        technologies: ["React.js", "Bootstrap", "Netlify"],
-        description: "",
+        technologies: ["React.js", "The Cat API", "Bootstrap", "Netlify"],
+        description: "call how many cat you want to colect, from The Cat API",
     },
     {
         id: 1.8,
@@ -72,7 +72,7 @@ export const latestProjectsPropsSecondary = [
         imgSrc: '"../../images/collection-map.jpg',
         linkHref: "https://anaseiculescu.github.io/collection-map/",
         technologies: ["JavaScript", "jQuery", "GoogleMapsAPI", "CSS"],
-        description: "",
+        description: "search for locations and you can collect them on your map and in your list",
     },
 ];
 

@@ -6,6 +6,7 @@ import Link from "@mui/material/Link";
 import PropTypes from "prop-types";
 import Chip from "@mui/material/Chip";
 import Stack from "@mui/material/Stack";
+import Divider from "@mui/material/Divider";
 
 export function ProjectCard({ title, technologies, alt, imgSrc, linkHref, description }) {
     return (
@@ -43,12 +44,11 @@ export function ProjectCard({ title, technologies, alt, imgSrc, linkHref, descri
                 }}
             >
                 {/* <Stack direction="column"> */}
-                <Typography sx={{ color: "black", fontSize: "14px" }}>
+                <Typography sx={{ color: "black", fontSize: "16px", fontWeight: "600" }}>
                     {title}
-                    <br />
-                    <br />
-                    {description}
+                    <Divider sx={{ marginTop: "10px" }}></Divider>
                 </Typography>
+                <Typography sx={{ color: "black", fontSize: "14px" }}>{description}</Typography>
                 <Stack direction="row" spacing={0.5}>
                     {technologies.map((tech, index) => (
                         <Chip key={index} label={tech} variant="outlined" size="small" />

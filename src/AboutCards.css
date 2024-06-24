@@ -1,3 +1,4 @@
-.letter-space {
-    letter-spacing: 0.2px;
+p.letter-space {
+    letter-spacing: 0.5px;
+    line-height: 1.7;
 }

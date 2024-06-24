@@ -44,7 +44,7 @@ export default function AboutCards() {
                     //     "linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(46,153,251,1) 11%, rgba(255,255,255,1) 100%)",
                 }}
             >
-                <CardContent>
+                <CardContent sx={{ maxWidth: "80ch" }}>
                     <Typography
                         variant="subtitle1"
                         align="center"
@@ -52,9 +52,9 @@ export default function AboutCards() {
                             marginTop: "13%",
                             marginBottom: "8%",
                             color: "grey",
-                            maxWidth: "80ch",
-                            letterSpacing: "0.3px",
-                            // lineHeight: "1.5",
+                            // maxWidth: "80ch",
+                            letterSpacing: "0.5px",
+                            lineHeight: "1.7",
                         }}
                     >
                         I believe in signs, communication, teamwork, friendship, gratitude…
@@ -63,40 +63,51 @@ export default function AboutCards() {
                         <br />
                         <br />
                         <span>
-                            &quot;The mind is beautiful because of the paradox. It uses itself to understand
-                            itself.&quot;
+                            <i>
+                                &quot;The mind is beautiful because of the paradox. It uses itself to understand
+                                itself.&quot;
+                            </i>
                             <br /> — Adam Elenbaas
                         </span>
-                        <Divider sx={{ marginTop: "50px", marginBottom: "40px", fontSize: "20px" }}>🦋</Divider>
-                        <Typography className="about-me letter-space" align="left" sx={{ letterSpacing: "0.3px" }}>
-                            <br />
-                            <Typography className="letter-space" sx={{ fontSize: "21px", letterSpacing: "0.3px" }}>
-                                I am a junior web developer, curious and open-minded, eager to learn and embrace new
-                                challenges.
-                            </Typography>
-                            {/* <Divider sx={{ marginTop: "30px" }}></Divider> */}I have honed skills in managing small
-                            projects, maintaining client communications, and being both independent and proactive
-                            through my experience as a construction architect. Larger projects have taught me the value
-                            of teamwork.
-                            <Typography className="letter-space" sx={{ letterSpacing: "0.3px" }}>
-                                🌤️ I have learned that trust and communication within a team can transform work into a
-                                joyful and successful endeavor; without these, work becomes a less inspiring place.
-                            </Typography>
-                            {/* <Divider sx={{ marginTop: "30px" }}></Divider> */}
-                            <br />
-                            <br />
-                            🐾 For some time now, I have been studying frontend development through online platforms and
-                            teaching courses. I am also part of the WebDev Remote Learning Program at Nagarro company.
-                            <br />
-                            <br />
-                            When I&apos;m not at my computer, I enjoy meeting friends, engaging in sports, going for
-                            walks, reading, and listening to music.
-                            <br />
-                            <Divider sx={{ marginTop: "30px" }}></Divider>
-                            <br />
-                            🦋 I eagerly await the opportunity to join a dynamic work environment where I can continue
-                            to learn and contribute.
-                        </Typography>
+                    </Typography>
+
+                    <Divider sx={{ marginTop: "50px", marginBottom: "40px", fontSize: "20px" }}>🦋</Divider>
+
+                    <br />
+                    <Typography
+                        variant="subtitle1"
+                        // align="left"
+                        className="letter-space"
+                        // sx={{ fontSize: "21px" }}
+                    >
+                        I am a junior web developer, curious and open-minded, eager to learn and embrace new challenges.
+                    </Typography>
+                    <br />
+                    <Typography variant="subtitle1" className="letter-space">
+                        I have honed skills in managing small projects, maintaining client communications, and being
+                        both independent and proactive through my experience as a construction architect. Larger
+                        projects have taught me the value of teamwork.
+                    </Typography>
+                    <Typography variant="subtitle1" className="letter-space">
+                        🌤️ I have learned that trust and communication within a team can transform work into a joyful
+                        and successful endeavor; without these, work becomes a less inspiring place.
+                    </Typography>
+
+                    <br />
+                    <br />
+                    <Typography variant="subtitle1" className="letter-space">
+                        🐾 For some time now, I have been studying frontend development through online platforms and
+                        teaching courses. I am also part of the WebDev Remote Learning Program at Nagarro company.
+                        <br />
+                        <br />
+                        When I&apos;m not at my computer, I enjoy meeting friends, engaging in sports, going for walks,
+                        reading, and listening to music.
+                    </Typography>
+                    <br />
+                    <Divider sx={{ marginTop: "30px" }}></Divider>
+                    <Typography variant="subtitle1" className="letter-space" sx={{ marginBottom: "80px" }}>
+                        <br />I eagerly await the opportunity to join a dynamic work environment where I can continue to
+                        learn and contribute.
                     </Typography>
                 </CardContent>
             </Card>

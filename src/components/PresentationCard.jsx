@@ -200,7 +200,7 @@ export function PresentationCard() {
                     sx={{
                         paddingTop: "70px",
                         // paddingLeft: "35%",
-                        minHeight: "110vh",
+                        // minHeight: "100vh",
                         // display: "flex",
                         // flexDirection: "column",
                         position: "relative",
@@ -223,7 +223,7 @@ export function PresentationCard() {
                 ></Box> */}
             </Container>
 
-            <Box sx={{ backgroundColor: "#f0f1f0", width: "100%", height: "6vh", overflow: "hidden" }}>
+            {/* <Box sx={{ backgroundColor: "#f0f1f0", width: "100%", height: "6vh", overflow: "hidden" }}>
                 <Box
                     sx={{
                         width: "100%",
@@ -233,7 +233,7 @@ export function PresentationCard() {
                         top: "-10px",
                     }}
                 ></Box>
-            </Box>
+            </Box> */}
         </Container>
     );
 }

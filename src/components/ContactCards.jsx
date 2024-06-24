@@ -5,6 +5,7 @@ import { Button } from "@mui/material";
 import TextField from "@mui/material/TextField";
 import Typography from "@mui/material/Typography";
 import Stack from "@mui/material/Stack";
+import { Divider } from "@mui/material";
 // import { grey } from "@mui/material/colors";
 
 export default function ContactCards() {
@@ -98,7 +99,7 @@ export default function ContactCards() {
                                 // disabled={isLoading}
                                 id="outlined-required"
                                 name="message"
-                                prop
+                                // prop
                                 // InputProps={{
                                 //     sx: {
                                 //         height: "200px",
@@ -165,10 +166,13 @@ export default function ContactCards() {
                 <CardContent sx={{ fontSize: "20px", textAlign: "center" }}>Send me an email</CardContent>
             </Card>
 
-            <Typography variant="subtitle1" align="center" sx={{ padding: "5% 5% 5% 30%", color: "grey" }}>
-                I welcome all feedback—whether you found delight, distaste, excitement, or boredom here. Your thoughts
-                are invaluable to me. <br /> Thank you!
+            <Typography variant="subtitle1" align="center" sx={{ padding: "5% 5% 0 30%", color: "grey" }}>
+                I welcome all feedback—whether you found delight, distaste, excitement, or boredom here.
+                <br /> Your thoughts are invaluable to me. <br /> Thank you!
             </Typography>
+            <Divider sx={{ padding: "0 5% 5% 30%", marginTop: "50px", marginBottom: "40px", fontSize: "20px" }}>
+                🦋
+            </Divider>
         </Box>
     );
 }
