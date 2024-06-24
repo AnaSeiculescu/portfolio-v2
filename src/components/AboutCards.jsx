@@ -39,6 +39,7 @@ export default function AboutCards() {
                     marginBottom: "80px",
                     padding: "0 5% 0 37%",
                     boxShadow: "5",
+                    // letterSpacing: "0.2px",
                     // background:
                     //     "linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(46,153,251,1) 11%, rgba(255,255,255,1) 100%)",
                 }}
@@ -52,9 +53,11 @@ export default function AboutCards() {
                             marginBottom: "8%",
                             color: "grey",
                             maxWidth: "80ch",
+                            letterSpacing: "0.3px",
+                            // lineHeight: "1.5",
                         }}
                     >
-                        I believe in signs, communication, teamwork, friendship, gratitude… 🦋
+                        I believe in signs, communication, teamwork, friendship, gratitude…
                         <br />
                         I also believe that every action we take holds multiple meanings and purposes.
                         <br />
@@ -64,47 +67,35 @@ export default function AboutCards() {
                             itself.&quot;
                             <br /> — Adam Elenbaas
                         </span>
-                        <Divider sx={{ marginTop: "50px", marginBottom: "50px" }}></Divider>
-                        <Typography className="about-me" align="left">
+                        <Divider sx={{ marginTop: "50px", marginBottom: "40px", fontSize: "20px" }}>🦋</Divider>
+                        <Typography className="about-me letter-space" align="left" sx={{ letterSpacing: "0.3px" }}>
                             <br />
-
-                            <p>
-                                <Typography sx={{}}>
-                                    I am a junior web developer, curious and open-minded, eager to learn 🦋 and embrace
-                                    new challenges.
-                                </Typography>
-                                {/* <Divider sx={{ marginTop: "30px" }}></Divider> */}
-                                <br />I have honed skills in managing small projects, maintaining client communications,
-                                and being both independent and proactive through my experience as a construction
-                                architect. Larger projects have taught me the value of teamwork.🐜
-                            </p>
-
-                            <Typography sx={{}}>
-                                I have learned that trust and communication within a team 🌤️ can transform work into a
-                                joyful and successful endeavor; without these, work becomes a less inspiring place. ⛈️
+                            <Typography className="letter-space" sx={{ fontSize: "21px", letterSpacing: "0.3px" }}>
+                                I am a junior web developer, curious and open-minded, eager to learn and embrace new
+                                challenges.
+                            </Typography>
+                            {/* <Divider sx={{ marginTop: "30px" }}></Divider> */}I have honed skills in managing small
+                            projects, maintaining client communications, and being both independent and proactive
+                            through my experience as a construction architect. Larger projects have taught me the value
+                            of teamwork.
+                            <Typography className="letter-space" sx={{ letterSpacing: "0.3px" }}>
+                                🌤️ I have learned that trust and communication within a team can transform work into a
+                                joyful and successful endeavor; without these, work becomes a less inspiring place.
                             </Typography>
                             {/* <Divider sx={{ marginTop: "30px" }}></Divider> */}
                             <br />
-
                             <br />
-                            <p>
-                                🐾 For some time now, I have been studying frontend development through online platforms
-                                and teaching courses. I am also part of the WebDev Remote Learning Program at Nagarro
-                                company.
-                            </p>
+                            🐾 For some time now, I have been studying frontend development through online platforms and
+                            teaching courses. I am also part of the WebDev Remote Learning Program at Nagarro company.
                             <br />
-                            {/* <br /> */}
-                            <p>
-                                When I&apos;m not at my computer, I enjoy meeting friends, engaging in sports, going for
-                                walks, reading, and listening to music.
-                            </p>
                             <br />
-                            <Divider sx={{ marginTop: "10px" }}></Divider>
+                            When I&apos;m not at my computer, I enjoy meeting friends, engaging in sports, going for
+                            walks, reading, and listening to music.
                             <br />
-                            <p>
-                                🦋 I eagerly await the opportunity to join a dynamic work environment where I can
-                                continue to learn and contribute.
-                            </p>
+                            <Divider sx={{ marginTop: "30px" }}></Divider>
+                            <br />
+                            🦋 I eagerly await the opportunity to join a dynamic work environment where I can continue
+                            to learn and contribute.
                         </Typography>
                     </Typography>
                 </CardContent>

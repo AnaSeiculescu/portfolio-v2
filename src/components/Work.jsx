@@ -40,6 +40,7 @@ export default function Work() {
                                     alt={project.alt}
                                     imgSrc={project.imgSrc}
                                     linkHref={project.linkHref}
+                                    description={project.description}
                                 />
                             ))}
                         </Box>

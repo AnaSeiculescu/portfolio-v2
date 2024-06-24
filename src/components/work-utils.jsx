@@ -6,6 +6,7 @@ export const latestProjectsPropsPrimary = [
         imgSrc: "../../images/power-organizer.jpg",
         linkHref: "",
         technologies: ["React.js", "JavaScript", "Material UI"],
+        description: "An app that helps you keep track of your todos",
     },
     {
         id: 1.2,
@@ -14,6 +15,7 @@ export const latestProjectsPropsPrimary = [
         imgSrc: "../../images/dizzy-notes.jpg",
         linkHref: "https://anaseiculescu.github.io/keep-notes/",
         technologies: ["JavaScript", "Masonry", "CSS", "HTML"],
+        description: "",
     },
     {
         id: 1.3,
@@ -22,6 +24,7 @@ export const latestProjectsPropsPrimary = [
         imgSrc: "../../images/catAPI.jpg",
         linkHref: "https://cat-caller.netlify.app/#",
         technologies: ["React.js", "Bootstrap", "Netlify"],
+        description: "",
     },
     {
         id: 1.4,
@@ -30,6 +33,7 @@ export const latestProjectsPropsPrimary = [
         imgSrc: '"../../images/collection-map.jpg',
         linkHref: "https://anaseiculescu.github.io/collection-map/",
         technologies: ["JavaScript", "jQuery", "GoogleMapsAPI", "CSS"],
+        description: "",
     },
 ];
 
@@ -41,6 +45,7 @@ export const latestProjectsPropsSecondary = [
         imgSrc: "../../images/power-organizer.jpg",
         linkHref: "",
         technologies: ["React.js", "JavaScript", "Material UI"],
+        description: "",
     },
     {
         id: 1.6,
@@ -49,6 +54,7 @@ export const latestProjectsPropsSecondary = [
         imgSrc: "../../images/dizzy-notes.jpg",
         linkHref: "https://anaseiculescu.github.io/keep-notes/",
         technologies: ["JavaScript", "Masonry", "CSS", "HTML"],
+        description: "",
     },
     {
         id: 1.7,
@@ -57,6 +63,7 @@ export const latestProjectsPropsSecondary = [
         imgSrc: "../../images/catAPI.jpg",
         linkHref: "https://cat-caller.netlify.app/#",
         technologies: ["React.js", "Bootstrap", "Netlify"],
+        description: "",
     },
     {
         id: 1.8,
@@ -65,6 +72,7 @@ export const latestProjectsPropsSecondary = [
         imgSrc: '"../../images/collection-map.jpg',
         linkHref: "https://anaseiculescu.github.io/collection-map/",
         technologies: ["JavaScript", "jQuery", "GoogleMapsAPI", "CSS"],
+        description: "",
     },
 ];
 
@@ -76,6 +84,7 @@ export const oldestProjectsPropsPrimary = [
         imgSrc: '"../../images/power-organizer.jpg',
         linkHref: "",
         technologies: ["JavaScript", "CSS", "jQuery"],
+        description: "",
     },
     {
         id: 2.2,
@@ -84,6 +93,7 @@ export const oldestProjectsPropsPrimary = [
         imgSrc: '"../../images/power-organizer.jpg',
         linkHref: "",
         technologies: ["CSS", "HTML", "Photoshop"],
+        description: "",
     },
     {
         id: 2.3,
@@ -92,6 +102,7 @@ export const oldestProjectsPropsPrimary = [
         imgSrc: '"../../images/power-organizer.jpg',
         linkHref: "",
         technologies: ["JavaScript", "CSS", "HTML"],
+        description: "",
     },
     {
         id: 2.4,
@@ -100,6 +111,7 @@ export const oldestProjectsPropsPrimary = [
         imgSrc: '"../../images/power-organizer.jpg',
         linkHref: "",
         technologies: ["JavaScript", "jQuery", "CSS"],
+        description: "",
     },
 ];
 
@@ -111,6 +123,7 @@ export const oldestProjectsPropsSecondary = [
         imgSrc: '"../../images/power-organizer.jpg',
         linkHref: "",
         technologies: ["JavaScript", "CSS", "jQuery"],
+        description: "",
     },
     {
         id: 2.6,
@@ -119,6 +132,7 @@ export const oldestProjectsPropsSecondary = [
         imgSrc: '"../../images/power-organizer.jpg',
         linkHref: "",
         technologies: ["CSS", "HTML", "Photoshop"],
+        description: "",
     },
     {
         id: 2.7,
@@ -127,6 +141,7 @@ export const oldestProjectsPropsSecondary = [
         imgSrc: '"../../images/power-organizer.jpg',
         linkHref: "",
         technologies: ["JavaScript", "CSS", "HTML"],
+        description: "",
     },
     {
         id: 2.8,
@@ -135,5 +150,6 @@ export const oldestProjectsPropsSecondary = [
         imgSrc: '"../../images/power-organizer.jpg',
         linkHref: "",
         technologies: ["JavaScript", "jQuery", "CSS"],
+        description: "",
     },
 ];
