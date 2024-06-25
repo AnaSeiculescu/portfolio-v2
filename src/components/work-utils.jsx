@@ -14,7 +14,7 @@ export const latestProjectsPropsPrimary = [
         alt: "dizzy-notes",
         imgSrc: "../../images/dizzy-notes.jpg",
         linkHref: "https://anaseiculescu.github.io/keep-notes/",
-        technologies: ["JavaScript", "Masonry", "CSS", "LocalStorage/node-storage"],
+        technologies: ["JavaScript", "Masonry", "CSS", "Web Storage API"],
         description: "your can add and delete coloured notes, storaged locally / with node-storage api",
     },
     {
@@ -53,7 +53,7 @@ export const latestProjectsPropsSecondary = [
         alt: "dizzy-notes",
         imgSrc: "../../images/dizzy-notes.jpg",
         linkHref: "https://anaseiculescu.github.io/keep-notes/",
-        technologies: ["JavaScript", "Masonry", "CSS", "LocalStorage/node-storage"],
+        technologies: ["JavaScript", "Masonry", "CSS", "Web Storage API"],
         description: "your can add and delete coloured notes, storaged locally / with node-storage api",
     },
     {

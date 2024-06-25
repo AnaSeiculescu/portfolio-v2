@@ -15,7 +15,7 @@ export function ProjectCard({ title, technologies, alt, imgSrc, linkHref, descri
             sx={{
                 display: "flex",
                 flexDirection: "column",
-                width: 320,
+                width: 340,
                 height: 380,
                 marginRight: "15px",
                 // backgroundColor: "lightgrey",

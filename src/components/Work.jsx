@@ -25,7 +25,7 @@ export default function Work() {
                             margin: "2vh 0",
                         }}
                     >
-                        <Divider textAlign="right" sx={{ paddingLeft: "35%" }}>
+                        <Divider textAlign="right" sx={{ paddingLeft: "35%", fontSize: "18px" }}>
                             some of my latest projects
                         </Divider>
                         {/* <Typography variant="h5" sx={{ paddingLeft: "55%" }}>
@@ -61,7 +61,7 @@ export default function Work() {
                     <Box
                         className="second-scroll-container" /*sx={{ boxShadow: "4", width: "100%", backgroundColor: "#f0f1f0" }}*/
                     >
-                        <Divider textAlign="right" sx={{ paddingLeft: "35%" }}>
+                        <Divider textAlign="right" sx={{ paddingLeft: "35%", fontSize: "18px" }}>
                             and some of my oldest
                         </Divider>
                         {/* <Typography variant="h5" sx={{ paddingLeft: "25%" }}>
