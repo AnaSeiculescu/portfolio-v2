@@ -9,8 +9,11 @@ import {
     oldestProjectsPropsSecondary,
 } from "./work-utils";
 import Divider from "@mui/material/Divider";
+// import { useState } from "react";
 
 export default function Work() {
+    // const [isHovered, setIsHovered] = useState(false);
+
     return (
         <>
             <Box className="work-container" sx={{ position: "relative", flexGrow: 1 }}>
@@ -31,9 +34,11 @@ export default function Work() {
                         {/* <Typography variant="h5" sx={{ paddingLeft: "55%" }}>
                             
                         </Typography> */}
+
                         <Box className="first-carousel-primary">
                             {latestProjectsPropsPrimary.map((project) => (
                                 <ProjectCard
+                                    // className="element-to-hover"
                                     key={project.id}
                                     title={project.title}
                                     technologies={project.technologies}
@@ -41,12 +46,15 @@ export default function Work() {
                                     imgSrc={project.imgSrc}
                                     linkHref={project.linkHref}
                                     description={project.description}
+                                    // onMouseEnter={() => setIsHovered(true)}
+                                    // onMouseLeave={() => setIsHovered(false)}
                                 />
                             ))}
                         </Box>
                         <Box className="first-carousel-primary first-carousel-secondary">
                             {latestProjectsPropsSecondary.map((project) => (
                                 <ProjectCard
+                                    // className="element-to-hover"
                                     key={project.id}
                                     title={project.title}
                                     technologies={project.technologies}
@@ -54,10 +62,31 @@ export default function Work() {
                                     imgSrc={project.imgSrc}
                                     linkHref={project.linkHref}
                                     description={project.description}
+                                    // onMouseEnter={() => setIsHovered(true)}
+                                    // onMouseLeave={() => setIsHovered(false)}
                                 />
                             ))}
                         </Box>
+                        {/* {isHovered && (
+                            <Box
+                                className="show-when-hover"
+                                sx={{
+                                    position: "absolute",
+                                    top: "100%",
+                                    left: "35%",
+                                    height: "150px",
+                                    backgroundColor: "red",
+                                }}
+                            >
+                                I am here now
+                                <br />
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam quam ducimus recusandae
+                                nam debitis accusamus neque non, sit vel quisquam suscipit repudiandae perferendis ullam
+                                exercitationem quos dolores doloremque, totam praesentium?
+                            </Box>
+                        )} */}
                     </Box>
+
                     <Box
                         className="second-scroll-container" /*sx={{ boxShadow: "4", width: "100%", backgroundColor: "#f0f1f0" }}*/
                     >
@@ -70,6 +99,7 @@ export default function Work() {
                         <Box className="second-carousel-primary">
                             {oldestProjectsPropsPrimary.map((project) => (
                                 <ProjectCard
+                                    // className="element-to-hover"
                                     key={project.id}
                                     title={project.title}
                                     technologies={project.technologies}
@@ -77,12 +107,15 @@ export default function Work() {
                                     imgSrc={project.imgSrc}
                                     linkHref={project.linkHref}
                                     description={project.description}
+                                    // onMouseEnter={() => setIsHovered(true)}
+                                    // onMouseLeave={() => setIsHovered(false)}
                                 />
                             ))}
                         </Box>
                         <Box className="second-carousel-primary second-carousel-secondary">
                             {oldestProjectsPropsSecondary.map((project) => (
                                 <ProjectCard
+                                    // className="element-to-hover"
                                     key={project.id}
                                     title={project.title}
                                     technologies={project.technologies}
@@ -90,6 +123,8 @@ export default function Work() {
                                     imgSrc={project.imgSrc}
                                     linkHref={project.linkHref}
                                     description={project.description}
+                                    // onMouseEnter={() => setIsHovered(true)}
+                                    // onMouseLeave={() => setIsHovered(false)}
                                 />
                             ))}
                         </Box>

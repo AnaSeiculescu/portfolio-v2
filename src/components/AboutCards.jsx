@@ -62,6 +62,7 @@ export default function AboutCards() {
                         I also believe that every action we take holds multiple meanings and purposes.
                         <br />
                         <br />
+                        <br />
                         <span>
                             <i>
                                 &quot;The mind is beautiful because of the paradox. It uses itself to understand
