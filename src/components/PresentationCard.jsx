@@ -9,7 +9,6 @@ import ContactCards from "./ContactCards";
 import { useInView } from "react-intersection-observer";
 import { usePrevious } from "@uidotdev/usehooks";
 import Work from "./Work";
-// import Divider from "@mui/material/Divider";
 
 export function PresentationCard() {
     const contentRef = useRef(null);
@@ -109,18 +108,7 @@ export function PresentationCard() {
     };
 
     return (
-        <Container
-            maxWidth="false"
-            className="content"
-            disableGutters={true}
-            ref={contentRef}
-            sx={
-                {
-                    // position: "relative",
-                    // border: "20px solid white",
-                }
-            }
-        >
+        <Container maxWidth="false" className="content" disableGutters={true} ref={contentRef}>
             <Box sx={{ display: "flex", flexGrow: "1", justifyContent: "center" }}>
                 <StickyMenu
                     onTabChange={handleTabChange}
@@ -136,18 +124,12 @@ export function PresentationCard() {
                 className="scrollingArea"
                 sx={{
                     overflow: "auto",
-                    // position: "relative",
-                    // clipPath: "circle(40%)",
-                    // backgroundColor: "#f0f1f0",
-                    // marginBottom: "25px",
-                    // boxShadow: 5,
                 }}
             >
                 <Box
                     ref={homeRef}
                     className="home"
                     sx={{
-                        // backgroundColor: "#f0f1f0",
                         color: "black",
                         minHeight: "100vh",
                         paddingLeft: "28%",
@@ -171,27 +153,13 @@ export function PresentationCard() {
                     className="about"
                     sx={{
                         paddingTop: "80px",
-                        // marginLeft: "35%",
-                        // height: "100vh",
-                        // display: "flex",
-                        // flexDirection: "column",
                         position: "relative",
                     }}
                 >
-                    {/* <Divider textAlign="right">some about me</Divider> */}
                     <AboutCards />
                 </Box>
 
-                <Box
-                    ref={workRef}
-                    sx={
-                        {
-                            // backgroundColor: "#f0f1f0",
-                            // paddingTop: "40px",
-                            // paddingLeft: "35%",
-                        }
-                    }
-                >
+                <Box ref={workRef}>
                     <Work />
                 </Box>
                 <Box
@@ -199,41 +167,12 @@ export function PresentationCard() {
                     ref={contactRef}
                     sx={{
                         paddingTop: "70px",
-                        // paddingLeft: "35%",
-                        // minHeight: "100vh",
-                        // display: "flex",
-                        // flexDirection: "column",
                         position: "relative",
-                        // backgroundColor: "#fafafa",
                     }}
                 >
-                    {/* <Divider textAlign="right">get in touch</Divider> */}
                     <ContactCards />
                 </Box>
-                {/* <Box
-                    sx={{
-                        backgroundColor: "#d096e7",
-                        width: "80px",
-                        height: "80px",
-                        position: "relative",
-                        bottom: "-40px",
-                        left: "60%",
-                        borderRadius: "50%",
-                    }}
-                ></Box> */}
             </Container>
-
-            {/* <Box sx={{ backgroundColor: "#f0f1f0", width: "100%", height: "6vh", overflow: "hidden" }}>
-                <Box
-                    sx={{
-                        width: "100%",
-                        height: "10px",
-                        boxShadow: 4,
-                        position: "relative",
-                        top: "-10px",
-                    }}
-                ></Box>
-            </Box> */}
         </Container>
     );
 }

@@ -16,15 +16,12 @@ export default function AboutCards() {
                     width: "250px",
                     height: "250px",
                     borderRadius: "50%",
-                    // marginLeft: "55%",
                     marginTop: "50px",
                     textAlign: "center",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
                     zIndex: "2",
-                    // backgroundColor: "#f7d31e",
-                    // backgroundColor: "#25dadb",
                     backgroundColor: "#ff9008",
                     opacity: "0.85",
                 }}
@@ -39,9 +36,6 @@ export default function AboutCards() {
                     marginBottom: "80px",
                     padding: "0 5% 0 37%",
                     boxShadow: "5",
-                    // letterSpacing: "0.2px",
-                    // background:
-                    //     "linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(46,153,251,1) 11%, rgba(255,255,255,1) 100%)",
                 }}
             >
                 <CardContent sx={{ maxWidth: "80ch" }}>
@@ -52,7 +46,6 @@ export default function AboutCards() {
                             marginTop: "13%",
                             marginBottom: "8%",
                             color: "grey",
-                            // maxWidth: "80ch",
                             letterSpacing: "0.5px",
                             lineHeight: "1.7",
                         }}
@@ -75,12 +68,7 @@ export default function AboutCards() {
                     <Divider sx={{ marginTop: "50px", marginBottom: "40px", fontSize: "20px" }}>🦋</Divider>
 
                     <br />
-                    <Typography
-                        variant="subtitle1"
-                        // align="left"
-                        className="letter-space"
-                        // sx={{ fontSize: "21px" }}
-                    >
+                    <Typography variant="subtitle1" className="letter-space">
                         I am a junior web developer, curious and open-minded, eager to learn and embrace new challenges.
                     </Typography>
                     <br />
