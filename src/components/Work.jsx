@@ -1,6 +1,6 @@
 import Box from "@mui/material/Box";
 import "../Work.css";
-import { Typography } from "@mui/material";
+// import { Typography } from "@mui/material";
 import { ProjectCard } from "./ProjectCard";
 import {
     latestProjectsPropsPrimary,
@@ -132,9 +132,9 @@ export default function Work() {
                 </>
             </Box>
 
-            <Box className="my-inspiration" sx={{ paddingLeft: "55%", width: "100%", height: "300px" }}>
+            {/* <Box className="my-inspiration" sx={{ paddingLeft: "55%", width: "100%", height: "300px" }}>
                 <Typography variant="h5">where did I get my inspiration from</Typography>
-            </Box>
+            </Box> */}
             {/* <Box className='my-learning'>
     <Typography variant="h5" sx={{ paddingLeft: "55%" }}>
             and some of my oldest
