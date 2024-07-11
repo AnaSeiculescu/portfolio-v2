@@ -84,7 +84,7 @@ export const oldestProjectsPropsPrimary = [
         imgSrc: '"../../images/power-organizer.jpg',
         linkHref: "",
         technologies: ["JavaScript", "CSS", "jQuery"],
-        description: "",
+        description: "select the hue you prefer to change the panel, you also can save your list of colors",
     },
     {
         id: 2.2,
@@ -93,7 +93,7 @@ export const oldestProjectsPropsPrimary = [
         imgSrc: '"../../images/power-organizer.jpg',
         linkHref: "",
         technologies: ["CSS", "HTML", "Photoshop"],
-        description: "",
+        description: "a responsive site, with the cuttest responsive logo :)",
     },
     {
         id: 2.3,
@@ -123,7 +123,7 @@ export const oldestProjectsPropsSecondary = [
         imgSrc: '"../../images/power-organizer.jpg',
         linkHref: "",
         technologies: ["JavaScript", "CSS", "jQuery"],
-        description: "",
+        description: "select the hue you prefer to change the panel, you also can save your list of colors",
     },
     {
         id: 2.6,
@@ -132,7 +132,7 @@ export const oldestProjectsPropsSecondary = [
         imgSrc: '"../../images/power-organizer.jpg',
         linkHref: "",
         technologies: ["CSS", "HTML", "Photoshop"],
-        description: "",
+        description: "a responsive site, with the cuttest responsive logo :)",
     },
     {
         id: 2.7,
