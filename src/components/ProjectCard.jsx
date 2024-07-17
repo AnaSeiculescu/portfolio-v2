@@ -34,10 +34,9 @@ export function ProjectCard({ title, technologies, alt, imgSrc, linkHref, descri
                 <CardMedia
                     component="img"
                     height="165"
-                    // width="285"
                     image={imgSrc}
                     alt={alt}
-                    sx={{ margin: "10px", boxShadow: "1", width: "300px" }}
+                    sx={{ margin: "10px", boxShadow: "1", width: "320px" }}
                 />
             </Link>
             <CardContent

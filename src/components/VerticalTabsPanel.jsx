@@ -16,7 +16,11 @@ const VerticalTabs = ({ tabValue, onTabChange }) => {
                 variant="scrollable"
                 value={tabValue}
                 onChange={handleTabChange}
-                indicatorColor="secondary"
+                TabIndicatorProps={{
+                    style: {
+                        backgroundColor: "red",
+                    },
+                }}
                 textColor="inherit"
                 sx={{ borderRight: 1, borderColor: "divider" }}
             >

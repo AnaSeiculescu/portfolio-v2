@@ -1,5 +1,6 @@
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
+// import Stack from "@mui/material/Stack";
 
 import { Typography } from "@mui/material";
 import { useEffect, useState, useRef } from "react";
@@ -124,9 +125,13 @@ export function PresentationCard() {
                 className="scrollingArea"
                 sx={{
                     overflow: "auto",
+                    backgroundImage: "url(../images/presentation-image.jpg)",
+                    backgroundPosition: "top-right",
+                    backgroundRepeat: "no-repeat",
                 }}
             >
                 <Box
+                    direction={"row"}
                     ref={homeRef}
                     className="home"
                     sx={{
@@ -136,16 +141,29 @@ export function PresentationCard() {
                         alignContent: "center",
                         textAlign: "center",
                         zIndex: "2",
+                        position: "relative",
                     }}
                 >
                     <Typography
                         sx={{
                             fontSize: "40px",
+                            position: "absolute",
+                            top: "70vh",
+                            left: "50%",
                         }}
                     >
                         Welcome! <br />
                         I&apos;m Ana
                     </Typography>
+                    {/* <Box
+                        sx={{
+                            // width: "100%",
+                            // height: "920px",
+                            backgroundImage: "url(../images/presentation-image1.jpg)",
+                            backgroundPosition: "top-right",
+                            backgroundRepeat: "no-repeat",
+                        }}
+                    ></Box> */}
                 </Box>
 
                 <Box
