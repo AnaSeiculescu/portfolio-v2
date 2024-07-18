@@ -6,8 +6,41 @@ import TextField from "@mui/material/TextField";
 import Typography from "@mui/material/Typography";
 import Stack from "@mui/material/Stack";
 import { Divider } from "@mui/material";
+import { useState } from "react";
+import emailjs from "@emailjs/browser";
 
 export default function ContactCards() {
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
+    const [message, setMessage] = useState("");
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        const serviceID = "service_tfrhdd6";
+        const templateID = "template_o82suek";
+        const publicKey = "QN8EhX4ApY_fsmSnd";
+
+        const templateParams = {
+            name: name,
+            email: email,
+            to_name: "Ana Seiculescu",
+            message: message,
+        };
+
+        emailjs
+            .send(serviceID, templateID, templateParams, publicKey)
+            .then((response) => {
+                console.log("Email sent successfully!", response);
+                setName("");
+                setEmail("");
+                setMessage("");
+            })
+            .catch((error) => {
+                console.log("Error sending email: ", error);
+            });
+    };
+
     const inputsStyle = {
         marginBottom: "25px",
     };
@@ -37,29 +70,23 @@ export default function ContactCards() {
                             <Stack>
                                 <Typography sx={labelsStyle}>Name:</Typography>
                                 <TextField
-                                    // required
                                     // disabled={isLoading}
                                     id="outlined-required"
                                     name="name"
-                                    // label="Required"
-                                    // value={localUserInput.username}
-                                    // onChange={(event) => handleInput(event)}
+                                    value={name}
+                                    onChange={(e) => setName(e.target.value)}
                                     sx={inputsStyle}
-                                    // fullWidth
                                 />
                             </Stack>
                             <Stack>
                                 <Typography sx={labelsStyle}>Email:</Typography>
                                 <TextField
-                                    // required
                                     // disabled={isLoading}
                                     id="outlined-required"
                                     name="email"
-                                    // label="Required"
-                                    // value={localUserInput.username}
-                                    // onChange={(event) => handleInput(event)}
+                                    value={email}
+                                    onChange={(e) => setEmail(e.target.value)}
                                     sx={inputsStyle}
-                                    // fullWidth
                                 />
                             </Stack>
                         </Stack>
@@ -67,33 +94,21 @@ export default function ContactCards() {
                         <Stack sx={{ width: "380px" }}>
                             <Typography sx={labelsStyle}>Message:</Typography>
                             <TextField
-                                // required
                                 multiline
                                 // disabled={isLoading}
                                 id="outlined-required"
                                 name="message"
-                                // prop
-                                // InputProps={{
-                                //     sx: {
-                                //         height: "200px",
-                                //         overflowY: "scroll",
-                                //     },
-                                // }}
                                 minRows={6}
                                 maxRows={6}
-                                // label="Multiline"
-                                // value={localUserInput.username}
-                                // onChange={(event) => handleInput(event)}
+                                value={message}
+                                onChange={(e) => setMessage(e.target.value)}
                                 sx={{
                                     ...inputsStyle,
-                                    // height: 200,
-                                    //  flexShrink: 0
                                 }}
-                                // fullWidth
                             />
                             <Button
-                                // fullWidth
                                 variant="contained"
+                                type="submit"
                                 // disabled={isLoading}
                                 sx={{
                                     width: "100px",
@@ -102,7 +117,7 @@ export default function ContactCards() {
                                     border: "1px solid black",
                                     boxShadow: 1,
                                 }}
-                                // onClick={handleSignUp}
+                                onClick={handleSubmit}
                             >
                                 Send
                             </Button>
