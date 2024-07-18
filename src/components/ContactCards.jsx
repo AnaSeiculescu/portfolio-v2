@@ -8,14 +8,22 @@ import Stack from "@mui/material/Stack";
 import { Divider } from "@mui/material";
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
+import CircularProgress from "@mui/material/CircularProgress";
 
 export default function ContactCards() {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [message, setMessage] = useState("");
+    const [isLoading, setIsLoading] = useState(false);
+
+    const handleLoadingOnClick = () => {
+        setIsLoading(true);
+    };
 
     const handleSubmit = (e) => {
         e.preventDefault();
+
+        handleLoadingOnClick();
 
         const serviceID = "service_tfrhdd6";
         const templateID = "template_o82suek";
@@ -35,6 +43,7 @@ export default function ContactCards() {
                 setName("");
                 setEmail("");
                 setMessage("");
+                setIsLoading(false);
             })
             .catch((error) => {
                 console.log("Error sending email: ", error);
@@ -119,6 +128,7 @@ export default function ContactCards() {
                                 }}
                                 onClick={handleSubmit}
                             >
+                                {isLoading && <CircularProgress size={25} />}
                                 Send
                             </Button>
                         </Stack>
