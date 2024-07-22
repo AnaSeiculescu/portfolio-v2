@@ -10,7 +10,7 @@ import Divider from "@mui/material/Divider";
 // import Box from "@mui/material/Box";
 // import { useState } from "react";
 
-export function ProjectCard({ title, technologies, alt, imgSrc, linkHref, description }) {
+export function ProjectCard({ title, technologies, alt, imgSrc, linkHref, description, codeLinkHref }) {
     // const [isHovered, setIsHovered] = useState(false);
     return (
         // <Box className="project-container" sx={{ position: "relative" }}>
@@ -48,8 +48,13 @@ export function ProjectCard({ title, technologies, alt, imgSrc, linkHref, descri
                     justifyContent: "space-between",
                 }}
             >
-                {/* <Stack direction="column"> */}
-                <Typography sx={{ color: "black", fontSize: "16px", fontWeight: "600" }}>{title}</Typography>
+                <Stack direction="row" sx={{ justifyContent: "space-between" }}>
+                    <Typography sx={{ color: "black", fontSize: "16px", fontWeight: "600" }}>{title}</Typography>
+
+                    <Link href={codeLinkHref} underline="none" target="blank" sx={{ cursor: "pointer" }}>
+                        <Chip label="code" variant="filled" size="small" />
+                    </Link>
+                </Stack>
                 <Divider></Divider>
                 <Typography sx={{ color: "black", fontSize: "14px" }}>{description}</Typography>
                 <Stack direction="row" spacing={0.5}>
@@ -57,7 +62,6 @@ export function ProjectCard({ title, technologies, alt, imgSrc, linkHref, descri
                         <Chip key={index} label={tech} variant="outlined" size="small" />
                     ))}
                 </Stack>
-                {/* </Stack> */}
             </CardContent>
         </Card>
         // {isHovered && (
@@ -89,4 +93,5 @@ ProjectCard.propTypes = {
     imgSrc: PropTypes.string,
     linkHref: PropTypes.string,
     description: PropTypes.string,
+    codeLinkHref: PropTypes.string,
 };

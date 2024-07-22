@@ -46,6 +46,7 @@ export default function Work() {
                                     imgSrc={project.imgSrc}
                                     linkHref={project.linkHref}
                                     description={project.description}
+                                    codeLinkHref={project.codeLinkHref}
                                     // onMouseEnter={() => setIsHovered(true)}
                                     // onMouseLeave={() => setIsHovered(false)}
                                 />
@@ -62,6 +63,7 @@ export default function Work() {
                                     imgSrc={project.imgSrc}
                                     linkHref={project.linkHref}
                                     description={project.description}
+                                    codeLinkHref={project.codeLinkHref}
                                     // onMouseEnter={() => setIsHovered(true)}
                                     // onMouseLeave={() => setIsHovered(false)}
                                 />
@@ -107,6 +109,7 @@ export default function Work() {
                                     imgSrc={project.imgSrc}
                                     linkHref={project.linkHref}
                                     description={project.description}
+                                    codeLinkHref={project.codeLinkHref}
                                     // onMouseEnter={() => setIsHovered(true)}
                                     // onMouseLeave={() => setIsHovered(false)}
                                 />
@@ -123,6 +126,7 @@ export default function Work() {
                                     imgSrc={project.imgSrc}
                                     linkHref={project.linkHref}
                                     description={project.description}
+                                    codeLinkHref={project.codeLinkHref}
                                     // onMouseEnter={() => setIsHovered(true)}
                                     // onMouseLeave={() => setIsHovered(false)}
                                 />

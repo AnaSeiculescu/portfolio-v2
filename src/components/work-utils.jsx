@@ -6,7 +6,9 @@ export const latestProjectsPropsPrimary = [
         imgSrc: "../../images/power-organizer1.jpg",
         linkHref: "http://3.76.123.244/login",
         technologies: ["React.js", "JavaScript", "Material UI"],
-        description: "helps you keep track of your todos depending on the calendar",
+        // description: "helps you keep track of your todos depending on the calendar",
+        description: "helps you keep track of your todos, in your account",
+        codeLinkHref: "https://github.com/AnaSeiculescu/to-do-list-react",
     },
     {
         id: 1.2,
@@ -15,7 +17,8 @@ export const latestProjectsPropsPrimary = [
         imgSrc: "../../images/dizzy-notes2.jpg",
         linkHref: "https://anaseiculescu.github.io/keep-notes/",
         technologies: ["JavaScript", "Masonry", "CSS", "Web Storage API"],
-        description: "your can add and delete coloured notes, storaged locally / with node-storage api",
+        description: "your can add and delete coloured notes, storaged with localStorage, or with JSON server",
+        codeLinkHref: "https://github.com/AnaSeiculescu/keep-notes",
     },
     {
         id: 1.3,
@@ -25,6 +28,7 @@ export const latestProjectsPropsPrimary = [
         linkHref: "https://cat-caller.netlify.app/#",
         technologies: ["React.js", "The Cat API", "Bootstrap", "Netlify"],
         description: "call how many cat you want to colect, from The Cat API",
+        codeLinkHref: "https://github.com/AnaSeiculescu/Call-a-Cat-API",
     },
     {
         id: 1.4,
@@ -34,6 +38,7 @@ export const latestProjectsPropsPrimary = [
         linkHref: "https://anaseiculescu.github.io/collection-map/",
         technologies: ["JavaScript", "jQuery", "GoogleMapsAPI", "CSS"],
         description: "search for locations and you can collect them on your map and in your list",
+        codeLinkHref: "https://github.com/AnaSeiculescu/collection-map",
     },
 ];
 
@@ -45,7 +50,9 @@ export const latestProjectsPropsSecondary = [
         imgSrc: "../../images/power-organizer1.jpg",
         linkHref: "http://3.76.123.244/login",
         technologies: ["React.js", "JavaScript", "Material UI"],
-        description: "helps you keep track of your todos depending on the calendar",
+        // description: "helps you keep track of your todos depending on the calendar",
+        description: "helps you keep track of your todos, in your account",
+        codeLinkHref: "https://github.com/AnaSeiculescu/to-do-list-react",
     },
     {
         id: 1.6,
@@ -54,7 +61,8 @@ export const latestProjectsPropsSecondary = [
         imgSrc: "../../images/dizzy-notes2.jpg",
         linkHref: "https://anaseiculescu.github.io/keep-notes/",
         technologies: ["JavaScript", "Masonry", "CSS", "Web Storage API"],
-        description: "your can add and delete coloured notes, storaged locally / with node-storage api",
+        description: "your can add and delete coloured notes, storaged with localStorage, or with JSON server",
+        codeLinkHref: "https://github.com/AnaSeiculescu/keep-notes",
     },
     {
         id: 1.7,
@@ -64,6 +72,7 @@ export const latestProjectsPropsSecondary = [
         linkHref: "https://cat-caller.netlify.app/#",
         technologies: ["React.js", "The Cat API", "Bootstrap", "Netlify"],
         description: "call how many cat you want to colect, from The Cat API",
+        codeLinkHref: "https://github.com/AnaSeiculescu/Call-a-Cat-API",
     },
     {
         id: 1.8,
@@ -73,6 +82,7 @@ export const latestProjectsPropsSecondary = [
         linkHref: "https://anaseiculescu.github.io/collection-map/",
         technologies: ["JavaScript", "jQuery", "GoogleMapsAPI", "CSS"],
         description: "search for locations and you can collect them on your map and in your list",
+        codeLinkHref: "https://github.com/AnaSeiculescu/collection-map",
     },
 ];
 
@@ -85,6 +95,7 @@ export const oldestProjectsPropsPrimary = [
         linkHref: "https://anaseiculescu.github.io/Portfolio/",
         technologies: ["JavaScript", "jQuery", "CSS"],
         description: "a development of my imagination through my beginner skills",
+        codeLinkHref: "https://github.com/AnaSeiculescu/Portfolio",
     },
     {
         id: 2.2,
@@ -94,6 +105,7 @@ export const oldestProjectsPropsPrimary = [
         linkHref: "https://anaseiculescu.github.io/rock-paper-scissors-lizard-spock/",
         technologies: ["JavaScript", "CSS", "HTML"],
         description: "try your luck! play the game!",
+        codeLinkHref: "https://github.com/AnaSeiculescu/rock-paper-scissors-lizard-spock",
     },
     {
         id: 2.3,
@@ -103,6 +115,7 @@ export const oldestProjectsPropsPrimary = [
         linkHref: "https://anaseiculescu.github.io/breakfast-recipes/",
         technologies: ["CSS", "HTML", "Photoshop"],
         description: "a responsive site, with the cuttest responsive logo :)",
+        codeLinkHref: "https://github.com/AnaSeiculescu/breakfast-recipes",
     },
     {
         id: 2.4,
@@ -112,6 +125,7 @@ export const oldestProjectsPropsPrimary = [
         linkHref: "https://anaseiculescu.github.io/ana_s_color_picker/",
         technologies: ["JavaScript", "CSS", "jQuery"],
         description: "select the hue you prefer to change the panel, you also can save a list of preferred colors",
+        codeLinkHref: "https://github.com/AnaSeiculescu/ana_s_color_picker",
     },
 ];
 
@@ -124,6 +138,7 @@ export const oldestProjectsPropsSecondary = [
         linkHref: "https://anaseiculescu.github.io/Portfolio/",
         technologies: ["JavaScript", "jQuery", "CSS"],
         description: "a development of my imagination through my beginner skills",
+        codeLinkHref: "https://github.com/AnaSeiculescu/Portfolio",
     },
     {
         id: 2.7,
@@ -133,6 +148,7 @@ export const oldestProjectsPropsSecondary = [
         linkHref: "https://anaseiculescu.github.io/rock-paper-scissors-lizard-spock/",
         technologies: ["JavaScript", "CSS", "HTML"],
         description: "try your luck! play the game!",
+        codeLinkHref: "https://github.com/AnaSeiculescu/rock-paper-scissors-lizard-spock",
     },
     {
         id: 2.6,
@@ -142,6 +158,7 @@ export const oldestProjectsPropsSecondary = [
         linkHref: "https://anaseiculescu.github.io/breakfast-recipes/",
         technologies: ["CSS", "HTML", "Photoshop"],
         description: "a responsive site, with the cuttest responsive logo :)",
+        codeLinkHref: "https://github.com/AnaSeiculescu/breakfast-recipes",
     },
     {
         id: 2.5,
@@ -151,5 +168,6 @@ export const oldestProjectsPropsSecondary = [
         linkHref: "https://anaseiculescu.github.io/ana_s_color_picker/",
         technologies: ["JavaScript", "CSS", "jQuery"],
         description: "select the hue you prefer to change the panel, you also can save a list of preferred colors",
+        codeLinkHref: "https://github.com/AnaSeiculescu/ana_s_color_picker",
     },
 ];
