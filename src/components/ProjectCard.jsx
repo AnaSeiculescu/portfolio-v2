@@ -49,14 +49,25 @@ export function ProjectCard({ title, technologies, alt, imgSrc, linkHref, descri
                 }}
             >
                 <Stack direction="row" sx={{ justifyContent: "space-between" }}>
-                    <Typography sx={{ color: "black", fontSize: "16px", fontWeight: "600" }}>{title}</Typography>
+                    <Typography
+                        sx={{ color: "black", fontSize: "16px", fontWeight: "800", fontFamily: "Nunito, sans-serif" }}
+                    >
+                        {title}
+                    </Typography>
 
-                    <Link href={codeLinkHref} underline="none" target="blank" sx={{ cursor: "pointer" }}>
+                    <Link
+                        href={codeLinkHref}
+                        underline="none"
+                        target="blank"
+                        sx={{ cursor: "pointer", fontFamily: "Nunito, sans-serif", fontWeight: "700" }}
+                    >
                         <Chip label="code" variant="filled" size="small" />
                     </Link>
                 </Stack>
                 <Divider></Divider>
-                <Typography sx={{ color: "black", fontSize: "14px" }}>{description}</Typography>
+                <Typography sx={{ color: "black", fontSize: "14px", fontFamily: "Nunito, sans-serif" }}>
+                    {description}
+                </Typography>
                 <Stack direction="row" spacing={0.5}>
                     {technologies.map((tech, index) => (
                         <Chip key={index} label={tech} variant="outlined" size="small" />

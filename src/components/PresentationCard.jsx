@@ -109,7 +109,13 @@ export function PresentationCard() {
     };
 
     return (
-        <Container maxWidth="false" className="content" disableGutters={true} ref={contentRef}>
+        <Container
+            maxWidth="false"
+            className="content"
+            disableGutters={true}
+            ref={contentRef}
+            // sx={{ fontFamily: "Nunito, sans-serif" }}
+        >
             <Box sx={{ display: "flex", flexGrow: "1", justifyContent: "center" }}>
                 <StickyMenu
                     onTabChange={handleTabChange}
@@ -147,15 +153,19 @@ export function PresentationCard() {
                 >
                     <Typography
                         sx={{
-                            fontSize: "70px",
-                            fontWeight: "400",
+                            fontFamily: "Nunito, sans-serif",
+                            fontSize: "90px",
+                            fontWeight: "200",
                             position: "absolute",
-                            top: "65vh",
-                            left: "48%",
+                            top: "67vh",
+                            left: "42%",
+                            lineHeight: "0.6",
                         }}
                     >
                         Welcome! <br />
-                        I&apos;m Ana
+                        <span style={{ fontSize: "36px" }}>
+                            I&apos;m <span style={{ fontWeight: "600" }}>Ana</span>, web developer
+                        </span>
                     </Typography>
                 </Box>
 

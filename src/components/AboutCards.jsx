@@ -3,10 +3,11 @@ import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 import "../AboutCards.css";
 import Divider from "@mui/material/Divider";
+import Box from "@mui/material/Box";
 
 export default function AboutCards() {
     return (
-        <>
+        <Box sx={{ fontFamily: "Nunito, sans-serif" }}>
             <Card
                 sx={{
                     position: "absolute",
@@ -36,6 +37,7 @@ export default function AboutCards() {
                     marginBottom: "80px",
                     padding: "0 5% 0 37%",
                     boxShadow: "5",
+                    fontFamily: "Nunito, sans-serif",
                 }}
             >
                 <CardContent sx={{ maxWidth: "80ch" }}>
@@ -48,6 +50,7 @@ export default function AboutCards() {
                             color: "grey",
                             letterSpacing: "0.5px",
                             lineHeight: "1.7",
+                            fontFamily: "Nunito, sans-serif",
                         }}
                     >
                         I believe in signs, communication, teamwork, friendship, gratitude…
@@ -68,23 +71,23 @@ export default function AboutCards() {
                     <Divider sx={{ marginTop: "50px", marginBottom: "40px", fontSize: "20px" }}>🦋</Divider>
 
                     <br />
-                    <Typography variant="subtitle1" className="letter-space">
+                    <Typography variant="subtitle1" className="letter-space" sx={{ fontFamily: "Nunito, sans-serif" }}>
                         I am a junior web developer, curious and open-minded, eager to learn and embrace new challenges.
                     </Typography>
                     <br />
-                    <Typography variant="subtitle1" className="letter-space">
+                    <Typography variant="subtitle1" className="letter-space" sx={{ fontFamily: "Nunito, sans-serif" }}>
                         I have honed skills in managing small projects, maintaining client communications, and being
                         both independent and proactive through my experience as a construction architect. Larger
                         projects have taught me the value of teamwork.
                     </Typography>
-                    <Typography variant="subtitle1" className="letter-space">
+                    <Typography variant="subtitle1" className="letter-space" sx={{ fontFamily: "Nunito, sans-serif" }}>
                         🌤️ I have learned that trust and communication within a team can transform work into a joyful
                         and successful endeavor; without these, work becomes a less inspiring place.
                     </Typography>
 
                     <br />
                     <br />
-                    <Typography variant="subtitle1" className="letter-space">
+                    <Typography variant="subtitle1" className="letter-space" sx={{ fontFamily: "Nunito, sans-serif" }}>
                         🐾 For some time now, I have been studying frontend development through online platforms and
                         teaching courses. I am also part of the WebDev Remote Learning Program at Nagarro company.
                         <br />
@@ -94,12 +97,16 @@ export default function AboutCards() {
                     </Typography>
                     <br />
                     <Divider sx={{ marginTop: "30px" }}></Divider>
-                    <Typography variant="subtitle1" className="letter-space" sx={{ marginBottom: "80px" }}>
+                    <Typography
+                        variant="subtitle1"
+                        className="letter-space"
+                        sx={{ marginBottom: "80px", fontFamily: "Nunito, sans-serif" }}
+                    >
                         <br />I eagerly await the opportunity to join a dynamic work environment where I can continue to
                         learn and contribute.
                     </Typography>
                 </CardContent>
             </Card>
-        </>
+        </Box>
     );
 }

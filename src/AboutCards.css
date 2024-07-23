@@ -2,3 +2,7 @@ p.letter-space {
     letter-spacing: 0.5px;
     line-height: 1.7;
 }
+
+* {
+    font-family: Nunito, sans-serif;
+}

@@ -52,9 +52,11 @@ export default function ContactCards() {
 
     const inputsStyle = {
         marginBottom: "25px",
+        fontFamily: "Nunito, sans-serif",
     };
     const labelsStyle = {
         marginBottom: "7px",
+        fontFamily: "Nunito, sans-serif",
     };
     return (
         <Box sx={{ position: "relative" }} className="contact-container">
@@ -125,6 +127,7 @@ export default function ContactCards() {
                                     bgcolor: "black",
                                     border: "1px solid black",
                                     boxShadow: 1,
+                                    fontFamily: "Nunito, sans-serif",
                                 }}
                                 onClick={handleSubmit}
                             >
@@ -157,7 +160,11 @@ export default function ContactCards() {
                 <CardContent sx={{ fontSize: "20px", textAlign: "center" }}>Send me an email</CardContent>
             </Card>
 
-            <Typography variant="subtitle1" align="center" sx={{ padding: "5% 5% 0 30%", color: "grey" }}>
+            <Typography
+                variant="subtitle1"
+                align="center"
+                sx={{ padding: "5% 5% 0 30%", color: "grey", fontFamily: "Nunito, sans-serif" }}
+            >
                 I welcome all feedback—whether you found delight, distaste, excitement, or boredom here.
                 <br /> Your thoughts are invaluable to me. <br /> Thank you!
             </Typography>

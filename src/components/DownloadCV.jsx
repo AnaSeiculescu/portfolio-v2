@@ -20,8 +20,10 @@ export default function DownloadCV() {
         top: "86vh",
         alignSelf: "center",
         zIndex: "1",
-        fontWeight: "600",
+        fontWeight: "800",
         color: "#F9CF00",
+        fontFamily: "Nunito, sans-serif",
+        fontSize: "13px",
     };
 
     return (

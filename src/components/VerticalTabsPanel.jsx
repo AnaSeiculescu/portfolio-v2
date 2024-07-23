@@ -24,10 +24,22 @@ const VerticalTabs = ({ tabValue, onTabChange }) => {
                 textColor="inherit"
                 sx={{ borderRight: 1, borderColor: "divider" }}
             >
-                <Tab sx={{ color: "white", fontWeight: tabValue === 0 && "bold" }} label="Home" />
-                <Tab sx={{ color: "white", fontWeight: tabValue === 1 && "bold" }} label="About" />
-                <Tab sx={{ color: "white", fontWeight: tabValue === 2 && "bold" }} label="Work" />
-                <Tab sx={{ color: "white", fontWeight: tabValue === 3 && "bold" }} label="Contact" />
+                <Tab
+                    sx={{ color: "white", fontWeight: tabValue === 0 && "bold", fontFamily: "Nunito, sans-serif" }}
+                    label="Home"
+                />
+                <Tab
+                    sx={{ color: "white", fontWeight: tabValue === 1 && "bold", fontFamily: "Nunito, sans-serif" }}
+                    label="About"
+                />
+                <Tab
+                    sx={{ color: "white", fontWeight: tabValue === 2 && "bold", fontFamily: "Nunito, sans-serif" }}
+                    label="Work"
+                />
+                <Tab
+                    sx={{ color: "white", fontWeight: tabValue === 3 && "bold", fontFamily: "Nunito, sans-serif" }}
+                    label="Contact"
+                />
             </Tabs>
         </Box>
     );
