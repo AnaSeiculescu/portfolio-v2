@@ -125,9 +125,10 @@ export function PresentationCard() {
                 className="scrollingArea"
                 sx={{
                     overflow: "auto",
-                    backgroundImage: "url(../images/presentation-image.jpg)",
-                    backgroundPosition: "top-right",
+                    backgroundImage: "url(../images/home-background-picture4.png)",
+                    backgroundPosition: "right top",
                     backgroundRepeat: "no-repeat",
+                    backgroundSize: "912px 680px",
                 }}
             >
                 <Box
@@ -146,24 +147,16 @@ export function PresentationCard() {
                 >
                     <Typography
                         sx={{
-                            fontSize: "40px",
+                            fontSize: "70px",
+                            fontWeight: "400",
                             position: "absolute",
-                            top: "70vh",
-                            left: "50%",
+                            top: "65vh",
+                            left: "48%",
                         }}
                     >
                         Welcome! <br />
                         I&apos;m Ana
                     </Typography>
-                    {/* <Box
-                        sx={{
-                            // width: "100%",
-                            // height: "920px",
-                            backgroundImage: "url(../images/presentation-image1.jpg)",
-                            backgroundPosition: "top-right",
-                            backgroundRepeat: "no-repeat",
-                        }}
-                    ></Box> */}
                 </Box>
 
                 <Box
