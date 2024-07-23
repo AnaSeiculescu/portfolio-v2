@@ -81,7 +81,6 @@ export default function ContactCards() {
                             <Stack>
                                 <Typography sx={labelsStyle}>Name:</Typography>
                                 <TextField
-                                    // disabled={isLoading}
                                     id="outlined-required"
                                     name="name"
                                     value={name}
@@ -92,7 +91,6 @@ export default function ContactCards() {
                             <Stack>
                                 <Typography sx={labelsStyle}>Email:</Typography>
                                 <TextField
-                                    // disabled={isLoading}
                                     id="outlined-required"
                                     name="email"
                                     value={email}
@@ -106,7 +104,6 @@ export default function ContactCards() {
                             <Typography sx={labelsStyle}>Message:</Typography>
                             <TextField
                                 multiline
-                                // disabled={isLoading}
                                 id="outlined-required"
                                 name="message"
                                 minRows={6}
@@ -120,7 +117,6 @@ export default function ContactCards() {
                             <Button
                                 variant="contained"
                                 type="submit"
-                                // disabled={isLoading}
                                 sx={{
                                     width: "100px",
                                     alignSelf: "right",

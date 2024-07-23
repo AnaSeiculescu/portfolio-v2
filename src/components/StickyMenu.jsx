@@ -5,6 +5,7 @@ import PropTypes from "prop-types";
 import DownloadCV from "./DownloadCV";
 import GroupContactButtons from "./GroupContactButtons";
 import MadeWithLove from "./MadeWithLove";
+import "../StickyMenu.css";
 
 export default function StickyMenu({ onTabChange, contentHeight, tabValue, setTabValue, onClickEmail }) {
     const menuStyle = {
@@ -42,11 +43,9 @@ export default function StickyMenu({ onTabChange, contentHeight, tabValue, setTa
                         position: "absolute",
                         top: "48vh",
                         left: "-23%",
-                        // right: '20%',
                         width: "250px",
                         border: "8px solid #FFF",
                         borderRadius: "3px",
-                        // alignSelf: "end",
                         marginRight: "30px",
                         boxShadow: "1px 1px 5px rgb(117, 116, 116)",
                     }}

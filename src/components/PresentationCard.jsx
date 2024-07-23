@@ -109,13 +109,7 @@ export function PresentationCard() {
     };
 
     return (
-        <Container
-            maxWidth="false"
-            className="content"
-            disableGutters={true}
-            ref={contentRef}
-            // sx={{ fontFamily: "Nunito, sans-serif" }}
-        >
+        <Container maxWidth="false" className="content" disableGutters={true} ref={contentRef}>
             <Box sx={{ display: "flex", flexGrow: "1", justifyContent: "center" }}>
                 <StickyMenu
                     onTabChange={handleTabChange}

@@ -7,13 +7,9 @@ import PropTypes from "prop-types";
 import Chip from "@mui/material/Chip";
 import Stack from "@mui/material/Stack";
 import Divider from "@mui/material/Divider";
-// import Box from "@mui/material/Box";
-// import { useState } from "react";
 
 export function ProjectCard({ title, technologies, alt, imgSrc, linkHref, description, codeLinkHref }) {
-    // const [isHovered, setIsHovered] = useState(false);
     return (
-        // <Box className="project-container" sx={{ position: "relative" }}>
         <Card
             className="project"
             sx={{
@@ -22,10 +18,8 @@ export function ProjectCard({ title, technologies, alt, imgSrc, linkHref, descri
                 width: 340,
                 height: 380,
                 marginRight: "15px",
-                // backgroundColor: "lightgrey",
                 color: "white",
                 boxShadow: "4",
-                // borderRadius: "10px",
             }}
             // onMouseEnter={() => setIsHovered(true)}
             // onMouseLeave={() => setIsHovered(false)}
@@ -75,25 +69,6 @@ export function ProjectCard({ title, technologies, alt, imgSrc, linkHref, descri
                 </Stack>
             </CardContent>
         </Card>
-        // {isHovered && (
-        //     <Box
-        //         className="show-when-hover"
-        //         sx={{
-        //             position: "absolute",
-        //             top: "100%",
-        //             left: "35%",
-        //             height: "150px",
-        //             backgroundColor: "red",
-        //         }}
-        //     >
-        //         I am here now
-        //         <br />
-        //         Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam quam ducimus recusandae nam debitis
-        //         accusamus neque non, sit vel quisquam suscipit repudiandae perferendis ullam exercitationem quos
-        //         dolores doloremque, totam praesentium?
-        //     </Box>
-        // )}
-        // </Box>
     );
 }
 
