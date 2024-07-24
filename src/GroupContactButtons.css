@@ -16,3 +16,26 @@
 .download-cv:hover {
     color: #b89e20;
 }
+
+.group-button-style {
+    position: sticky;
+    top: 83.5vh;
+    align-self: center;
+}
+
+.group-button-style > a ~ a {
+    margin-left: 15px;
+}
+
+.contact-btns-small-screen,
+.cv-small-screen {
+    display: none;
+}
+
+@media (max-width: 1300px) {
+    .contact-btns-wide-screen,
+    .cv-wide-screen,
+    .made-with-wide-screen {
+        display: none;
+    }
+}

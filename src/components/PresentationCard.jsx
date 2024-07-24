@@ -13,6 +13,11 @@ import { usePrevious } from "@uidotdev/usehooks";
 import Work from "./Work";
 import portfolioImage from "../../images/portfolio-image3.jpeg";
 
+import DownloadCV from "./DownloadCV";
+import GroupContactButtons from "./GroupContactButtons";
+
+import "../GroupContactButtons.css";
+
 export function PresentationCard() {
     const contentRef = useRef(null);
     const [contentHeight, setContentHeight] = useState("100vh");
@@ -134,23 +139,28 @@ export function PresentationCard() {
                     backgroundSize: "912px 680px",
                 }}
             >
-                <Box className="me-image-small-screen-box">
-                    <img
-                        className="me-image-small-screen"
-                        src={portfolioImage}
-                        alt="portfolio-image"
-                        // style={{
-                        //     position: "absolute",
-                        //     top: "48vh",
-                        //     left: "-23%",
-                        //     width: "250px",
-                        //     border: "8px solid #FFF",
-                        //     borderRadius: "3px",
-                        //     marginRight: "30px",
-                        //     boxShadow: "1px 1px 5px rgb(117, 116, 116)",
-                        // }}
-                    />
+                <Box className="contact-info-small-screen">
+                    <Box className="me-image-small-screen-box">
+                        <img
+                            className="me-image-small-screen"
+                            src={portfolioImage}
+                            alt="portfolio-image"
+                            // style={{
+                            //     position: "absolute",
+                            //     top: "48vh",
+                            //     left: "-23%",
+                            //     width: "250px",
+                            //     border: "8px solid #FFF",
+                            //     borderRadius: "3px",
+                            //     marginRight: "30px",
+                            //     boxShadow: "1px 1px 5px rgb(117, 116, 116)",
+                            // }}
+                        />
+                    </Box>
+                    <GroupContactButtons className="contact-btns-small-screen" onClickEmail={handleClickEmail} />
+                    <DownloadCV hide={true} />
                 </Box>
+
                 <Box
                     direction={"row"}
                     ref={homeRef}

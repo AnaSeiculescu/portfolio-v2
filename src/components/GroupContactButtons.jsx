@@ -5,15 +5,15 @@ import PropTypes from "prop-types";
 
 export default function GroupContactButtons({ onClickEmail }) {
     const groupBtnsStyle = {
-        position: "sticky",
-        top: "83.5vh",
-        alignSelf: "center",
-        "& > :not(style) ~ :not(style)": {
-            ml: 2,
-        },
+        // position: "sticky",
+        // top: "83.5vh",
+        // alignSelf: "center",
+        // "& > :not(style) ~ :not(style)": {
+        //     ml: 2,
+        // },
     };
     return (
-        <Box sx={groupBtnsStyle}>
+        <Box className="group-button-style" sx={groupBtnsStyle}>
             <Link onClick={onClickEmail} underline="none" target="blank">
                 <i className="fa-solid fa-envelope fa-xl"></i>
             </Link>

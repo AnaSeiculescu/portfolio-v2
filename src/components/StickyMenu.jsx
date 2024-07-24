@@ -31,22 +31,10 @@ export default function StickyMenu({ onTabChange, contentHeight, tabValue, setTa
 
     return (
         <Box className="stickyMenu" sx={menuStyle}>
-            <Box className="me-image-wide-screen-box">
-                <img
-                    className="me-image-wide-screen"
-                    src={portfolioImage}
-                    alt="portfolio-image"
-                    // style={{
-                    //     position: "absolute",
-                    //     top: "48vh",
-                    //     left: "-23%",
-                    //     width: "250px",
-                    //     border: "8px solid #FFF",
-                    //     borderRadius: "3px",
-                    //     marginRight: "30px",
-                    //     boxShadow: "1px 1px 5px rgb(117, 116, 116)",
-                    // }}
-                />
+            <Box className="contact-info-small-screen">
+                <Box className="me-image-wide-screen-box">
+                    <img className="me-image-wide-screen" src={portfolioImage} alt="portfolio-image" />
+                </Box>
             </Box>
 
             <VerticalTabsPanel
@@ -55,9 +43,9 @@ export default function StickyMenu({ onTabChange, contentHeight, tabValue, setTa
                 setTabValue={setTabValue}
                 tabPanelOrientation={tabPanelOrientation}
             />
-            <GroupContactButtons onClickEmail={onClickEmail} />
-            <DownloadCV />
-            <MadeWithLove />
+            <GroupContactButtons className="contact-btns-wide-screen" onClickEmail={onClickEmail} />
+            <DownloadCV className="cv-wide-screen" />
+            <MadeWithLove className="made-with-wide-screen" />
         </Box>
     );
 }

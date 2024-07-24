@@ -52,10 +52,6 @@
     /* transform: scale(0.9); */
 }
 
-.tabs-panel {
-    /* transform: scale(0.9); */
-}
-
 @media (max-width: 1300px) {
     .stickyMenu {
         position: fixed;
@@ -65,7 +61,7 @@
         display: flex;
         flex-direction: row;
         gap: "40px";
-        padding-bottom: 20px;
+        padding-bottom: 10px;
 
         background: rgba(33, 138, 179, 0.85);
         color: white;
@@ -91,27 +87,14 @@
     }
 
     .me-image-small-screen {
-        position: absolute;
-        top: 125px;
-        left: 5%;
-        width: 100px;
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        width: 90px;
         border: 4px solid #fff;
         border-radius: 3px solid white;
         margin-right: 30px;
         box-shadow: 1px 1px 5px rgb(117, 116, 116);
         z-index: 5;
-    }
-
-    .tabs-panel-box {
-        /* display: flex;
-        position: sticky;
-        top: 20vh;
-        align-self: center;
-        z-index: 10; */
-        /* transform: scale(0.9); */
-    }
-
-    .tabs-panel {
-        /* transform: scale(0.9); */
     }
 }

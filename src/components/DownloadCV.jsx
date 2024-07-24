@@ -1,9 +1,10 @@
 import axios from "axios";
+import PropTypes from "prop-types";
 import fileDownload from "js-file-download";
 import Button from "@mui/material/Button";
 import "../GroupContactButtons.css";
 
-export default function DownloadCV() {
+export default function DownloadCV({ hide = false }) {
     const myCvURL = "../../resources/AnaSeiculescu-Resume-CV.pdf";
     const handleDownload = (url, filename) => {
         axios
@@ -26,9 +27,13 @@ export default function DownloadCV() {
         fontSize: "13px",
     };
 
+    if (hide) {
+        downloadBtnStyle.display = "none";
+    }
+
     return (
         <Button
-            className="download-cv"
+            className={`download-cv`}
             sx={downloadBtnStyle}
             variant="text"
             color="warning"
@@ -40,3 +45,7 @@ export default function DownloadCV() {
         </Button>
     );
 }
+
+DownloadCV.propTypes = {
+    hide: PropTypes.bool,
+};
