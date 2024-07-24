@@ -1,6 +1,7 @@
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 // import Stack from "@mui/material/Stack";
+import backgroundImg from "../../images/home-background-picture4.png";
 
 import { Typography } from "@mui/material";
 import { useEffect, useState, useRef } from "react";
@@ -125,7 +126,7 @@ export function PresentationCard() {
                 className="scrollingArea"
                 sx={{
                     overflow: "auto",
-                    backgroundImage: "url(../images/home-background-picture4.png)",
+                    backgroundImage: `url(${backgroundImg})`,
                     backgroundPosition: "right top",
                     backgroundRepeat: "no-repeat",
                     backgroundSize: "912px 680px",
