@@ -1,9 +1,11 @@
+import po1 from "../../images/power-organizer1.jpg";
+
 export const latestProjectsPropsPrimary = [
     {
         id: 1.1,
         title: "power organizer",
         alt: "power-organizer",
-        imgSrc: "../../images/power-organizer1.jpg",
+        imgSrc: po1,
         linkHref: "http://3.76.123.244",
         technologies: ["React.js", "JavaScript", "Material UI"],
         // description: "helps you keep track of your todos depending on the calendar",
