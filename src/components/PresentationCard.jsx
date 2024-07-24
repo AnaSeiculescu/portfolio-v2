@@ -11,6 +11,7 @@ import ContactCards from "./ContactCards";
 import { useInView } from "react-intersection-observer";
 import { usePrevious } from "@uidotdev/usehooks";
 import Work from "./Work";
+import portfolioImage from "../../images/portfolio-image3.jpeg";
 
 export function PresentationCard() {
     const contentRef = useRef(null);
@@ -125,6 +126,7 @@ export function PresentationCard() {
                 disableGutters={true}
                 className="scrollingArea"
                 sx={{
+                    position: "relative",
                     overflow: "auto",
                     backgroundImage: `url(${backgroundImg})`,
                     backgroundPosition: "right top",
@@ -132,6 +134,23 @@ export function PresentationCard() {
                     backgroundSize: "912px 680px",
                 }}
             >
+                <Box className="me-image-small-screen-box">
+                    <img
+                        className="me-image-small-screen"
+                        src={portfolioImage}
+                        alt="portfolio-image"
+                        // style={{
+                        //     position: "absolute",
+                        //     top: "48vh",
+                        //     left: "-23%",
+                        //     width: "250px",
+                        //     border: "8px solid #FFF",
+                        //     borderRadius: "3px",
+                        //     marginRight: "30px",
+                        //     boxShadow: "1px 1px 5px rgb(117, 116, 116)",
+                        // }}
+                    />
+                </Box>
                 <Box
                     direction={"row"}
                     ref={homeRef}

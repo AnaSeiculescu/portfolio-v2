@@ -3,22 +3,36 @@ import Tab from "@mui/material/Tab";
 import Box from "@mui/material/Box";
 import PropTypes from "prop-types";
 
-const VerticalTabs = ({ tabValue, onTabChange }) => {
+const VerticalTabs = ({ tabValue, onTabChange, tabPanelOrientation }) => {
     const handleTabChange = (event, newValue) => {
         onTabChange(newValue);
         console.log("newValue2: ", newValue);
     };
 
     return (
-        <Box sx={{ display: "flex", position: "sticky", top: "20vh", alignSelf: "center", zIndex: "10" }}>
+        <Box
+            className="tabs-panel-box"
+            sx={
+                {
+                    // display: "flex",
+                    // position: "sticky",
+                    // top: "20vh",
+                    // alignSelf: "center",
+                    // zIndex: "10",
+                    // transform: "scale(0.9)",
+                }
+            }
+        >
             <Tabs
-                orientation="vertical"
+                className="tabs-panel"
+                orientation={tabPanelOrientation}
                 variant="scrollable"
                 value={tabValue}
                 onChange={handleTabChange}
                 TabIndicatorProps={{
                     style: {
                         backgroundColor: "red",
+                        // transform: "scale(1.2)",
                     },
                 }}
                 textColor="inherit"
@@ -49,6 +63,7 @@ VerticalTabs.propTypes = {
     setTabValue: PropTypes.func,
     tabValue: PropTypes.number,
     onTabChange: PropTypes.func,
+    tabPanelOrientation: PropTypes.string,
 };
 
 export default VerticalTabs;

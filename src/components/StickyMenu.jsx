@@ -6,66 +6,55 @@ import DownloadCV from "./DownloadCV";
 import GroupContactButtons from "./GroupContactButtons";
 import MadeWithLove from "./MadeWithLove";
 import "../StickyMenu.css";
+// import "../PortfolioMeImage.css";
 import { ViewportWidth } from "./ViewportWidth";
 import { useState, useEffect } from "react";
 
 export default function StickyMenu({ onTabChange, contentHeight, tabValue, setTabValue, onClickEmail }) {
     const viewportWidth = ViewportWidth();
     const [height, setHeight] = useState(contentHeight);
+    const [tabPanelOrientation, setTabPanelOrientation] = useState("vertical");
 
     useEffect(() => {
         if (viewportWidth > 1300) {
             setHeight(contentHeight);
+            setTabPanelOrientation("vertical");
         } else {
-            setHeight(110);
+            setHeight(150);
+            setTabPanelOrientation("horizontal");
         }
     }, [viewportWidth, contentHeight]);
 
     const menuStyle = {
-        // position: "absolute",
-        // top: "0",
-        // left: "10%",
-
-        // display: "flex",
-        // flexDirection: "column",
-        // gap: "40px",
-
-        // background:
-        //     "linear-gradient(0deg, rgba(172,55,255,1) 0%, rgba(14,6,37,1) 45%, rgba(71,96,217,1) 72%, rgba(34,193,195,1) 100%)",
-        // color: "white",
-        // boxShadow: 8,
-        // borderRadius: "0",
-
-        // width: "18%",
         height: `${height}px`,
-        // transition: "height 3.7s",
-
-        // textAlign: "center",
-        // zIndex: "5",
-        // opacity: "0.95",
-        // fontFamily: "Nunito, sans-serif",
     };
 
     return (
         <Box className="stickyMenu" sx={menuStyle}>
-            <Box>
+            <Box className="me-image-wide-screen-box">
                 <img
+                    className="me-image-wide-screen"
                     src={portfolioImage}
                     alt="portfolio-image"
-                    style={{
-                        position: "absolute",
-                        top: "48vh",
-                        left: "-23%",
-                        width: "250px",
-                        border: "8px solid #FFF",
-                        borderRadius: "3px",
-                        marginRight: "30px",
-                        boxShadow: "1px 1px 5px rgb(117, 116, 116)",
-                    }}
+                    // style={{
+                    //     position: "absolute",
+                    //     top: "48vh",
+                    //     left: "-23%",
+                    //     width: "250px",
+                    //     border: "8px solid #FFF",
+                    //     borderRadius: "3px",
+                    //     marginRight: "30px",
+                    //     boxShadow: "1px 1px 5px rgb(117, 116, 116)",
+                    // }}
                 />
             </Box>
 
-            <VerticalTabsPanel onTabChange={onTabChange} tabValue={tabValue} setTabValue={setTabValue} />
+            <VerticalTabsPanel
+                onTabChange={onTabChange}
+                tabValue={tabValue}
+                setTabValue={setTabValue}
+                tabPanelOrientation={tabPanelOrientation}
+            />
             <GroupContactButtons onClickEmail={onClickEmail} />
             <DownloadCV />
             <MadeWithLove />
