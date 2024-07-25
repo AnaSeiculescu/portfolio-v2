@@ -3,6 +3,8 @@ import PropTypes from "prop-types";
 import fileDownload from "js-file-download";
 import Button from "@mui/material/Button";
 import "../GroupContactButtons.css";
+// import { ViewportWidth } from "./ViewportWidth";
+// import { useEffect } from "react";
 
 export default function DownloadCV({ hide = false }) {
     const myCvURL = "../../resources/AnaSeiculescu-Resume-CV.pdf";
@@ -26,6 +28,18 @@ export default function DownloadCV({ hide = false }) {
         fontFamily: "Nunito, sans-serif",
         fontSize: "13px",
     };
+
+    // const viewportWidth = ViewportWidth();
+
+    // useEffect(() => {
+    //     if (viewportWidth > 1300) {
+    //         setHeight(contentHeight);
+    //         setTabPanelOrientation("vertical");
+    //     } else {
+    //         setHeight(150);
+    //         setTabPanelOrientation("horizontal");
+    //     }
+    // }, [viewportWidth, contentHeight]);
 
     if (hide) {
         downloadBtnStyle.display = "none";

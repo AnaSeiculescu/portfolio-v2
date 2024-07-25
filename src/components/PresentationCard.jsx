@@ -15,6 +15,9 @@ import portfolioImage from "../../images/portfolio-image3.jpeg";
 
 import DownloadCV from "./DownloadCV";
 import GroupContactButtons from "./GroupContactButtons";
+import "../GroupContactButtons.css";
+import { ViewportWidth } from "./ViewportWidth";
+import MadeWithLove from "./MadeWithLove";
 
 import "../GroupContactButtons.css";
 
@@ -115,6 +118,16 @@ export function PresentationCard() {
         scrollToEntry(contactEntry);
     };
 
+    const viewportWidth = ViewportWidth();
+    const [hide, setHide] = useState(false);
+    useEffect(() => {
+        if (viewportWidth > 1300) {
+            setHide(true);
+        } else {
+            setHide(false);
+        }
+    }, [viewportWidth, contentHeight]);
+
     return (
         <Container maxWidth="false" className="content" disableGutters={true} ref={contentRef}>
             <Box sx={{ display: "flex", flexGrow: "1", justifyContent: "center" }}>
@@ -157,8 +170,12 @@ export function PresentationCard() {
                             // }}
                         />
                     </Box>
-                    <GroupContactButtons className="contact-btns-small-screen" onClickEmail={handleClickEmail} />
-                    <DownloadCV hide={true} />
+                    <GroupContactButtons
+                        className="contact-btns-small-screen"
+                        onClickEmail={handleClickEmail}
+                        hide={hide}
+                    />
+                    <DownloadCV hide={hide} />
                 </Box>
 
                 <Box
@@ -217,6 +234,7 @@ export function PresentationCard() {
                 >
                     <ContactCards />
                 </Box>
+                <MadeWithLove className="made-with-small-screen" hide={hide} />
             </Container>
         </Container>
     );

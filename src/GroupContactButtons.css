@@ -33,9 +33,7 @@
 }
 
 @media (max-width: 1300px) {
-    .contact-btns-wide-screen,
-    .cv-wide-screen,
-    .made-with-wide-screen {
-        display: none;
+    .made-with-small-screen {
+        margin-top: 30px;
     }
 }

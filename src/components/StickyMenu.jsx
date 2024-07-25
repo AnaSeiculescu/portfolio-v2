@@ -14,14 +14,17 @@ export default function StickyMenu({ onTabChange, contentHeight, tabValue, setTa
     const viewportWidth = ViewportWidth();
     const [height, setHeight] = useState(contentHeight);
     const [tabPanelOrientation, setTabPanelOrientation] = useState("vertical");
+    const [hide, setHide] = useState(false);
 
     useEffect(() => {
         if (viewportWidth > 1300) {
             setHeight(contentHeight);
             setTabPanelOrientation("vertical");
+            setHide(false);
         } else {
             setHeight(150);
             setTabPanelOrientation("horizontal");
+            setHide(true);
         }
     }, [viewportWidth, contentHeight]);
 
@@ -43,9 +46,9 @@ export default function StickyMenu({ onTabChange, contentHeight, tabValue, setTa
                 setTabValue={setTabValue}
                 tabPanelOrientation={tabPanelOrientation}
             />
-            <GroupContactButtons className="contact-btns-wide-screen" onClickEmail={onClickEmail} />
-            <DownloadCV className="cv-wide-screen" />
-            <MadeWithLove className="made-with-wide-screen" />
+            <GroupContactButtons className="contact-btns-wide-screen" onClickEmail={onClickEmail} hide={hide} />
+            <DownloadCV className="cv-wide-screen" hide={hide} />
+            <MadeWithLove className="made-with-wide-screen" hide={hide} />
         </Box>
     );
 }

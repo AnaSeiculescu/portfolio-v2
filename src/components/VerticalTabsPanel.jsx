@@ -32,7 +32,7 @@ const VerticalTabs = ({ tabValue, onTabChange, tabPanelOrientation }) => {
                 TabIndicatorProps={{
                     style: {
                         backgroundColor: "red",
-                        // transform: "scale(1.2)",
+                        // transform: "scale(0.75)",
                     },
                 }}
                 textColor="inherit"
