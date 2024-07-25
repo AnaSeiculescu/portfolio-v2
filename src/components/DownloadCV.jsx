@@ -6,9 +6,10 @@ import Link from "@mui/material/Link";
 import "../GroupContactButtons.css";
 // import { ViewportWidth } from "./ViewportWidth";
 // import { useEffect } from "react";
+import CV from "../../resources/AnaSeiculescu-Resume-CV.pdf";
 
 export default function DownloadCV({ hide = false, changeStyle }) {
-    const myCvURL = "../../resources/AnaSeiculescu-Resume-CV.pdf";
+    const myCvURL = CV;
     const handleDownload = (url, filename) => {
         axios
             .get(url, {
