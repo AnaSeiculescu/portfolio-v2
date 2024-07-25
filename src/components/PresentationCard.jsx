@@ -1,5 +1,6 @@
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
+import Stack from "@mui/material/Stack";
 // import Stack from "@mui/material/Stack";
 import backgroundImg from "../../images/home-background-picture4.png";
 
@@ -18,8 +19,6 @@ import GroupContactButtons from "./GroupContactButtons";
 import "../GroupContactButtons.css";
 import { ViewportWidth } from "./ViewportWidth";
 import MadeWithLove from "./MadeWithLove";
-
-import "../GroupContactButtons.css";
 
 export function PresentationCard() {
     const contentRef = useRef(null);
@@ -120,11 +119,15 @@ export function PresentationCard() {
 
     const viewportWidth = ViewportWidth();
     const [hide, setHide] = useState(false);
+    const [changeStyle, setChangeStyle] = useState(false);
+
     useEffect(() => {
         if (viewportWidth > 1300) {
             setHide(true);
+            setChangeStyle(false);
         } else {
             setHide(false);
+            setChangeStyle(true);
         }
     }, [viewportWidth, contentHeight]);
 
@@ -152,7 +155,7 @@ export function PresentationCard() {
                     backgroundSize: "912px 680px",
                 }}
             >
-                <Box className="contact-info-small-screen">
+                <Stack className="contact-info-small-screen" direction="row" spacing={3}>
                     <Box className="me-image-small-screen-box">
                         <img
                             className="me-image-small-screen"
@@ -170,13 +173,14 @@ export function PresentationCard() {
                             // }}
                         />
                     </Box>
+                    <DownloadCV hide={hide} className="cv-small-screen" changeStyle={changeStyle} />
                     <GroupContactButtons
                         className="contact-btns-small-screen"
                         onClickEmail={handleClickEmail}
                         hide={hide}
+                        changeStyle={changeStyle}
                     />
-                    <DownloadCV hide={hide} />
-                </Box>
+                </Stack>
 
                 <Box
                     direction={"row"}
@@ -234,7 +238,7 @@ export function PresentationCard() {
                 >
                     <ContactCards />
                 </Box>
-                <MadeWithLove className="made-with-small-screen" hide={hide} />
+                <MadeWithLove className="made-with-small-screen" hide={hide} changeStyle={changeStyle} />
             </Container>
         </Container>
     );

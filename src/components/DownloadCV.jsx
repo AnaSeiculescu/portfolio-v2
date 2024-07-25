@@ -6,7 +6,7 @@ import "../GroupContactButtons.css";
 // import { ViewportWidth } from "./ViewportWidth";
 // import { useEffect } from "react";
 
-export default function DownloadCV({ hide = false }) {
+export default function DownloadCV({ hide = false, changeStyle }) {
     const myCvURL = "../../resources/AnaSeiculescu-Resume-CV.pdf";
     const handleDownload = (url, filename) => {
         axios
@@ -29,17 +29,12 @@ export default function DownloadCV({ hide = false }) {
         fontSize: "13px",
     };
 
-    // const viewportWidth = ViewportWidth();
-
-    // useEffect(() => {
-    //     if (viewportWidth > 1300) {
-    //         setHeight(contentHeight);
-    //         setTabPanelOrientation("vertical");
-    //     } else {
-    //         setHeight(150);
-    //         setTabPanelOrientation("horizontal");
-    //     }
-    // }, [viewportWidth, contentHeight]);
+    if (changeStyle) {
+        // downloadBtnStyle.position = "fixed";
+        downloadBtnStyle.top = "35px";
+        downloadBtnStyle.left = "120px";
+        // downloadBtnStyle.zIndex = "5";
+    }
 
     if (hide) {
         downloadBtnStyle.display = "none";
@@ -62,4 +57,5 @@ export default function DownloadCV({ hide = false }) {
 
 DownloadCV.propTypes = {
     hide: PropTypes.bool,
+    changeStyle: PropTypes.bool,
 };

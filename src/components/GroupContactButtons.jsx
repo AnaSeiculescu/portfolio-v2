@@ -3,7 +3,7 @@ import Link from "@mui/material/Link";
 import "../GroupContactButtons.css";
 import PropTypes from "prop-types";
 
-export default function GroupContactButtons({ hide = false, onClickEmail }) {
+export default function GroupContactButtons({ hide = false, onClickEmail, changeStyle }) {
     const groupBtnsStyle = {
         position: "sticky",
         top: "83.5vh",
@@ -15,6 +15,13 @@ export default function GroupContactButtons({ hide = false, onClickEmail }) {
 
     if (hide) {
         groupBtnsStyle.display = "none";
+    }
+
+    if (changeStyle) {
+        // groupBtnsStyle.position = "fixed";
+        groupBtnsStyle.top = "40px";
+        groupBtnsStyle.left = "120px";
+        // groupBtnsStyle.zIndex = "5";
     }
     return (
         <Box className="group-button-style" sx={groupBtnsStyle}>
@@ -34,4 +41,5 @@ export default function GroupContactButtons({ hide = false, onClickEmail }) {
 GroupContactButtons.propTypes = {
     onClickEmail: PropTypes.func,
     hide: PropTypes.bool,
+    changeStyle: PropTypes.bool,
 };

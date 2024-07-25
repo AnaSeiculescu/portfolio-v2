@@ -2,7 +2,7 @@ import { Typography } from "@mui/material";
 import Stack from "@mui/material/Stack";
 import PropTypes from "prop-types";
 
-export default function MadeWithLove({ hide /*className*/ }) {
+export default function MadeWithLove({ hide = false, changeStyle }) {
     const madeWithLoveStyle = {
         position: "fixed",
         top: "96vh",
@@ -15,6 +15,11 @@ export default function MadeWithLove({ hide /*className*/ }) {
     if (hide) {
         madeWithLoveStyle.display = "none";
     }
+
+    if (changeStyle) {
+        madeWithLoveStyle.position = "static";
+        madeWithLoveStyle.marginBottom = "10px";
+    }
     return (
         <Stack className>
             <Typography sx={madeWithLoveStyle}>
@@ -26,4 +31,5 @@ export default function MadeWithLove({ hide /*className*/ }) {
 
 MadeWithLove.propTypes = {
     hide: PropTypes.bool,
+    changeStyle: PropTypes.bool,
 };
