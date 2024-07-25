@@ -1,7 +1,8 @@
 import axios from "axios";
 import PropTypes from "prop-types";
 import fileDownload from "js-file-download";
-import Button from "@mui/material/Button";
+// import Button from "@mui/material/Button";
+import Link from "@mui/material/Link";
 import "../GroupContactButtons.css";
 // import { ViewportWidth } from "./ViewportWidth";
 // import { useEffect } from "react";
@@ -20,20 +21,19 @@ export default function DownloadCV({ hide = false, changeStyle }) {
 
     const downloadBtnStyle = {
         position: "sticky",
-        top: "86vh",
+        top: "86.5vh",
         alignSelf: "center",
         zIndex: "1",
         fontWeight: "800",
         color: "#F9CF00",
         fontFamily: "Nunito, sans-serif",
-        fontSize: "13px",
+        fontSize: "16px",
     };
 
     if (changeStyle) {
-        // downloadBtnStyle.position = "fixed";
-        downloadBtnStyle.top = "35px";
+        downloadBtnStyle.top = "40px";
         downloadBtnStyle.left = "120px";
-        // downloadBtnStyle.zIndex = "5";
+        downloadBtnStyle.fontSize = "16px";
     }
 
     if (hide) {
@@ -41,17 +41,21 @@ export default function DownloadCV({ hide = false, changeStyle }) {
     }
 
     return (
-        <Button
+        <Link
+            component="button"
+            // href={linkHref}
+            underline="none"
             className={`download-cv`}
             sx={downloadBtnStyle}
             variant="text"
-            color="warning"
+            // color="warning"
             onClick={() => {
                 handleDownload(myCvURL, "AnaSeiculescu-Resume-CV.pdf");
             }}
         >
-            Download CV
-        </Button>
+            <p>Download CV</p>
+            {/* Download CV */}
+        </Link>
     );
 }
 
