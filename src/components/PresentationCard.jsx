@@ -205,22 +205,7 @@ export function PresentationCard() {
                     />
                 </Stack>
 
-                <Box
-                    direction={"row"}
-                    ref={homeRef}
-                    className="home"
-                    sx={
-                        {
-                            // color: "black",
-                            // minHeight: "100vh",
-                            // paddingLeft: "28%",
-                            // alignContent: "center",
-                            // textAlign: "center",
-                            // zIndex: "2",
-                            // position: "relative",
-                        }
-                    }
-                >
+                <Box direction={"row"} ref={homeRef} className="home">
                     <Typography className="welcome-text" sx={welcomeStyle}>
                         Welcome! <br />
                         <span className="i-am-text">

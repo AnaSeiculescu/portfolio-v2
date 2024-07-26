@@ -71,7 +71,7 @@ export default function ContactCards() {
             >
                 <CardContent>
                     <Stack
-                        sx={{ justifyContent: "center", flexGrow: "1", margin: "30px 0", padding: "0 8% 0 32%" }}
+                        className="contact-card-content"
                         spacing={{ xs: 5, sm: 3 }}
                         direction="row"
                         useFlexGap
@@ -143,7 +143,7 @@ export default function ContactCards() {
                     width: "180px",
                     height: "180px",
                     borderRadius: "50%",
-                    marginLeft: "80%",
+                    // marginLeft: "80%",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
@@ -157,14 +157,18 @@ export default function ContactCards() {
             </Card>
 
             <Typography
+                className="thank-you-text"
                 variant="subtitle1"
                 align="center"
-                sx={{ padding: "5% 5% 0 30%", color: "grey", fontFamily: "Nunito, sans-serif" }}
+                // sx={{ padding: "5% 5% 0 30%", color: "grey", fontFamily: "Nunito, sans-serif" }}
             >
                 I welcome all feedback—whether you found delight, distaste, excitement, or boredom here.
                 <br /> Your thoughts are invaluable to me. <br /> Thank you!
             </Typography>
-            <Divider sx={{ padding: "0 5% 5% 30%", marginTop: "50px", marginBottom: "40px", fontSize: "20px" }}>
+            <Divider
+                className="thank-you-divider"
+                // sx={{ padding: "0 5% 5% 30%", marginTop: "50px", marginBottom: "40px", fontSize: "20px" }}
+            >
                 🦋
             </Divider>
         </Box>

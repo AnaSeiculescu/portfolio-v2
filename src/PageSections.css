@@ -37,13 +37,27 @@
     font-family: Nunito, sans-serif;
 }
 
-@media (max-width: 1300px) {
-    .home {
-        padding-left: 0;
-        align-content: center;
-        text-align: center;
-    }
+.contact-card-content {
+    justify-content: center;
+    flex-grow: 1;
+    margin: 30px 0;
+    padding: 0 8% 0 32%;
+}
 
+.thank-you-text {
+    padding: 5% 5% 0 30%;
+    color: grey;
+    font-family: Nunito, sans-serif;
+}
+
+.contact-container .thank-you-divider {
+    padding: 0 5% 5% 30%;
+    margin-top: 50px;
+    margin-bottom: 40px;
+    font-size: 20px;
+}
+
+@media (max-width: 1300px) {
     .about-card-title {
         position: absolute;
         top: 1%;
@@ -56,6 +70,18 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+    }
+
+    .contact-card-content {
+        padding: 0 8% 0 12%;
+    }
+
+    .thank-you-text {
+        padding: 5% 5% 0 5%;
+    }
+
+    .contact-container .thank-you-divider {
+        padding: 0 5% 5% 5%;
     }
 }
 
