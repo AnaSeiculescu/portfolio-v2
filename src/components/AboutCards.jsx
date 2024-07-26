@@ -8,7 +8,7 @@ import "../PageSections.css";
 
 export default function AboutCards() {
     return (
-        <Box sx={{ fontFamily: "Nunito, sans-serif" }}>
+        <Box sx={{ fontFamily: "Nunito, sans-serif", marginTop: "200px" }}>
             <Card
                 className="about-card-title"
                 sx={{

@@ -19,6 +19,7 @@ import GroupContactButtons from "./GroupContactButtons";
 import "../GroupContactButtons.css";
 import { ViewportWidth } from "./ViewportWidth";
 import MadeWithLove from "./MadeWithLove";
+import { WorkSmallScreen } from "./WorkSmallScreen";
 
 export function PresentationCard() {
     const contentRef = useRef(null);
@@ -120,6 +121,7 @@ export function PresentationCard() {
     const viewportWidth = ViewportWidth();
     const [hide, setHide] = useState(false);
     const [changeStyle, setChangeStyle] = useState(false);
+    // const [hideCarousel, setHideCarousel] = useState(false);
 
     const welcomeStyle = {
         fontFamily: "Nunito, sans-serif",
@@ -135,9 +137,11 @@ export function PresentationCard() {
         if (viewportWidth > 1300) {
             setHide(true);
             setChangeStyle(false);
+            // setHideCarousel(false);
         } else {
             setHide(false);
             setChangeStyle(true);
+            // setHideCarousel(true);
         }
     }, [viewportWidth, contentHeight]);
 
@@ -227,6 +231,7 @@ export function PresentationCard() {
 
                 <Box ref={workRef}>
                     <Work />
+                    <WorkSmallScreen />
                 </Box>
                 <Box
                     className="contact"

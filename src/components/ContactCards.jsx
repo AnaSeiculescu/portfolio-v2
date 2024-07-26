@@ -59,7 +59,7 @@ export default function ContactCards() {
         fontFamily: "Nunito, sans-serif",
     };
     return (
-        <Box sx={{ position: "relative" }} className="contact-container">
+        <Box sx={{ position: "relative", marginTop: "200px" }} className="contact-container">
             <Card
                 className="message-card"
                 sx={{

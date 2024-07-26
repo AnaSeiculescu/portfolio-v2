@@ -7,18 +7,19 @@ import PropTypes from "prop-types";
 import Chip from "@mui/material/Chip";
 import Stack from "@mui/material/Stack";
 import Divider from "@mui/material/Divider";
+import "../Work.css";
 
 export function ProjectCard({ title, technologies, alt, imgSrc, linkHref, description, codeLinkHref }) {
     return (
         <Card
             className="project"
             sx={{
-                display: "flex",
-                flexDirection: "column",
-                width: 340,
-                height: 380,
-                marginRight: "15px",
-                color: "white",
+                // display: "flex",
+                // flexDirection: "column",
+                // width: 340,
+                // height: 380,
+                // marginRight: "15px",
+                // color: "white",
                 boxShadow: "4",
             }}
             // onMouseEnter={() => setIsHovered(true)}
@@ -26,11 +27,16 @@ export function ProjectCard({ title, technologies, alt, imgSrc, linkHref, descri
         >
             <Link href={linkHref} underline="none" target="blank">
                 <CardMedia
+                    className="project-card-media-img"
                     component="img"
                     height="165"
                     image={imgSrc}
                     alt={alt}
-                    sx={{ margin: "10px", boxShadow: "1", width: "320px" }}
+                    sx={{
+                        // margin: "10px",
+                        boxShadow: "1",
+                        width: "320px",
+                    }}
                 />
             </Link>
             <CardContent

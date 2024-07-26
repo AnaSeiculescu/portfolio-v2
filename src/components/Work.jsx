@@ -8,11 +8,42 @@ import {
     oldestProjectsPropsSecondary,
 } from "./work-utils";
 import Divider from "@mui/material/Divider";
+import { ViewportWidth } from "./ViewportWidth";
+import { useState, useEffect } from "react";
+import PropTypes from "prop-types";
 
 export default function Work() {
+    const viewportWidth = ViewportWidth();
+
+    const [hideWork, setHideWork] = useState(false);
+
+    useEffect(() => {
+        if (viewportWidth > 1300) {
+            setHideWork(false);
+        } else {
+            setHideWork(true);
+        }
+    }, [viewportWidth]);
+
+    const firstCarouselSecondaryStyle = {};
+    const secondCarouselSecondaryStyle = {};
+    // if (hideCarousel) {
+    //     firstCarouselSecondaryStyle.display = "none";
+    //     secondCarouselSecondaryStyle.display = "none";
+    // }
+
+    const workStyle = {
+        position: "relative",
+        flexGrow: 1,
+    };
+
+    if (hideWork) {
+        workStyle.display = "none";
+    }
+
     return (
         <>
-            <Box className="work-container" sx={{ position: "relative", flexGrow: 1 }}>
+            <Box className="work-container" sx={workStyle}>
                 <>
                     <Box
                         className="first-scroll-container"
@@ -40,7 +71,10 @@ export default function Work() {
                                 />
                             ))}
                         </Box>
-                        <Box className="first-carousel-primary first-carousel-secondary">
+                        <Box
+                            className="first-carousel-primary first-carousel-secondary"
+                            sx={firstCarouselSecondaryStyle}
+                        >
                             {latestProjectsPropsSecondary.map((project) => (
                                 <ProjectCard
                                     // className="element-to-hover"
@@ -80,7 +114,10 @@ export default function Work() {
                                 />
                             ))}
                         </Box>
-                        <Box className="second-carousel-primary second-carousel-secondary">
+                        <Box
+                            className="second-carousel-primary second-carousel-secondary"
+                            sx={secondCarouselSecondaryStyle}
+                        >
                             {oldestProjectsPropsSecondary.map((project) => (
                                 <ProjectCard
                                     // className="element-to-hover"
@@ -103,3 +140,7 @@ export default function Work() {
         </>
     );
 }
+
+Work.propTypes = {
+    hideCarousel: PropTypes.bool,
+};
