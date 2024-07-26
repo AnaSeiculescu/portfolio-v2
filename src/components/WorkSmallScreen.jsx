@@ -4,7 +4,6 @@ import Stack from "@mui/material/Stack";
 import Divider from "@mui/material/Divider";
 import { ViewportWidth } from "./ViewportWidth";
 import { useState, useEffect } from "react";
-// import PropTypes from "prop-types";
 import { ProjectCard } from "./ProjectCard";
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 
@@ -12,9 +11,6 @@ export function WorkSmallScreen() {
     const viewportWidth = ViewportWidth();
 
     const [hideWorkSmallScreen, setHideWorkSmallScreen] = useState(false);
-
-    // const firstCarouselSecondaryStyle = {};
-    // const secondCarouselSecondaryStyle = {};
 
     useEffect(() => {
         if (viewportWidth > 1300) {
@@ -27,6 +23,8 @@ export function WorkSmallScreen() {
     const workSmallScreenStyle = {
         position: "relative",
         marginBottom: "70px",
+        display: "flex",
+        justifyContent: "space-around",
         // flexGrow: 1,
     };
 
@@ -43,10 +41,10 @@ export function WorkSmallScreen() {
                 <i>some of my latest projects</i>
             </Divider>
             <ResponsiveMasonry
-                columnsCountBreakPoints={{ 400: 1, 700: 2, 1250: 3 }}
-                style={{ margin: "25px 25px 25px 30px", justifyContent: "center" }}
+                columnsCountBreakPoints={{ 400: 1, 750: 2, 1100: 3 }}
+                style={{ margin: "25px 25px 25px 30px" }}
             >
-                <Masonry gutter="20px" sx={{ justifyContent: "center" }}>
+                <Masonry gutter="20px" sx={{}}>
                     {latestProjectsProps.map((project) => (
                         <ProjectCard
                             key={project.id}
@@ -69,7 +67,7 @@ export function WorkSmallScreen() {
                 <i>and some of my oldest</i>
             </Divider>
             <ResponsiveMasonry
-                columnsCountBreakPoints={{ 400: 1, 700: 2, 1250: 3 }}
+                columnsCountBreakPoints={{ 400: 1, 750: 2, 1100: 3 }}
                 style={{ margin: "25px 25px 25px 30px" }}
             >
                 <Masonry gutter="20px">
@@ -90,7 +88,3 @@ export function WorkSmallScreen() {
         </Stack>
     );
 }
-
-WorkSmallScreen.propTypes = {
-    // hideCarousel: PropTypes.bool,
-};

@@ -27,10 +27,6 @@ export default function Work() {
 
     const firstCarouselSecondaryStyle = {};
     const secondCarouselSecondaryStyle = {};
-    // if (hideCarousel) {
-    //     firstCarouselSecondaryStyle.display = "none";
-    //     secondCarouselSecondaryStyle.display = "none";
-    // }
 
     const workStyle = {
         position: "relative",
@@ -57,7 +53,6 @@ export default function Work() {
                         <Box className="first-carousel-primary">
                             {latestProjectsPropsPrimary.map((project) => (
                                 <ProjectCard
-                                    // className="element-to-hover"
                                     key={project.id}
                                     title={project.title}
                                     technologies={project.technologies}
@@ -66,8 +61,6 @@ export default function Work() {
                                     linkHref={project.linkHref}
                                     description={project.description}
                                     codeLinkHref={project.codeLinkHref}
-                                    // onMouseEnter={() => setIsHovered(true)}
-                                    // onMouseLeave={() => setIsHovered(false)}
                                 />
                             ))}
                         </Box>
@@ -77,7 +70,6 @@ export default function Work() {
                         >
                             {latestProjectsPropsSecondary.map((project) => (
                                 <ProjectCard
-                                    // className="element-to-hover"
                                     key={project.id}
                                     title={project.title}
                                     technologies={project.technologies}
@@ -86,8 +78,6 @@ export default function Work() {
                                     linkHref={project.linkHref}
                                     description={project.description}
                                     codeLinkHref={project.codeLinkHref}
-                                    // onMouseEnter={() => setIsHovered(true)}
-                                    // onMouseLeave={() => setIsHovered(false)}
                                 />
                             ))}
                         </Box>
@@ -100,7 +90,6 @@ export default function Work() {
                         <Box className="second-carousel-primary">
                             {oldestProjectsPropsPrimary.map((project) => (
                                 <ProjectCard
-                                    // className="element-to-hover"
                                     key={project.id}
                                     title={project.title}
                                     technologies={project.technologies}
@@ -109,8 +98,6 @@ export default function Work() {
                                     linkHref={project.linkHref}
                                     description={project.description}
                                     codeLinkHref={project.codeLinkHref}
-                                    // onMouseEnter={() => setIsHovered(true)}
-                                    // onMouseLeave={() => setIsHovered(false)}
                                 />
                             ))}
                         </Box>
@@ -120,7 +107,6 @@ export default function Work() {
                         >
                             {oldestProjectsPropsSecondary.map((project) => (
                                 <ProjectCard
-                                    // className="element-to-hover"
                                     key={project.id}
                                     title={project.title}
                                     technologies={project.technologies}
@@ -129,8 +115,6 @@ export default function Work() {
                                     linkHref={project.linkHref}
                                     description={project.description}
                                     codeLinkHref={project.codeLinkHref}
-                                    // onMouseEnter={() => setIsHovered(true)}
-                                    // onMouseLeave={() => setIsHovered(false)}
                                 />
                             ))}
                         </Box>

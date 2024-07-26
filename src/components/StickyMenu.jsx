@@ -6,7 +6,6 @@ import DownloadCV from "./DownloadCV";
 import GroupContactButtons from "./GroupContactButtons";
 import MadeWithLove from "./MadeWithLove";
 import "../StickyMenu.css";
-// import "../PortfolioMeImage.css";
 import { ViewportWidth } from "./ViewportWidth";
 import { useState, useEffect } from "react";
 

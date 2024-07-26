@@ -121,7 +121,6 @@ export function PresentationCard() {
     const viewportWidth = ViewportWidth();
     const [hide, setHide] = useState(false);
     const [changeStyle, setChangeStyle] = useState(false);
-    // const [hideCarousel, setHideCarousel] = useState(false);
 
     const welcomeStyle = {
         fontFamily: "Nunito, sans-serif",
@@ -137,11 +136,9 @@ export function PresentationCard() {
         if (viewportWidth > 1300) {
             setHide(true);
             setChangeStyle(false);
-            // setHideCarousel(false);
         } else {
             setHide(false);
             setChangeStyle(true);
-            // setHideCarousel(true);
         }
     }, [viewportWidth, contentHeight]);
 
@@ -184,21 +181,7 @@ export function PresentationCard() {
             >
                 <Stack className="contact-info-small-screen" direction="row" spacing={3}>
                     <Box className="me-image-small-screen-box">
-                        <img
-                            className="me-image-small-screen"
-                            src={portfolioImage}
-                            alt="portfolio-image"
-                            // style={{
-                            //     position: "absolute",
-                            //     top: "48vh",
-                            //     left: "-23%",
-                            //     width: "250px",
-                            //     border: "8px solid #FFF",
-                            //     borderRadius: "3px",
-                            //     marginRight: "30px",
-                            //     boxShadow: "1px 1px 5px rgb(117, 116, 116)",
-                            // }}
-                        />
+                        <img className="me-image-small-screen" src={portfolioImage} alt="portfolio-image" />
                     </Box>
                     <DownloadCV hide={hide} className="cv-small-screen" changeStyle={changeStyle} />
                     <GroupContactButtons

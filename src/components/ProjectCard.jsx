@@ -14,16 +14,8 @@ export function ProjectCard({ title, technologies, alt, imgSrc, linkHref, descri
         <Card
             className="project"
             sx={{
-                // display: "flex",
-                // flexDirection: "column",
-                // width: 340,
-                // height: 380,
-                // marginRight: "15px",
-                // color: "white",
                 boxShadow: "4",
             }}
-            // onMouseEnter={() => setIsHovered(true)}
-            // onMouseLeave={() => setIsHovered(false)}
         >
             <Link href={linkHref} underline="none" target="blank">
                 <CardMedia
@@ -33,7 +25,6 @@ export function ProjectCard({ title, technologies, alt, imgSrc, linkHref, descri
                     image={imgSrc}
                     alt={alt}
                     sx={{
-                        // margin: "10px",
                         boxShadow: "1",
                         width: "320px",
                     }}
