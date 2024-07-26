@@ -8,16 +8,6 @@
     position: relative;
 }
 
-.welcome-text {
-    font-family: Nunito, sans-serif;
-    font-size: 90px;
-    font-weight: 200;
-    position: absolute;
-    top: 67vh;
-    left: 42%;
-    line-height: 0.6;
-}
-
 .i-am-text {
     font-size: 36px;
 }
@@ -44,29 +34,25 @@
     margin-top: 150px;
     margin-bottom: 80px;
     padding: 0 5% 0 37%;
-    /* box-shadow: 4px 4px 4px grey; */
     font-family: Nunito, sans-serif;
 }
 
 @media (max-width: 1300px) {
-    .welcome-text {
-        /* max-width: 80vw; */
-        /* top: 67vh; */
-        left: 20%;
+    .home {
+        padding-left: 0;
+        align-content: center;
+        text-align: center;
     }
 
     .about-card-title {
         position: absolute;
         top: 1%;
-        /* right: 10%; */
-        /* box-shadow: 4px 4px 4px grey; */
         width: 200px;
         height: 200px;
     }
 
     .about-card-text {
         padding: 0 5% 0 10%;
-        /* text-align: center; */
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -74,9 +60,6 @@
 }
 
 @media (max-width: 900px) {
-    .welcome-text {
-        font-size: 60px;
-    }
     .i-am-text {
         font-size: 24px;
     }

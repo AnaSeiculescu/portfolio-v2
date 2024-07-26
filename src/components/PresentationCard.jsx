@@ -1,7 +1,6 @@
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import Stack from "@mui/material/Stack";
-// import Stack from "@mui/material/Stack";
 import backgroundImg from "../../images/home-background-picture4.png";
 import "../PageSections.css";
 
@@ -122,6 +121,16 @@ export function PresentationCard() {
     const [hide, setHide] = useState(false);
     const [changeStyle, setChangeStyle] = useState(false);
 
+    const welcomeStyle = {
+        fontFamily: "Nunito, sans-serif",
+        // fontSize: "90px",
+        fontWeight: "200",
+        position: "absolute",
+        top: "67vh",
+        // left: "42%",
+        lineHeight: "0.6",
+    };
+
     useEffect(() => {
         if (viewportWidth > 1300) {
             setHide(true);
@@ -131,6 +140,19 @@ export function PresentationCard() {
             setChangeStyle(true);
         }
     }, [viewportWidth, contentHeight]);
+
+    if (viewportWidth > 1300) {
+        welcomeStyle.left = "42%";
+    } else {
+        welcomeStyle.left = "25%";
+    }
+
+    if (viewportWidth > 900) {
+        welcomeStyle.fontSize = "90px";
+    } else {
+        welcomeStyle.fontSize = "60px";
+        welcomeStyle.left = "15%";
+    }
 
     return (
         <Container maxWidth="false" className="content" disableGutters={true} ref={contentRef}>
@@ -199,18 +221,7 @@ export function PresentationCard() {
                         }
                     }
                 >
-                    <Typography
-                        className="welcome-text"
-                        sx={{
-                            fontFamily: "Nunito, sans-serif",
-                            fontSize: "90px",
-                            fontWeight: "200",
-                            // position: "absolute",
-                            // top: "67vh",
-                            // left: "42%",
-                            lineHeight: "0.6",
-                        }}
-                    >
+                    <Typography className="welcome-text" sx={welcomeStyle}>
                         Welcome! <br />
                         <span className="i-am-text">
                             I&apos;m <span style={{ fontWeight: "600" }}>Ana</span>, web developer
