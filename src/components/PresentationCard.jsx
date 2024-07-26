@@ -201,17 +201,15 @@ export function PresentationCard() {
                 >
                     <Typography
                         className="welcome-text"
-                        sx={
-                            {
-                                // fontFamily: "Nunito, sans-serif",
-                                // fontSize: "90px",
-                                // fontWeight: "200",
-                                // position: "absolute",
-                                // top: "67vh",
-                                // left: "42%",
-                                // lineHeight: "0.6",
-                            }
-                        }
+                        sx={{
+                            fontFamily: "Nunito, sans-serif",
+                            fontSize: "90px",
+                            fontWeight: "200",
+                            // position: "absolute",
+                            // top: "67vh",
+                            // left: "42%",
+                            lineHeight: "0.6",
+                        }}
                     >
                         Welcome! <br />
                         <span className="i-am-text">

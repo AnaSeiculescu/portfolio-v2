@@ -4,6 +4,7 @@ import Typography from "@mui/material/Typography";
 import "../AboutCards.css";
 import Divider from "@mui/material/Divider";
 import Box from "@mui/material/Box";
+import "../PageSections.css";
 
 export default function AboutCards() {
     return (
@@ -17,14 +18,14 @@ export default function AboutCards() {
                     boxShadow: "5",
                     // width: "250px",
                     // height: "250px",
-                    // borderRadius: "50%",
+                    borderRadius: "50%",
                     // marginTop: "50px",
                     // textAlign: "center",
                     // display: "flex",
                     // alignItems: "center",
                     // justifyContent: "center",
                     // zIndex: "2",
-                    // backgroundColor: "#ff9008",
+                    backgroundColor: "#ff9008",
                     // opacity: "0.85",
                 }}
             >
@@ -39,7 +40,7 @@ export default function AboutCards() {
                     // marginBottom: "80px",
                     // padding: "0 5% 0 37%",
                     boxShadow: "5",
-                    // fontFamily: "Nunito, sans-serif",
+                    fontFamily: "Nunito, sans-serif",
                 }}
             >
                 <CardContent sx={{ maxWidth: "80ch" }}>
@@ -47,16 +48,14 @@ export default function AboutCards() {
                         className="about-card-content-text"
                         variant="subtitle1"
                         align="center"
-                        sx={
-                            {
-                                // marginTop: "13%",
-                                // marginBottom: "8%",
-                                // color: "grey",
-                                // letterSpacing: "0.5px",
-                                // lineHeight: "1.7",
-                                // fontFamily: "Nunito, sans-serif",
-                            }
-                        }
+                        sx={{
+                            marginTop: "13%",
+                            marginBottom: "8%",
+                            color: "grey",
+                            letterSpacing: "0.5px",
+                            lineHeight: "1.7",
+                            fontFamily: "Nunito, sans-serif",
+                        }}
                     >
                         I believe in signs, communication, teamwork, friendship, gratitude…
                         <br />
