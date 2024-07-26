@@ -30,6 +30,7 @@ export default function StickyMenu({ onTabChange, contentHeight, tabValue, setTa
 
     const menuStyle = {
         height: `${height}px`,
+        boxShadow: "10",
     };
 
     return (

@@ -3,6 +3,7 @@ import Container from "@mui/material/Container";
 import Stack from "@mui/material/Stack";
 // import Stack from "@mui/material/Stack";
 import backgroundImg from "../../images/home-background-picture4.png";
+import "../PageSections.css";
 
 import { Typography } from "@mui/material";
 import { useEffect, useState, useRef } from "react";
@@ -186,29 +187,34 @@ export function PresentationCard() {
                     direction={"row"}
                     ref={homeRef}
                     className="home"
-                    sx={{
-                        color: "black",
-                        minHeight: "100vh",
-                        paddingLeft: "28%",
-                        alignContent: "center",
-                        textAlign: "center",
-                        zIndex: "2",
-                        position: "relative",
-                    }}
+                    sx={
+                        {
+                            // color: "black",
+                            // minHeight: "100vh",
+                            // paddingLeft: "28%",
+                            // alignContent: "center",
+                            // textAlign: "center",
+                            // zIndex: "2",
+                            // position: "relative",
+                        }
+                    }
                 >
                     <Typography
-                        sx={{
-                            fontFamily: "Nunito, sans-serif",
-                            fontSize: "90px",
-                            fontWeight: "200",
-                            position: "absolute",
-                            top: "67vh",
-                            left: "42%",
-                            lineHeight: "0.6",
-                        }}
+                        className="welcome-text"
+                        sx={
+                            {
+                                // fontFamily: "Nunito, sans-serif",
+                                // fontSize: "90px",
+                                // fontWeight: "200",
+                                // position: "absolute",
+                                // top: "67vh",
+                                // left: "42%",
+                                // lineHeight: "0.6",
+                            }
+                        }
                     >
                         Welcome! <br />
-                        <span style={{ fontSize: "36px" }}>
+                        <span className="i-am-text">
                             I&apos;m <span style={{ fontWeight: "600" }}>Ana</span>, web developer
                         </span>
                     </Typography>

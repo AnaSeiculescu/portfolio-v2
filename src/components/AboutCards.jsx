@@ -9,22 +9,23 @@ export default function AboutCards() {
     return (
         <Box sx={{ fontFamily: "Nunito, sans-serif" }}>
             <Card
+                className="about-card-title"
                 sx={{
-                    position: "absolute",
-                    top: "1%",
-                    right: "10%",
+                    // position: "absolute",
+                    // top: "1%",
+                    // right: "10%",
                     boxShadow: "5",
-                    width: "250px",
-                    height: "250px",
-                    borderRadius: "50%",
-                    marginTop: "50px",
-                    textAlign: "center",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    zIndex: "2",
-                    backgroundColor: "#ff9008",
-                    opacity: "0.85",
+                    // width: "250px",
+                    // height: "250px",
+                    // borderRadius: "50%",
+                    // marginTop: "50px",
+                    // textAlign: "center",
+                    // display: "flex",
+                    // alignItems: "center",
+                    // justifyContent: "center",
+                    // zIndex: "2",
+                    // backgroundColor: "#ff9008",
+                    // opacity: "0.85",
                 }}
             >
                 <CardContent sx={{ fontSize: "24px" }}>
@@ -32,26 +33,30 @@ export default function AboutCards() {
                 </CardContent>
             </Card>
             <Card
+                className="about-card-text"
                 sx={{
-                    marginTop: "150px",
-                    marginBottom: "80px",
-                    padding: "0 5% 0 37%",
+                    // marginTop: "150px",
+                    // marginBottom: "80px",
+                    // padding: "0 5% 0 37%",
                     boxShadow: "5",
-                    fontFamily: "Nunito, sans-serif",
+                    // fontFamily: "Nunito, sans-serif",
                 }}
             >
                 <CardContent sx={{ maxWidth: "80ch" }}>
                     <Typography
+                        className="about-card-content-text"
                         variant="subtitle1"
                         align="center"
-                        sx={{
-                            marginTop: "13%",
-                            marginBottom: "8%",
-                            color: "grey",
-                            letterSpacing: "0.5px",
-                            lineHeight: "1.7",
-                            fontFamily: "Nunito, sans-serif",
-                        }}
+                        sx={
+                            {
+                                // marginTop: "13%",
+                                // marginBottom: "8%",
+                                // color: "grey",
+                                // letterSpacing: "0.5px",
+                                // lineHeight: "1.7",
+                                // fontFamily: "Nunito, sans-serif",
+                            }
+                        }
                     >
                         I believe in signs, communication, teamwork, friendship, gratitude…
                         <br />
