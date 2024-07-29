@@ -136,6 +136,10 @@
         position: relative;
     }
 
+    .work-container-small {
+        display: none;
+    }
+
     .first-scroll-container {
         position: absolute;
         top: 5%;

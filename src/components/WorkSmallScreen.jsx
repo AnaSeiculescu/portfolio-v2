@@ -1,24 +1,24 @@
 import { latestProjectsProps, oldestProjectsProps } from "./workSmallScreen-utils";
-// import Box from "@mui/material/Box";
 import Stack from "@mui/material/Stack";
 import Divider from "@mui/material/Divider";
-import { ViewportWidth } from "./ViewportWidth";
-import { useState, useEffect } from "react";
 import { ProjectCard } from "./ProjectCard";
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
+import PropTypes from "prop-types";
+import "../Work.css";
 
 export function WorkSmallScreen() {
-    const viewportWidth = ViewportWidth();
+// { hideWorkSmallScreen }
+    // const viewportWidth = ViewportWidth();
 
-    const [hideWorkSmallScreen, setHideWorkSmallScreen] = useState(false);
+    // const [hideWorkSmallScreen, setHideWorkSmallScreen] = useState(false);
 
-    useEffect(() => {
-        if (viewportWidth > 1300) {
-            setHideWorkSmallScreen(true);
-        } else {
-            setHideWorkSmallScreen(false);
-        }
-    }, [viewportWidth]);
+    // useEffect(() => {
+    //     if (viewportWidth > 1300) {
+    //         setHideWorkSmallScreen(true);
+    //     } else {
+    //         setHideWorkSmallScreen(false);
+    //     }
+    // }, [viewportWidth]);
 
     const workSmallScreenStyle = {
         position: "relative",
@@ -28,12 +28,12 @@ export function WorkSmallScreen() {
         // flexGrow: 1,
     };
 
-    if (hideWorkSmallScreen) {
-        workSmallScreenStyle.display = "none";
-    }
+    // if (hideWorkSmallScreen) {
+    //     workSmallScreenStyle.display = "none";
+    // }
 
     return (
-        <Stack className="work-container" sx={workSmallScreenStyle}>
+        <Stack className="work-container-small" sx={workSmallScreenStyle}>
             <Divider
                 textAlign="right"
                 sx={{ paddingLeft: "10%", fontSize: "20px", marginTop: "160px", marginBottom: "30px" }}
@@ -88,3 +88,7 @@ export function WorkSmallScreen() {
         </Stack>
     );
 }
+
+WorkSmallScreen.propTypes = {
+    hideWorkSmallScreen: PropTypes.bool,
+};

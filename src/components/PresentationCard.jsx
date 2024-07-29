@@ -121,6 +121,7 @@ export function PresentationCard() {
     const viewportWidth = ViewportWidth();
     const [hide, setHide] = useState(false);
     const [changeStyle, setChangeStyle] = useState(false);
+    // const [hideWorkSmallScreen, setHideWorkSmallScreen] = useState(false);
 
     const welcomeStyle = {
         fontFamily: "Nunito, sans-serif",
@@ -136,11 +137,21 @@ export function PresentationCard() {
         if (viewportWidth > 1300) {
             setHide(true);
             setChangeStyle(false);
+            // setHideWorkSmallScreen(true);
         } else {
             setHide(false);
             setChangeStyle(true);
+            // setHideWorkSmallScreen(false);
         }
-    }, [viewportWidth, contentHeight]);
+    }, [viewportWidth]);
+
+    // useEffect(() => {
+    //     if (viewportWidth > 1300) {
+    //         setHideWorkSmallScreen(true);
+    //     } else {
+    //         setHideWorkSmallScreen(false);
+    //     }
+    // }, [viewportWidth]);
 
     if (viewportWidth > 1300) {
         welcomeStyle.left = "42%";
@@ -213,8 +224,11 @@ export function PresentationCard() {
                 </Box>
 
                 <Box ref={workRef}>
-                    <Work />
-                    <WorkSmallScreen />
+                    {viewportWidth > 1300 ? <Work /> : <WorkSmallScreen />}
+                    {/* <Work />
+                    <WorkSmallScreen
+                    // hideWorkSmallScreen={hideWorkSmallScreen}
+                    /> */}
                 </Box>
                 <Box
                     className="contact"

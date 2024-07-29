@@ -8,22 +8,22 @@ import {
     oldestProjectsPropsSecondary,
 } from "./work-utils";
 import Divider from "@mui/material/Divider";
-import { ViewportWidth } from "./ViewportWidth";
-import { useState, useEffect } from "react";
+// import { ViewportWidth } from "./ViewportWidth";
+// import { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 
 export default function Work() {
-    const viewportWidth = ViewportWidth();
+    // const viewportWidth = ViewportWidth();
 
-    const [hideWork, setHideWork] = useState(false);
+    // const [hideWork, setHideWork] = useState(false);
 
-    useEffect(() => {
-        if (viewportWidth > 1300) {
-            setHideWork(false);
-        } else {
-            setHideWork(true);
-        }
-    }, [viewportWidth]);
+    // useEffect(() => {
+    //     if (viewportWidth > 1300) {
+    //         setHideWork(false);
+    //     } else {
+    //         setHideWork(true);
+    //     }
+    // }, [viewportWidth]);
 
     const firstCarouselSecondaryStyle = {};
     const secondCarouselSecondaryStyle = {};
@@ -33,9 +33,9 @@ export default function Work() {
         flexGrow: 1,
     };
 
-    if (hideWork) {
-        workStyle.display = "none";
-    }
+    // if (hideWork) {
+    //     workStyle.display = "none";
+    // }
 
     return (
         <>
