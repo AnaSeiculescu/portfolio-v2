@@ -26,10 +26,10 @@ export function PresentationCard() {
     const [contentHeight, setContentHeight] = useState("100vh");
     const [tabValue, setTabValue] = useState(0);
 
-    const [homeRef, inViewOfHome, homeEntry] = useInView({ threshold: 0.5 });
-    const [aboutRef, inViewOfAbout, aboutEntry] = useInView({ threshold: 0.5 });
-    const [workRef, inViewOfWork, workEntry] = useInView({ threshold: 0.2 });
-    const [contactRef, inViewOfContact, contactEntry] = useInView({ threshold: 0.5 });
+    const [homeRef, inViewOfHome, homeEntry] = useInView({ threshold: 0.3 });
+    const [aboutRef, inViewOfAbout, aboutEntry] = useInView({ threshold: 0.3 });
+    const [workRef, inViewOfWork, workEntry] = useInView({ threshold: 0.1 });
+    const [contactRef, inViewOfContact, contactEntry] = useInView({ threshold: 0.3 });
 
     const previouslyInViewOfHome = usePrevious(inViewOfHome);
     const previouslyInViewOfAbout = usePrevious(inViewOfAbout);
