@@ -121,7 +121,7 @@ export function PresentationCard() {
     const viewportWidth = ViewportWidth();
     const [hide, setHide] = useState(false);
     const [changeStyle, setChangeStyle] = useState(false);
-    // const [hideWorkSmallScreen, setHideWorkSmallScreen] = useState(false);
+    // const [isSmallScreen, setIsSmallScreen] = useState(viewportWidth < 1300);
 
     const welcomeStyle = {
         fontFamily: "Nunito, sans-serif",

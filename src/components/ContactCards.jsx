@@ -9,15 +9,27 @@ import { Divider } from "@mui/material";
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
 import CircularProgress from "@mui/material/CircularProgress";
+// import { MesssageSentModal } from "./MessageSentModal";
+import Snackbar from "@mui/material/Snackbar";
 
 export default function ContactCards() {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [message, setMessage] = useState("");
     const [isLoading, setIsLoading] = useState(false);
+    // const [isSent, setIsSent] = useState(false);
+    const [openAlert, setOpenAlert] = useState({ open: false, message: "" });
 
     const handleLoadingOnClick = () => {
         setIsLoading(true);
+    };
+
+    // const handleAlertOnClick = () => {
+    //     setOpenAlert({ open: true });
+    // };
+
+    const handleAlertOnCLose = () => {
+        setOpenAlert({ open: false });
     };
 
     const handleSubmit = (e) => {
@@ -39,14 +51,23 @@ export default function ContactCards() {
         emailjs
             .send(serviceID, templateID, templateParams, publicKey)
             .then((response) => {
+                if (templateParams.name !== "" && templateParams.email !== "" && templateParams.message !== "") {
+                    // handleAlertOnClick();
+                    setOpenAlert({ open: true, message: "Your message was sent." });
+                } else {
+                    setOpenAlert({ open: true, message: "You sent an empty message, name or email." });
+                }
                 console.log("Email sent successfully!", response);
+                // handleAlertOnClick();
                 setName("");
                 setEmail("");
                 setMessage("");
                 setIsLoading(false);
+                // setIsSent(true);
             })
             .catch((error) => {
                 console.log("Error sending email: ", error);
+                setOpenAlert({ open: true, message: "There has been an error. Your message was not sent." });
             });
     };
 
@@ -129,6 +150,14 @@ export default function ContactCards() {
                             >
                                 {isLoading && <CircularProgress size={25} />}
                                 Send
+                                {/* <MesssageSentModal isSent={isSent} /> */}
+                                <Snackbar
+                                    anchorOrigin={{ vertical: "top", horizontal: "center" }}
+                                    open={openAlert.open}
+                                    onClose={handleAlertOnCLose}
+                                    message={openAlert.message}
+                                    sx={{ textAlign: "center" }}
+                                />
                             </Button>
                         </Stack>
                     </Stack>
