@@ -1,12 +1,9 @@
 import axios from "axios";
 import PropTypes from "prop-types";
 import fileDownload from "js-file-download";
-// import Button from "@mui/material/Button";
 import Link from "@mui/material/Link";
 import "../GroupContactButtons.css";
-// import { ViewportWidth } from "./ViewportWidth";
-// import { useEffect } from "react";
-import CV from "../../resources/AnaSeiculescu-Resume-CV.pdf";
+import CV from "../../resources/CV-AnaSeiculescu.pdf";
 
 export default function DownloadCV({ hide = false, changeStyle }) {
     const myCvURL = CV;
@@ -51,7 +48,7 @@ export default function DownloadCV({ hide = false, changeStyle }) {
             variant="text"
             // color="warning"
             onClick={() => {
-                handleDownload(myCvURL, "AnaSeiculescu-Resume-CV.pdf");
+                handleDownload(myCvURL, "CV-AnaSeiculescu.pdf");
             }}
         >
             <p>Download CV</p>
