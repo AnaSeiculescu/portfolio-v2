@@ -125,7 +125,7 @@ export const oldestProjectsPropsPrimary = [
         imgSrc: breakfastRecipesImg,
         linkHref: "https://anaseiculescu.github.io/breakfast-recipes/",
         technologies: ["CSS", "HTML", "Photoshop"],
-        description: "a responsive site, with the cuttest responsive logo :)",
+        description: "a responsive site, with the cutest responsive logo :)",
         codeLinkHref: "https://github.com/AnaSeiculescu/breakfast-recipes",
     },
     {
@@ -168,7 +168,7 @@ export const oldestProjectsPropsSecondary = [
         imgSrc: breakfastRecipesImg,
         linkHref: "https://anaseiculescu.github.io/breakfast-recipes/",
         technologies: ["CSS", "HTML", "Photoshop"],
-        description: "a responsive site, with the cuttest responsive logo :)",
+        description: "a responsive site, with the cutest responsive logo :)",
         codeLinkHref: "https://github.com/AnaSeiculescu/breakfast-recipes",
     },
     {
