@@ -93,7 +93,7 @@ export default function AboutCards() {
                     <br />
                     <Typography variant="subtitle1" className="letter-space" sx={{ fontFamily: "Nunito, sans-serif" }}>
                         🐾 For some time now, I have been studying frontend development through online platforms and
-                        teaching courses. I am also part of the WebDev Remote Learning Program at Nagarro company.
+                        teaching courses. I was also part of the WebDev Remote Learning Programme at Nagarro company.
                         <br />
                         <br />
                         When I&apos;m not at my computer, I enjoy meeting friends, engaging in sports, going for walks,
